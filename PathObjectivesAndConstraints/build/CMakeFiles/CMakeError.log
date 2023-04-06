@@ -1,21 +1,21 @@
 Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
-Change Dir: /home/david/Code/curvature_constraints/PathObjectivesAndConstraints/build/CMakeFiles/CMakeTmp
+Change Dir: /home/david/Code/path_generator/PathObjectivesAndConstraints/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_ed0cf/fast && /usr/bin/make -f CMakeFiles/cmTC_ed0cf.dir/build.make CMakeFiles/cmTC_ed0cf.dir/build
-make[1]: Entering directory '/home/david/Code/curvature_constraints/PathObjectivesAndConstraints/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_ed0cf.dir/src.cxx.o
-/usr/bin/c++    -DCMAKE_HAVE_LIBC_PTHREAD   -std=gnu++11 -o CMakeFiles/cmTC_ed0cf.dir/src.cxx.o -c /home/david/Code/curvature_constraints/PathObjectivesAndConstraints/build/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_ed0cf
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ed0cf.dir/link.txt --verbose=1
-/usr/bin/c++   -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_ed0cf.dir/src.cxx.o  -o cmTC_ed0cf 
-/usr/bin/ld: CMakeFiles/cmTC_ed0cf.dir/src.cxx.o: in function `main':
+Run Build Command(s):/usr/bin/make cmTC_3cf7e/fast && /usr/bin/make -f CMakeFiles/cmTC_3cf7e.dir/build.make CMakeFiles/cmTC_3cf7e.dir/build
+make[1]: Entering directory '/home/david/Code/path_generator/PathObjectivesAndConstraints/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_3cf7e.dir/src.cxx.o
+/usr/bin/c++    -DCMAKE_HAVE_LIBC_PTHREAD   -std=gnu++11 -o CMakeFiles/cmTC_3cf7e.dir/src.cxx.o -c /home/david/Code/path_generator/PathObjectivesAndConstraints/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_3cf7e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3cf7e.dir/link.txt --verbose=1
+/usr/bin/c++   -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_3cf7e.dir/src.cxx.o  -o cmTC_3cf7e 
+/usr/bin/ld: CMakeFiles/cmTC_3cf7e.dir/src.cxx.o: in function `main':
 src.cxx:(.text+0x46): undefined reference to `pthread_create'
 /usr/bin/ld: src.cxx:(.text+0x52): undefined reference to `pthread_detach'
 /usr/bin/ld: src.cxx:(.text+0x63): undefined reference to `pthread_join'
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_ed0cf.dir/build.make:87: cmTC_ed0cf] Error 1
-make[1]: Leaving directory '/home/david/Code/curvature_constraints/PathObjectivesAndConstraints/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_ed0cf/fast] Error 2
+make[1]: *** [CMakeFiles/cmTC_3cf7e.dir/build.make:87: cmTC_3cf7e] Error 1
+make[1]: Leaving directory '/home/david/Code/path_generator/PathObjectivesAndConstraints/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_3cf7e/fast] Error 2
 
 
 Source file was:
@@ -39,20 +39,20 @@ int main(void)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/david/Code/curvature_constraints/PathObjectivesAndConstraints/build/CMakeFiles/CMakeTmp
+Change Dir: /home/david/Code/path_generator/PathObjectivesAndConstraints/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_bf520/fast && /usr/bin/make -f CMakeFiles/cmTC_bf520.dir/build.make CMakeFiles/cmTC_bf520.dir/build
-make[1]: Entering directory '/home/david/Code/curvature_constraints/PathObjectivesAndConstraints/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_bf520.dir/CheckFunctionExists.cxx.o
-/usr/bin/c++    -DCHECK_FUNCTION_EXISTS=pthread_create   -std=gnu++11 -o CMakeFiles/cmTC_bf520.dir/CheckFunctionExists.cxx.o -c /home/david/Code/curvature_constraints/PathObjectivesAndConstraints/build/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
-Linking CXX executable cmTC_bf520
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bf520.dir/link.txt --verbose=1
-/usr/bin/c++   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_bf520.dir/CheckFunctionExists.cxx.o  -o cmTC_bf520  -lpthreads 
+Run Build Command(s):/usr/bin/make cmTC_cdd8d/fast && /usr/bin/make -f CMakeFiles/cmTC_cdd8d.dir/build.make CMakeFiles/cmTC_cdd8d.dir/build
+make[1]: Entering directory '/home/david/Code/path_generator/PathObjectivesAndConstraints/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_cdd8d.dir/CheckFunctionExists.cxx.o
+/usr/bin/c++    -DCHECK_FUNCTION_EXISTS=pthread_create   -std=gnu++11 -o CMakeFiles/cmTC_cdd8d.dir/CheckFunctionExists.cxx.o -c /home/david/Code/path_generator/PathObjectivesAndConstraints/build/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_cdd8d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cdd8d.dir/link.txt --verbose=1
+/usr/bin/c++   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_cdd8d.dir/CheckFunctionExists.cxx.o  -o cmTC_cdd8d  -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_bf520.dir/build.make:87: cmTC_bf520] Error 1
-make[1]: Leaving directory '/home/david/Code/curvature_constraints/PathObjectivesAndConstraints/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_bf520/fast] Error 2
+make[1]: *** [CMakeFiles/cmTC_cdd8d.dir/build.make:87: cmTC_cdd8d] Error 1
+make[1]: Leaving directory '/home/david/Code/path_generator/PathObjectivesAndConstraints/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_cdd8d/fast] Error 2
 
 
 

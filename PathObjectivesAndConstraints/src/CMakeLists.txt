@@ -20,6 +20,8 @@ add_library(${PROJECT_NAME} SHARED
     ObstacleConstraints.cpp
     ObstacleConstraints.hpp
     CurvatureConstraints.cpp
-    CurvatureConstraints.hpp)
+    CurvatureConstraints.hpp
+    DerivativeBounds.cpp
+    DerivativeBounds.hpp)
 
 target_include_directories(${PROJECT_NAME} PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/src")

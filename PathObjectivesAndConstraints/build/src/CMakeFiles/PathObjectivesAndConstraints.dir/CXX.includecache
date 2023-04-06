@@ -6,15 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/david/Code/curvature_constraints/PathObjectivesAndConstraints/src/CBindingHelper.hpp
+/home/david/Code/path_generator/PathObjectivesAndConstraints/src/CBindingHelper.hpp
 eigen3/Eigen/Core
 -
 eigen3/Eigen/Dense
 -
 gtest/gtest_prod.h
-/home/david/Code/curvature_constraints/PathObjectivesAndConstraints/src/gtest/gtest_prod.h
+/home/david/Code/path_generator/PathObjectivesAndConstraints/src/gtest/gtest_prod.h
 
-/home/david/Code/curvature_constraints/PathObjectivesAndConstraints/src/CubicEquationSolver.hpp
+/home/david/Code/path_generator/PathObjectivesAndConstraints/src/CubicEquationSolver.hpp
 array
 -
 list
@@ -22,7 +22,31 @@ list
 limits
 -
 
-/home/david/Code/curvature_constraints/PathObjectivesAndConstraints/src/DerivativeEvaluator.hpp
+/home/david/Code/path_generator/PathObjectivesAndConstraints/src/CurvatureConstraints.cpp
+CurvatureConstraints.hpp
+/home/david/Code/path_generator/PathObjectivesAndConstraints/src/CurvatureConstraints.hpp
+
+/home/david/Code/path_generator/PathObjectivesAndConstraints/src/CurvatureConstraints.hpp
+ThirdOrderCurvatureBounds.hpp
+/home/david/Code/path_generator/PathObjectivesAndConstraints/src/ThirdOrderCurvatureBounds.hpp
+CBindingHelper.hpp
+/home/david/Code/path_generator/PathObjectivesAndConstraints/src/CBindingHelper.hpp
+
+/home/david/Code/path_generator/PathObjectivesAndConstraints/src/DerivativeBounds.hpp
+array
+-
+eigen3/Eigen/Core
+-
+eigen3/Eigen/Dense
+-
+gtest/gtest_prod.h
+/home/david/Code/path_generator/PathObjectivesAndConstraints/src/gtest/gtest_prod.h
+CBindingHelper.hpp
+/home/david/Code/path_generator/PathObjectivesAndConstraints/src/CBindingHelper.hpp
+DerivativeEvaluator.hpp
+/home/david/Code/path_generator/PathObjectivesAndConstraints/src/DerivativeEvaluator.hpp
+
+/home/david/Code/path_generator/PathObjectivesAndConstraints/src/DerivativeEvaluator.hpp
 array
 -
 eigen3/Eigen/Core
@@ -30,21 +54,35 @@ eigen3/Eigen/Core
 eigen3/Eigen/Dense
 -
 CubicEquationSolver.hpp
-/home/david/Code/curvature_constraints/PathObjectivesAndConstraints/src/CubicEquationSolver.hpp
+/home/david/Code/path_generator/PathObjectivesAndConstraints/src/CubicEquationSolver.hpp
 gtest/gtest_prod.h
-/home/david/Code/curvature_constraints/PathObjectivesAndConstraints/src/gtest/gtest_prod.h
+/home/david/Code/path_generator/PathObjectivesAndConstraints/src/gtest/gtest_prod.h
 CBindingHelper.hpp
-/home/david/Code/curvature_constraints/PathObjectivesAndConstraints/src/CBindingHelper.hpp
+/home/david/Code/path_generator/PathObjectivesAndConstraints/src/CBindingHelper.hpp
 
-/home/david/Code/curvature_constraints/PathObjectivesAndConstraints/src/WaypointConstraints.cpp
-WaypointConstraints.hpp
-/home/david/Code/curvature_constraints/PathObjectivesAndConstraints/src/WaypointConstraints.hpp
+/home/david/Code/path_generator/PathObjectivesAndConstraints/src/ThirdOrderCurvatureBounds.cpp
+ThirdOrderCurvatureBounds.hpp
+/home/david/Code/path_generator/PathObjectivesAndConstraints/src/ThirdOrderCurvatureBounds.hpp
+CubicEquationSolver.hpp
+/home/david/Code/path_generator/PathObjectivesAndConstraints/src/CubicEquationSolver.hpp
 iostream
 -
+stdexcept
+-
 
-/home/david/Code/curvature_constraints/PathObjectivesAndConstraints/src/WaypointConstraints.hpp
-DerivativeEvaluator.hpp
-/home/david/Code/curvature_constraints/PathObjectivesAndConstraints/src/DerivativeEvaluator.hpp
+/home/david/Code/path_generator/PathObjectivesAndConstraints/src/ThirdOrderCurvatureBounds.hpp
+array
+-
+eigen3/Eigen/Core
+-
+eigen3/Eigen/Dense
+-
+gtest/gtest_prod.h
+/home/david/Code/path_generator/PathObjectivesAndConstraints/src/gtest/gtest_prod.h
 CBindingHelper.hpp
-/home/david/Code/curvature_constraints/PathObjectivesAndConstraints/src/CBindingHelper.hpp
+/home/david/Code/path_generator/PathObjectivesAndConstraints/src/CBindingHelper.hpp
+DerivativeBounds.hpp
+/home/david/Code/path_generator/PathObjectivesAndConstraints/src/DerivativeBounds.hpp
+DerivativeEvaluator.hpp
+/home/david/Code/path_generator/PathObjectivesAndConstraints/src/DerivativeEvaluator.hpp
 

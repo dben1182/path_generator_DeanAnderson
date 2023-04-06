@@ -24,7 +24,7 @@ point_4 = np.array([[20],[14]])
 point_sequence = np.concatenate((point_1,point_2,point_3,point_4),axis=1)
 waypoints = np.concatenate((point_sequence[:,0][:,None], point_sequence[:,-1][:,None]),1)
 # waypoints = np.array([[2,16],[3,13]])
-waypoint_directions = np.array([[0,0],[0,0]]) # 2
+waypoint_directions = np.array([[0,1],[1,0]]) # 2
 waypoint_curvatures = np.array([-1,0.1])
 # waypoint_curvatures = None
 # waypoint_directions = None

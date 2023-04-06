@@ -15,9 +15,18 @@ src/CMakeFiles/PathObjectivesAndConstraints.dir/CubicEquationSolver.cpp.o: ../sr
 src/CMakeFiles/PathObjectivesAndConstraints.dir/CubicEquationSolver.cpp.o: ../src/CubicEquationSolver.hpp
 
 src/CMakeFiles/PathObjectivesAndConstraints.dir/CurvatureConstraints.cpp.o: ../src/CBindingHelper.hpp
+src/CMakeFiles/PathObjectivesAndConstraints.dir/CurvatureConstraints.cpp.o: ../src/CubicEquationSolver.hpp
 src/CMakeFiles/PathObjectivesAndConstraints.dir/CurvatureConstraints.cpp.o: ../src/CurvatureConstraints.cpp
 src/CMakeFiles/PathObjectivesAndConstraints.dir/CurvatureConstraints.cpp.o: ../src/CurvatureConstraints.hpp
+src/CMakeFiles/PathObjectivesAndConstraints.dir/CurvatureConstraints.cpp.o: ../src/DerivativeBounds.hpp
+src/CMakeFiles/PathObjectivesAndConstraints.dir/CurvatureConstraints.cpp.o: ../src/DerivativeEvaluator.hpp
 src/CMakeFiles/PathObjectivesAndConstraints.dir/CurvatureConstraints.cpp.o: ../src/ThirdOrderCurvatureBounds.hpp
+
+src/CMakeFiles/PathObjectivesAndConstraints.dir/DerivativeBounds.cpp.o: ../src/CBindingHelper.hpp
+src/CMakeFiles/PathObjectivesAndConstraints.dir/DerivativeBounds.cpp.o: ../src/CubicEquationSolver.hpp
+src/CMakeFiles/PathObjectivesAndConstraints.dir/DerivativeBounds.cpp.o: ../src/DerivativeBounds.cpp
+src/CMakeFiles/PathObjectivesAndConstraints.dir/DerivativeBounds.cpp.o: ../src/DerivativeBounds.hpp
+src/CMakeFiles/PathObjectivesAndConstraints.dir/DerivativeBounds.cpp.o: ../src/DerivativeEvaluator.hpp
 
 src/CMakeFiles/PathObjectivesAndConstraints.dir/DerivativeEvaluator.cpp.o: ../src/CBindingHelper.hpp
 src/CMakeFiles/PathObjectivesAndConstraints.dir/DerivativeEvaluator.cpp.o: ../src/CubicEquationSolver.hpp
@@ -40,6 +49,7 @@ src/CMakeFiles/PathObjectivesAndConstraints.dir/ObstacleConstraints.cpp.o: ../sr
 
 src/CMakeFiles/PathObjectivesAndConstraints.dir/ThirdOrderCurvatureBounds.cpp.o: ../src/CBindingHelper.hpp
 src/CMakeFiles/PathObjectivesAndConstraints.dir/ThirdOrderCurvatureBounds.cpp.o: ../src/CubicEquationSolver.hpp
+src/CMakeFiles/PathObjectivesAndConstraints.dir/ThirdOrderCurvatureBounds.cpp.o: ../src/DerivativeBounds.hpp
 src/CMakeFiles/PathObjectivesAndConstraints.dir/ThirdOrderCurvatureBounds.cpp.o: ../src/DerivativeEvaluator.hpp
 src/CMakeFiles/PathObjectivesAndConstraints.dir/ThirdOrderCurvatureBounds.cpp.o: ../src/ThirdOrderCurvatureBounds.cpp
 src/CMakeFiles/PathObjectivesAndConstraints.dir/ThirdOrderCurvatureBounds.cpp.o: ../src/ThirdOrderCurvatureBounds.hpp

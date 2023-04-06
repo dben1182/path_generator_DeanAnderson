@@ -10,7 +10,8 @@ add_executable(${TEST_NAME}
     UnitTestObjectiveFunctions.cpp
     UnitTestConvexHullCollisionChecker.cpp
     UnitTestObstacleConstraints.cpp
-    UnitTestCurvatureConstraints.cpp)
+    UnitTestCurvatureConstraints.cpp
+    UnitTestDerivativeBounds.cpp)
 
 target_include_directories(${PROJECT_NAME} PUBLIC "${PROJECT_SOURCE_DIR}/src")
 

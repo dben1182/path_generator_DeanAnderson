@@ -1,6 +1,5 @@
 #include "ThirdOrderCurvatureBounds.hpp"
 #include "CubicEquationSolver.hpp"
-#include "DerivativeEvaluator.hpp"
 #include <iostream>
 #include <stdexcept>
 
@@ -45,12 +44,11 @@ template <int D>
 double ThirdOrderCurvatureBounds<D>::evaluate_interval_curvature_bound(Eigen::Matrix<double,D,4> &control_points)
 {
     double scale_factor = 1;
-    DerivativeEvaluator<D> d_dt_eval{};
-    std::array<double,2> min_velocity_and_time = d_dt_eval.find_min_velocity_and_time(control_points,scale_factor);
+    std::array<double,2> min_velocity_and_time = d_dt_bounds.find_min_velocity_and_time(control_points,scale_factor);
     double min_velocity = min_velocity_and_time[0];
     double time_at_min_velocity = min_velocity_and_time[1];
     double max_cross_term = find_maximum_cross_term(control_points,scale_factor);
-    std::array<double,2> max_acceleration_and_time = d_dt_eval.find_max_acceleration_and_time(control_points, scale_factor);
+    std::array<double,2> max_acceleration_and_time = d_dt_bounds.find_max_acceleration_and_time(control_points, scale_factor);
     double max_acceleration = max_acceleration_and_time[0];
     double curvature_bound;
     if (min_velocity <= 1.0e-6)
@@ -205,7 +203,6 @@ Eigen::Vector4d ThirdOrderCurvatureBounds<D>::get_3D_cross_coefficients(Eigen::M
 template <int D>
 double ThirdOrderCurvatureBounds<D>::calculate_cross_term_magnitude(double &t, Eigen::Matrix<double,D,4> &control_points, double &scale_factor)
 {
-    DerivativeEvaluator<D> d_dt_eval{};
     Eigen::Matrix<double,D,1> velocity_vector = d_dt_eval.calculate_velocity_vector(t, control_points, scale_factor);
     Eigen::Matrix<double,D,1> acceleration_vector = d_dt_eval.calculate_acceleration_vector(t, control_points, scale_factor);
     double cross_term_magnitude = cbind_help.cross_term_magnitude(velocity_vector, acceleration_vector);

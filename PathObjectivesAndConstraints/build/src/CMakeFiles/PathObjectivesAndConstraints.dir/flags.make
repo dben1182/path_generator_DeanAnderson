@@ -6,5 +6,5 @@ CXX_FLAGS = -fPIC   -std=gnu++11
 
 CXX_DEFINES = -DPathObjectivesAndConstraints_EXPORTS
 
-CXX_INCLUDES = -I/home/david/Code/curvature_constraints/PathObjectivesAndConstraints/build/src -I/home/david/Code/curvature_constraints/PathObjectivesAndConstraints/src -I/home/david/Code/curvature_constraints/PathObjectivesAndConstraints/src/src 
+CXX_INCLUDES = -I/home/david/Code/path_generator/PathObjectivesAndConstraints/build/src -I/home/david/Code/path_generator/PathObjectivesAndConstraints/src -I/home/david/Code/path_generator/PathObjectivesAndConstraints/src/src 
 

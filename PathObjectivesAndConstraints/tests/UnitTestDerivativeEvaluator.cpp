@@ -1,7 +1,7 @@
 #include "gtest/gtest.h"
 #include "DerivativeEvaluator.hpp"
 
-TEST(DerivativeTest, MatrixRetrieval)
+TEST(DerivativeEvaluationTest, MatrixRetrieval)
 {
     DerivativeEvaluator<2> c_eval{};
     Eigen::Matrix<double, 4,4> true_M;
@@ -14,7 +14,7 @@ TEST(DerivativeTest, MatrixRetrieval)
     EXPECT_TRUE(true_M.isApprox(M,tolerance));
 }
 
-TEST(DerivativeTest, DerivativeVectorRetrieval)
+TEST(DerivativeEvaluationTest, DerivativeVectorRetrieval)
 {
     DerivativeEvaluator<2> c_eval{};
     double scale_factor = 1;
@@ -26,7 +26,7 @@ TEST(DerivativeTest, DerivativeVectorRetrieval)
     EXPECT_TRUE(true_dt_vector.isApprox(dt_vector, tolerance));
 }
 
-TEST(DerivativeTest, SecondDerivativeVectorRetrieval)
+TEST(DerivativeEvaluationTest, SecondDerivativeVectorRetrieval)
 {
     double scale_factor = 1;
     DerivativeEvaluator<2> c_eval{};
@@ -38,7 +38,7 @@ TEST(DerivativeTest, SecondDerivativeVectorRetrieval)
     EXPECT_TRUE(true_ddt_vector.isApprox(ddt_vector, tolerance));
 }
 
-TEST(DerivativeTest, DerivativeVectorRetrievalError)
+TEST(DerivativeEvaluationTest, DerivativeVectorRetrievalError)
 {
     // this tests _that_ the expected exception is thrown
     DerivativeEvaluator<2> c_eval{};
@@ -56,7 +56,7 @@ TEST(DerivativeTest, DerivativeVectorRetrievalError)
     }, std::invalid_argument);
 }
 
-TEST(DerivativeTest, SecondDerivativeVectorRetrievalError)
+TEST(DerivativeEvaluationTest, SecondDerivativeVectorRetrievalError)
 {
     // this tests _that_ the expected exception is thrown
     DerivativeEvaluator<2> c_eval{};
@@ -74,7 +74,7 @@ TEST(DerivativeTest, SecondDerivativeVectorRetrievalError)
     }, std::invalid_argument);
 }
 
-TEST(DerivativeTest, VelocityMagnitude)
+TEST(DerivativeEvaluationTest, VelocityMagnitude)
 {
     DerivativeEvaluator<2> c_eval{};
     double scale_factor = 1;
@@ -88,7 +88,7 @@ TEST(DerivativeTest, VelocityMagnitude)
     EXPECT_NEAR(true_velocity, velocity,tolerance);
 }
 
-TEST(DerivativeTest, AccelerationMagnitude)
+TEST(DerivativeEvaluationTest, AccelerationMagnitude)
 {
     DerivativeEvaluator<2> c_eval{};
     double true_acceleration = 2.2568129685516602;
@@ -102,86 +102,3 @@ TEST(DerivativeTest, AccelerationMagnitude)
     EXPECT_NEAR(true_acceleration, acceleration,tolerance);
 }
 
-TEST(DerivativeTest, MinVelocity)
-{
-    DerivativeEvaluator<2> c_eval{};
-    double scale_factor = 1;
-    double true_min_velocity = 0.12523779030065027;
-    Eigen::Matrix<double, 2,4> control_points;
-    control_points << 0.1,  3.2,  2.01, 1.1,
-                      0.01, 2.98, 2.1,  0.99; 
-    std::array<double,2> min_velocity_and_time = c_eval.find_min_velocity_and_time(control_points,scale_factor);
-    double min_velocity = min_velocity_and_time[0];
-    double tolerance = 0.00001;
-    EXPECT_NEAR(true_min_velocity, min_velocity,tolerance);
-}
-
-TEST(DerivativeTest, MaxAcceleration)
-{
-    DerivativeEvaluator<2> c_eval{};
-    double true_max_acceleration = 9.055385138137417;
-    Eigen::Matrix<double, 2,4> control_points;
-    control_points << 7, 4, 2, 0,
-                      3, 1, 8, 7;
-    double scale_factor = 1;
-    std::array<double,2> max_acceleration_and_time = c_eval.find_max_acceleration_and_time(control_points, scale_factor);
-    double max_acceleration = max_acceleration_and_time[0];
-    EXPECT_EQ(true_max_acceleration, max_acceleration);
-}
-
-TEST(DerivativeTest, MinVelocityOfSpline)
-{
-    DerivativeEvaluator<2> c_eval{};
-    double scale_factor = 1;
-    double true_min_velocity = 0.7068769432442363;
-    int num_control_points = 8;
-    double control_points[] = {   -0.89402549, -0.05285741,  1.10545513,  2.47300498,
-         3.79358126,  4.76115495,  5.11942253,  4.76115495, -0.10547684,  0.05273842,
-        -0.10547684, -0.47275804, -0.79306865, -0.76080139, -0.11946946,  1.23867924};
-    double min_velocity = c_eval.find_min_velocity_of_spline(control_points, num_control_points,scale_factor);
-    double tolerance = 0.00001;
-    EXPECT_NEAR(true_min_velocity, min_velocity, tolerance);
-}
-
-
-TEST(DerivativeTest, MaxAccelerationOfSpline)
-{
-    DerivativeEvaluator<2> c_eval{};
-    double scale_factor = 1;
-    double true_max_acceleration = 1.0135328890911517;
-    int num_control_points = 8;
-    double control_points[] = {   -0.89402549, -0.05285741,  1.10545513,  2.47300498,
-         3.79358126,  4.76115495,  5.11942253,  4.76115495, -0.10547684,  0.05273842,
-        -0.10547684, -0.47275804, -0.79306865, -0.76080139, -0.11946946,  1.23867924};
-    double max_acceleration = c_eval.find_max_acceleration_of_spline(control_points, num_control_points,scale_factor);
-    double tolerance = 0.00001;
-    EXPECT_NEAR(true_max_acceleration, max_acceleration, tolerance);
-}
-
-TEST(DerivativeTest, MinVelocityOfSpline3D)
-{
-    DerivativeEvaluator<3> c_eval{};
-    double scale_factor = 1;
-    double true_min_velocity = 1.5;
-    int num_control_points = 8;
-    double control_points[] = {3, 0, 5, 1, 9, 6, 6, 4,
-                                6, 2, 6, 8, 0, 8, 0, 6,
-                                0, 0, 8, 0, 4, 7, 1, 8};
-    double min_velocity = c_eval.find_min_velocity_of_spline(control_points, num_control_points,scale_factor);
-    double tolerance = 0.00001;
-    EXPECT_NEAR(true_min_velocity, min_velocity, tolerance);
-}
-
-TEST(DerivativeTest, MaxAccelerationOfSpline3D)
-{
-    DerivativeEvaluator<3> c_eval{};
-    double scale_factor = 1;
-    double true_max_acceleration = 19.697715603592208;
-    int num_control_points = 8;
-    double control_points[] = {3, 0, 5, 1, 9, 6, 6, 4,
-                                6, 2, 6, 8, 0, 8, 0, 6,
-                                0, 0, 8, 0, 4, 7, 1, 8};
-    double max_acceleration = c_eval.find_max_acceleration_of_spline(control_points, num_control_points,scale_factor);
-    double tolerance = 0.0000001;
-    EXPECT_NEAR(true_max_acceleration, max_acceleration, tolerance);
-}

@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/david/Code/curvature_constraints/PathObjectivesAndConstraints
+CMAKE_SOURCE_DIR = /home/david/Code/path_generator/PathObjectivesAndConstraints
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/david/Code/curvature_constraints/PathObjectivesAndConstraints/build
+CMAKE_BINARY_DIR = /home/david/Code/path_generator/PathObjectivesAndConstraints/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/david/Code/curvature_constraints/PathObjectivesAndConstraints/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/david/Code/curvature_constraints/PathObjectivesAndConstraints/build/CMakeFiles /home/david/Code/curvature_constraints/PathObjectivesAndConstraints/build/src/CMakeFiles/progress.marks
-	cd /home/david/Code/curvature_constraints/PathObjectivesAndConstraints/build && $(MAKE) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/david/Code/curvature_constraints/PathObjectivesAndConstraints/build/CMakeFiles 0
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/david/Code/path_generator/PathObjectivesAndConstraints/build/CMakeFiles /home/david/Code/path_generator/PathObjectivesAndConstraints/build/src/CMakeFiles/progress.marks
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/david/Code/path_generator/PathObjectivesAndConstraints/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/david/Code/curvature_constraints/PathObjectivesAndConstraints/build && $(MAKE) -f CMakeFiles/Makefile2 src/clean
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/david/Code/curvature_constraints/PathObjectivesAndConstraints/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/david/Code/curvature_constraints/PathObjectivesAndConstraints/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/david/Code/curvature_constraints/PathObjectivesAndConstraints/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/CMakeFiles/PathObjectivesAndConstraints.dir/rule:
-	cd /home/david/Code/curvature_constraints/PathObjectivesAndConstraints/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/PathObjectivesAndConstraints.dir/rule
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/PathObjectivesAndConstraints.dir/rule
 .PHONY : src/CMakeFiles/PathObjectivesAndConstraints.dir/rule
 
 # Convenience name for target.
@@ -122,7 +122,7 @@ PathObjectivesAndConstraints: src/CMakeFiles/PathObjectivesAndConstraints.dir/ru
 
 # fast build rule for target.
 PathObjectivesAndConstraints/fast:
-	cd /home/david/Code/curvature_constraints/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/build
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/build
 .PHONY : PathObjectivesAndConstraints/fast
 
 BsplineToMinvo.o: BsplineToMinvo.cpp.o
@@ -131,7 +131,7 @@ BsplineToMinvo.o: BsplineToMinvo.cpp.o
 
 # target to build an object file
 BsplineToMinvo.cpp.o:
-	cd /home/david/Code/curvature_constraints/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/BsplineToMinvo.cpp.o
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/BsplineToMinvo.cpp.o
 .PHONY : BsplineToMinvo.cpp.o
 
 BsplineToMinvo.i: BsplineToMinvo.cpp.i
@@ -140,7 +140,7 @@ BsplineToMinvo.i: BsplineToMinvo.cpp.i
 
 # target to preprocess a source file
 BsplineToMinvo.cpp.i:
-	cd /home/david/Code/curvature_constraints/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/BsplineToMinvo.cpp.i
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/BsplineToMinvo.cpp.i
 .PHONY : BsplineToMinvo.cpp.i
 
 BsplineToMinvo.s: BsplineToMinvo.cpp.s
@@ -149,7 +149,7 @@ BsplineToMinvo.s: BsplineToMinvo.cpp.s
 
 # target to generate assembly for a file
 BsplineToMinvo.cpp.s:
-	cd /home/david/Code/curvature_constraints/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/BsplineToMinvo.cpp.s
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/BsplineToMinvo.cpp.s
 .PHONY : BsplineToMinvo.cpp.s
 
 CBindingHelper.o: CBindingHelper.cpp.o
@@ -158,7 +158,7 @@ CBindingHelper.o: CBindingHelper.cpp.o
 
 # target to build an object file
 CBindingHelper.cpp.o:
-	cd /home/david/Code/curvature_constraints/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/CBindingHelper.cpp.o
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/CBindingHelper.cpp.o
 .PHONY : CBindingHelper.cpp.o
 
 CBindingHelper.i: CBindingHelper.cpp.i
@@ -167,7 +167,7 @@ CBindingHelper.i: CBindingHelper.cpp.i
 
 # target to preprocess a source file
 CBindingHelper.cpp.i:
-	cd /home/david/Code/curvature_constraints/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/CBindingHelper.cpp.i
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/CBindingHelper.cpp.i
 .PHONY : CBindingHelper.cpp.i
 
 CBindingHelper.s: CBindingHelper.cpp.s
@@ -176,7 +176,7 @@ CBindingHelper.s: CBindingHelper.cpp.s
 
 # target to generate assembly for a file
 CBindingHelper.cpp.s:
-	cd /home/david/Code/curvature_constraints/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/CBindingHelper.cpp.s
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/CBindingHelper.cpp.s
 .PHONY : CBindingHelper.cpp.s
 
 ConvexHullCollisionChecker.o: ConvexHullCollisionChecker.cpp.o
@@ -185,7 +185,7 @@ ConvexHullCollisionChecker.o: ConvexHullCollisionChecker.cpp.o
 
 # target to build an object file
 ConvexHullCollisionChecker.cpp.o:
-	cd /home/david/Code/curvature_constraints/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/ConvexHullCollisionChecker.cpp.o
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/ConvexHullCollisionChecker.cpp.o
 .PHONY : ConvexHullCollisionChecker.cpp.o
 
 ConvexHullCollisionChecker.i: ConvexHullCollisionChecker.cpp.i
@@ -194,7 +194,7 @@ ConvexHullCollisionChecker.i: ConvexHullCollisionChecker.cpp.i
 
 # target to preprocess a source file
 ConvexHullCollisionChecker.cpp.i:
-	cd /home/david/Code/curvature_constraints/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/ConvexHullCollisionChecker.cpp.i
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/ConvexHullCollisionChecker.cpp.i
 .PHONY : ConvexHullCollisionChecker.cpp.i
 
 ConvexHullCollisionChecker.s: ConvexHullCollisionChecker.cpp.s
@@ -203,7 +203,7 @@ ConvexHullCollisionChecker.s: ConvexHullCollisionChecker.cpp.s
 
 # target to generate assembly for a file
 ConvexHullCollisionChecker.cpp.s:
-	cd /home/david/Code/curvature_constraints/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/ConvexHullCollisionChecker.cpp.s
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/ConvexHullCollisionChecker.cpp.s
 .PHONY : ConvexHullCollisionChecker.cpp.s
 
 CubicEquationSolver.o: CubicEquationSolver.cpp.o
@@ -212,7 +212,7 @@ CubicEquationSolver.o: CubicEquationSolver.cpp.o
 
 # target to build an object file
 CubicEquationSolver.cpp.o:
-	cd /home/david/Code/curvature_constraints/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/CubicEquationSolver.cpp.o
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/CubicEquationSolver.cpp.o
 .PHONY : CubicEquationSolver.cpp.o
 
 CubicEquationSolver.i: CubicEquationSolver.cpp.i
@@ -221,7 +221,7 @@ CubicEquationSolver.i: CubicEquationSolver.cpp.i
 
 # target to preprocess a source file
 CubicEquationSolver.cpp.i:
-	cd /home/david/Code/curvature_constraints/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/CubicEquationSolver.cpp.i
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/CubicEquationSolver.cpp.i
 .PHONY : CubicEquationSolver.cpp.i
 
 CubicEquationSolver.s: CubicEquationSolver.cpp.s
@@ -230,7 +230,7 @@ CubicEquationSolver.s: CubicEquationSolver.cpp.s
 
 # target to generate assembly for a file
 CubicEquationSolver.cpp.s:
-	cd /home/david/Code/curvature_constraints/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/CubicEquationSolver.cpp.s
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/CubicEquationSolver.cpp.s
 .PHONY : CubicEquationSolver.cpp.s
 
 CurvatureConstraints.o: CurvatureConstraints.cpp.o
@@ -239,7 +239,7 @@ CurvatureConstraints.o: CurvatureConstraints.cpp.o
 
 # target to build an object file
 CurvatureConstraints.cpp.o:
-	cd /home/david/Code/curvature_constraints/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/CurvatureConstraints.cpp.o
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/CurvatureConstraints.cpp.o
 .PHONY : CurvatureConstraints.cpp.o
 
 CurvatureConstraints.i: CurvatureConstraints.cpp.i
@@ -248,7 +248,7 @@ CurvatureConstraints.i: CurvatureConstraints.cpp.i
 
 # target to preprocess a source file
 CurvatureConstraints.cpp.i:
-	cd /home/david/Code/curvature_constraints/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/CurvatureConstraints.cpp.i
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/CurvatureConstraints.cpp.i
 .PHONY : CurvatureConstraints.cpp.i
 
 CurvatureConstraints.s: CurvatureConstraints.cpp.s
@@ -257,8 +257,35 @@ CurvatureConstraints.s: CurvatureConstraints.cpp.s
 
 # target to generate assembly for a file
 CurvatureConstraints.cpp.s:
-	cd /home/david/Code/curvature_constraints/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/CurvatureConstraints.cpp.s
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/CurvatureConstraints.cpp.s
 .PHONY : CurvatureConstraints.cpp.s
+
+DerivativeBounds.o: DerivativeBounds.cpp.o
+
+.PHONY : DerivativeBounds.o
+
+# target to build an object file
+DerivativeBounds.cpp.o:
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/DerivativeBounds.cpp.o
+.PHONY : DerivativeBounds.cpp.o
+
+DerivativeBounds.i: DerivativeBounds.cpp.i
+
+.PHONY : DerivativeBounds.i
+
+# target to preprocess a source file
+DerivativeBounds.cpp.i:
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/DerivativeBounds.cpp.i
+.PHONY : DerivativeBounds.cpp.i
+
+DerivativeBounds.s: DerivativeBounds.cpp.s
+
+.PHONY : DerivativeBounds.s
+
+# target to generate assembly for a file
+DerivativeBounds.cpp.s:
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/DerivativeBounds.cpp.s
+.PHONY : DerivativeBounds.cpp.s
 
 DerivativeEvaluator.o: DerivativeEvaluator.cpp.o
 
@@ -266,7 +293,7 @@ DerivativeEvaluator.o: DerivativeEvaluator.cpp.o
 
 # target to build an object file
 DerivativeEvaluator.cpp.o:
-	cd /home/david/Code/curvature_constraints/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/DerivativeEvaluator.cpp.o
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/DerivativeEvaluator.cpp.o
 .PHONY : DerivativeEvaluator.cpp.o
 
 DerivativeEvaluator.i: DerivativeEvaluator.cpp.i
@@ -275,7 +302,7 @@ DerivativeEvaluator.i: DerivativeEvaluator.cpp.i
 
 # target to preprocess a source file
 DerivativeEvaluator.cpp.i:
-	cd /home/david/Code/curvature_constraints/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/DerivativeEvaluator.cpp.i
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/DerivativeEvaluator.cpp.i
 .PHONY : DerivativeEvaluator.cpp.i
 
 DerivativeEvaluator.s: DerivativeEvaluator.cpp.s
@@ -284,7 +311,7 @@ DerivativeEvaluator.s: DerivativeEvaluator.cpp.s
 
 # target to generate assembly for a file
 DerivativeEvaluator.cpp.s:
-	cd /home/david/Code/curvature_constraints/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/DerivativeEvaluator.cpp.s
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/DerivativeEvaluator.cpp.s
 .PHONY : DerivativeEvaluator.cpp.s
 
 MDMAlgorithmClass.o: MDMAlgorithmClass.cpp.o
@@ -293,7 +320,7 @@ MDMAlgorithmClass.o: MDMAlgorithmClass.cpp.o
 
 # target to build an object file
 MDMAlgorithmClass.cpp.o:
-	cd /home/david/Code/curvature_constraints/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/MDMAlgorithmClass.cpp.o
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/MDMAlgorithmClass.cpp.o
 .PHONY : MDMAlgorithmClass.cpp.o
 
 MDMAlgorithmClass.i: MDMAlgorithmClass.cpp.i
@@ -302,7 +329,7 @@ MDMAlgorithmClass.i: MDMAlgorithmClass.cpp.i
 
 # target to preprocess a source file
 MDMAlgorithmClass.cpp.i:
-	cd /home/david/Code/curvature_constraints/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/MDMAlgorithmClass.cpp.i
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/MDMAlgorithmClass.cpp.i
 .PHONY : MDMAlgorithmClass.cpp.i
 
 MDMAlgorithmClass.s: MDMAlgorithmClass.cpp.s
@@ -311,7 +338,7 @@ MDMAlgorithmClass.s: MDMAlgorithmClass.cpp.s
 
 # target to generate assembly for a file
 MDMAlgorithmClass.cpp.s:
-	cd /home/david/Code/curvature_constraints/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/MDMAlgorithmClass.cpp.s
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/MDMAlgorithmClass.cpp.s
 .PHONY : MDMAlgorithmClass.cpp.s
 
 ObjectiveFunctions.o: ObjectiveFunctions.cpp.o
@@ -320,7 +347,7 @@ ObjectiveFunctions.o: ObjectiveFunctions.cpp.o
 
 # target to build an object file
 ObjectiveFunctions.cpp.o:
-	cd /home/david/Code/curvature_constraints/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/ObjectiveFunctions.cpp.o
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/ObjectiveFunctions.cpp.o
 .PHONY : ObjectiveFunctions.cpp.o
 
 ObjectiveFunctions.i: ObjectiveFunctions.cpp.i
@@ -329,7 +356,7 @@ ObjectiveFunctions.i: ObjectiveFunctions.cpp.i
 
 # target to preprocess a source file
 ObjectiveFunctions.cpp.i:
-	cd /home/david/Code/curvature_constraints/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/ObjectiveFunctions.cpp.i
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/ObjectiveFunctions.cpp.i
 .PHONY : ObjectiveFunctions.cpp.i
 
 ObjectiveFunctions.s: ObjectiveFunctions.cpp.s
@@ -338,7 +365,7 @@ ObjectiveFunctions.s: ObjectiveFunctions.cpp.s
 
 # target to generate assembly for a file
 ObjectiveFunctions.cpp.s:
-	cd /home/david/Code/curvature_constraints/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/ObjectiveFunctions.cpp.s
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/ObjectiveFunctions.cpp.s
 .PHONY : ObjectiveFunctions.cpp.s
 
 ObstacleConstraints.o: ObstacleConstraints.cpp.o
@@ -347,7 +374,7 @@ ObstacleConstraints.o: ObstacleConstraints.cpp.o
 
 # target to build an object file
 ObstacleConstraints.cpp.o:
-	cd /home/david/Code/curvature_constraints/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/ObstacleConstraints.cpp.o
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/ObstacleConstraints.cpp.o
 .PHONY : ObstacleConstraints.cpp.o
 
 ObstacleConstraints.i: ObstacleConstraints.cpp.i
@@ -356,7 +383,7 @@ ObstacleConstraints.i: ObstacleConstraints.cpp.i
 
 # target to preprocess a source file
 ObstacleConstraints.cpp.i:
-	cd /home/david/Code/curvature_constraints/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/ObstacleConstraints.cpp.i
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/ObstacleConstraints.cpp.i
 .PHONY : ObstacleConstraints.cpp.i
 
 ObstacleConstraints.s: ObstacleConstraints.cpp.s
@@ -365,7 +392,7 @@ ObstacleConstraints.s: ObstacleConstraints.cpp.s
 
 # target to generate assembly for a file
 ObstacleConstraints.cpp.s:
-	cd /home/david/Code/curvature_constraints/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/ObstacleConstraints.cpp.s
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/ObstacleConstraints.cpp.s
 .PHONY : ObstacleConstraints.cpp.s
 
 ThirdOrderCurvatureBounds.o: ThirdOrderCurvatureBounds.cpp.o
@@ -374,7 +401,7 @@ ThirdOrderCurvatureBounds.o: ThirdOrderCurvatureBounds.cpp.o
 
 # target to build an object file
 ThirdOrderCurvatureBounds.cpp.o:
-	cd /home/david/Code/curvature_constraints/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/ThirdOrderCurvatureBounds.cpp.o
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/ThirdOrderCurvatureBounds.cpp.o
 .PHONY : ThirdOrderCurvatureBounds.cpp.o
 
 ThirdOrderCurvatureBounds.i: ThirdOrderCurvatureBounds.cpp.i
@@ -383,7 +410,7 @@ ThirdOrderCurvatureBounds.i: ThirdOrderCurvatureBounds.cpp.i
 
 # target to preprocess a source file
 ThirdOrderCurvatureBounds.cpp.i:
-	cd /home/david/Code/curvature_constraints/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/ThirdOrderCurvatureBounds.cpp.i
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/ThirdOrderCurvatureBounds.cpp.i
 .PHONY : ThirdOrderCurvatureBounds.cpp.i
 
 ThirdOrderCurvatureBounds.s: ThirdOrderCurvatureBounds.cpp.s
@@ -392,7 +419,7 @@ ThirdOrderCurvatureBounds.s: ThirdOrderCurvatureBounds.cpp.s
 
 # target to generate assembly for a file
 ThirdOrderCurvatureBounds.cpp.s:
-	cd /home/david/Code/curvature_constraints/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/ThirdOrderCurvatureBounds.cpp.s
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/ThirdOrderCurvatureBounds.cpp.s
 .PHONY : ThirdOrderCurvatureBounds.cpp.s
 
 WaypointConstraints.o: WaypointConstraints.cpp.o
@@ -401,7 +428,7 @@ WaypointConstraints.o: WaypointConstraints.cpp.o
 
 # target to build an object file
 WaypointConstraints.cpp.o:
-	cd /home/david/Code/curvature_constraints/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/WaypointConstraints.cpp.o
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/WaypointConstraints.cpp.o
 .PHONY : WaypointConstraints.cpp.o
 
 WaypointConstraints.i: WaypointConstraints.cpp.i
@@ -410,7 +437,7 @@ WaypointConstraints.i: WaypointConstraints.cpp.i
 
 # target to preprocess a source file
 WaypointConstraints.cpp.i:
-	cd /home/david/Code/curvature_constraints/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/WaypointConstraints.cpp.i
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/WaypointConstraints.cpp.i
 .PHONY : WaypointConstraints.cpp.i
 
 WaypointConstraints.s: WaypointConstraints.cpp.s
@@ -419,7 +446,7 @@ WaypointConstraints.s: WaypointConstraints.cpp.s
 
 # target to generate assembly for a file
 WaypointConstraints.cpp.s:
-	cd /home/david/Code/curvature_constraints/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/WaypointConstraints.cpp.s
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/WaypointConstraints.cpp.s
 .PHONY : WaypointConstraints.cpp.s
 
 # Help Target
@@ -446,6 +473,9 @@ help:
 	@echo "... CurvatureConstraints.o"
 	@echo "... CurvatureConstraints.i"
 	@echo "... CurvatureConstraints.s"
+	@echo "... DerivativeBounds.o"
+	@echo "... DerivativeBounds.i"
+	@echo "... DerivativeBounds.s"
 	@echo "... DerivativeEvaluator.o"
 	@echo "... DerivativeEvaluator.i"
 	@echo "... DerivativeEvaluator.s"
@@ -475,6 +505,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/david/Code/curvature_constraints/PathObjectivesAndConstraints/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

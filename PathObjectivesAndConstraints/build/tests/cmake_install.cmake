@@ -1,4 +1,4 @@
-# Install script for directory: /home/david/Code/curvature_constraints/PathObjectivesAndConstraints/tests
+# Install script for directory: /home/david/Code/path_generator/PathObjectivesAndConstraints/tests
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
