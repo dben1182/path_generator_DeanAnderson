@@ -14,11 +14,13 @@ class DerivativeBounds
         DerivativeBounds();
         double find_min_velocity_of_spline(double cont_pts[], int num_control_points, double scale_factor);
         double find_max_acceleration_of_spline(double cont_pts[], int num_control_points, double scale_factor);
+        std::array<double,2> find_max_velocity_and_time(Eigen::Matrix<double,D,4> &control_points, double &scale_factor);
         std::array<double,2> find_min_velocity_and_time(Eigen::Matrix<double,D,4> &control_points, double &scale_factor);
         std::array<double,2> find_max_acceleration_and_time(Eigen::Matrix<double,D,4> &control_points, double &scale_factor);
     private:
         CBindingHelper<D> cbind_help{};
         DerivativeEvaluator<D> d_eval{};
+        std::array<double,3> get_velocity_roots(Eigen::Matrix<double,D,4> &control_points, double &scale_factor);
 };
 #endif
 

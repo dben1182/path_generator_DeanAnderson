@@ -1,6 +1,8 @@
 #include "gtest/gtest.h"
 #include "DerivativeBounds.hpp"
 
+// Create test for max velocity, also check if these work for variable scale factors
+
 TEST(DerivativeBoundsTest, MinVelocity)
 {
     DerivativeBounds<2> d_bounds{};
@@ -13,6 +15,21 @@ TEST(DerivativeBoundsTest, MinVelocity)
     double min_velocity = min_velocity_and_time[0];
     double tolerance = 0.00001;
     EXPECT_NEAR(true_min_velocity, min_velocity,tolerance);
+}
+
+TEST(DerivativeBoundsTest, MaxVelocity)
+{
+    DerivativeBounds<3> d_bounds{};
+    double scale_factor = 1.5;
+    double true_max_velocity = 3.7214639159987115;
+    Eigen::Matrix<double, 3,4> control_points;
+    control_points << 5, 8, 6, 7,
+                    5, 11, 2, 7,
+                    8, 7, 5, 9; 
+    std::array<double,2> max_velocity_and_time = d_bounds.find_max_velocity_and_time(control_points,scale_factor);
+    double max_velocity = max_velocity_and_time[0];
+    double tolerance = 0.00001;
+    EXPECT_NEAR(true_max_velocity, max_velocity,tolerance);
 }
 
 TEST(DerivativeBoundsTest, MaxAcceleration)

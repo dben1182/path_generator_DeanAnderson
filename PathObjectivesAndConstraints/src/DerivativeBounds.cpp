@@ -49,15 +49,9 @@ double DerivativeBounds<D>::find_max_acceleration_of_spline(double cont_pts[], i
 template <int D>
 std::array<double,2> DerivativeBounds<D>::find_min_velocity_and_time(Eigen::Matrix<double,D,4> &control_points, double &scale_factor)
 {
-    Eigen::Matrix<double, 4,4> M = d_eval.get_third_order_M_matrix();
-    Eigen::Matrix<double, 4,4> J = M.transpose()*control_points.transpose()*control_points*M;
-    double A = 36*J(0,0);
-    double B = 12*J(0,1) + 24*J(1,0);
-    double C = 8*J(1,1) + 12*J(2,0);
-    double D_ = 4*J(2,1);
-    std::array<double,3> roots = CubicEquationSolver::solve_equation(A, B, C, D_);
+    std::array<double,3> roots = get_velocity_roots(control_points, scale_factor);
     double t0 = 0;
-    double tf = 1.0;
+    double tf = scale_factor;
     double time_at_min = t0;
     double min_velocity = d_eval.calculate_velocity_magnitude(t0,control_points,scale_factor);
     double velocity_at_tf = d_eval.calculate_velocity_magnitude(tf,control_points,scale_factor);
@@ -84,10 +78,59 @@ std::array<double,2> DerivativeBounds<D>::find_min_velocity_and_time(Eigen::Matr
 }
 
 template <int D>
+std::array<double,2> DerivativeBounds<D>::find_max_velocity_and_time(Eigen::Matrix<double,D,4> &control_points, double &scale_factor)
+{
+    std::array<double,3> roots = get_velocity_roots(control_points, scale_factor);
+    double t0 = 0;
+    double tf = scale_factor;
+    double time_at_max = t0;
+    double max_velocity = d_eval.calculate_velocity_magnitude(t0,control_points,scale_factor);
+    double velocity_at_tf = d_eval.calculate_velocity_magnitude(tf,control_points,scale_factor);
+    if (velocity_at_tf > max_velocity)
+    {
+        max_velocity = velocity_at_tf;
+        double time_at_max = tf;
+    }
+    for(int index = 0; index < 3; index++)
+    {
+        double root = roots[index];
+        if(root > 0 && root < 1.0)
+        {
+            double velocity = d_eval.calculate_velocity_magnitude(root, control_points,scale_factor);
+            if (velocity > max_velocity)
+            {
+                max_velocity = velocity;
+                double time_at_max = root;
+            }
+        }
+    }
+    std::array<double,2> max_velocity_and_time = {max_velocity, time_at_max};
+    return max_velocity_and_time;
+}
+
+template <int D>
+std::array<double,3> DerivativeBounds<D>::get_velocity_roots(Eigen::Matrix<double,D,4> &control_points, double &scale_factor)
+{
+    Eigen::Matrix<double, 4,4> M = d_eval.get_third_order_M_matrix();
+    Eigen::Matrix<double, 4,4> J = M.transpose()*control_points.transpose()*control_points*M;
+    double A = 36*J(0,0);
+    double B = 12*J(0,1) + 24*J(1,0);
+    double C = 8*J(1,1) + 12*J(2,0);
+    double D_ = 4*J(2,1);
+    std::array<double,3> roots = CubicEquationSolver::solve_equation(A, B, C, D_);
+    roots[0] = roots[0]*scale_factor;
+    roots[1] = roots[1]*scale_factor;
+    roots[2] = roots[2]*scale_factor;
+    return roots;
+}
+
+
+
+template <int D>
 std::array<double,2> DerivativeBounds<D>::find_max_acceleration_and_time(Eigen::Matrix<double,D,4> &control_points, double &scale_factor)
 {
     double t0 = 0;
-    double tf = 1.0;
+    double tf = scale_factor;
     double time_at_max = 0;
     double max_acceleration = d_eval.calculate_acceleration_magnitude(t0,control_points,scale_factor);
     double acceleration_at_tf = d_eval.calculate_acceleration_magnitude(tf, control_points,scale_factor);
