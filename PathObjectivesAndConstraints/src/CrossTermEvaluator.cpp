@@ -46,7 +46,29 @@ double CrossTermEvaluator<D>::calculate_curvature(double &t, Eigen::Matrix<doubl
 template <int D>
 bool CrossTermEvaluator<D>::check_if_not_ascending_colinear(double &t, Eigen::Matrix<double,D,4> &control_points, double &scale_factor)
 {
-    return false;
+    bool isNonAscendingColinear{false};
+    if (t > 0 && t < scale_factor)
+    {
+        double time_step = scale_factor/100;
+        double t_a = t - time_step;
+        double t_b = t;
+        double t_c = t + time_step;
+        if (t_a < 0){t_a = 0;};
+        if (t_b < 0){t_b = scale_factor;};
+        Eigen::Matrix<double,D,1> point_a = d_dt_eval.calculate_position_vector(t_a,control_points,scale_factor);
+        Eigen::Matrix<double,D,1> point_b = d_dt_eval.calculate_position_vector(t_b,control_points,scale_factor);
+        Eigen::Matrix<double,D,1> point_c = d_dt_eval.calculate_position_vector(t_c,control_points,scale_factor);
+        Eigen::Matrix<double,D,1> step_1 = point_b - point_a;
+        Eigen::Matrix<double,D,1> step_2 = point_c - point_b;
+        if (step_1.cwiseAbs().isApprox(step_2.cwiseAbs(), 0.00000001))
+        {
+            if(!step_1.isApprox(step_2, 0.00000001))
+            {
+                isNonAscendingColinear = true;
+            }
+        }
+    } 
+    return isNonAscendingColinear;
 }
 
 template <int D>
@@ -68,47 +90,6 @@ double CrossTermEvaluator<D>::calculate_cross_term_magnitude(double &t, Eigen::M
     }
     return cross_term_magnitude;
 }
-
-    // def get_angular_rate_at_time_t(self, time):
-    //     '''
-    //     This function evaluates the angular rate at time t
-    //     '''
-    //     dimension = get_dimension(self._control_points)
-    //     velocity = self.get_derivative_at_time_t(time,1)
-    //     if dimension > 3:
-    //         raise Exception("Curvature cannot be evaluated for higher than 3 dimensions")
-    //     if dimension == 1:
-    //         velocity_magnitude = np.linalg.norm(np.array([1 , velocity]))
-    //     else:
-    //         velocity_magnitude = np.linalg.norm(velocity)
-    //     centripetal_acceleration = self.get_centripetal_acceleration_at_time_t(time)
-    //     if velocity_magnitude < 0.1:
-    //         num_intervals = self._num_control_points - self._order
-    //         time_step = (self._end_time - self._start_time)/(100*num_intervals)
-    //         if time == self._start_time:
-    //             point_a = self.get_spline_at_time_t(time)
-    //             point_b = self.get_spline_at_time_t(time+time_step)
-    //             point_c = self.get_spline_at_time_t(time+2*time_step)
-    //         elif time == self._end_time:
-    //             point_a = self.get_spline_at_time_t(time-time_step*2)
-    //             point_b = self.get_spline_at_time_t(time-time_step)
-    //             point_c = self.get_spline_at_time_t(time)
-    //         else:
-    //             point_a = self.get_spline_at_time_t(time-time_step)
-    //             point_b = self.get_spline_at_time_t(time)
-    //             point_c = self.get_spline_at_time_t(time+time_step)
-    //         result = self.check_if_points_are_ascending_colinear(point_a, point_b, point_c)
-    //         if result == "colinear_ascending":
-    //             angular_rate = 0
-    //         elif result == "colinear_unordered":
-    //             angular_rate = sys.maxsize
-    //         elif velocity_magnitude < 1e-10:
-    //             angular_rate = 0
-    //         else:
-    //             angular_rate = centripetal_acceleration/velocity_magnitude
-    //     else:
-    //         angular_rate = centripetal_acceleration/velocity_magnitude
-    //     return angular_rate
 
 //Explicit template instantiations
 template class CrossTermEvaluator<2>;

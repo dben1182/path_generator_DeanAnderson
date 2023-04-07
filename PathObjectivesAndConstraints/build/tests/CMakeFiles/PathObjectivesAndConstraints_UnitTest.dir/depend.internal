@@ -8,6 +8,15 @@ tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestConvexHullCol
  ../src/ConvexHullCollisionChecker.hpp
  ../src/MDMAlgorithmClass.hpp
  /home/david/Code/path_generator/PathObjectivesAndConstraints/tests/UnitTestConvexHullCollisionChecker.cpp
+tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCrossTermBounds.cpp.o
+ ../src/CBindingHelper.hpp
+ ../src/CrossTermBounds.hpp
+ ../src/CrossTermEvaluator.hpp
+ ../src/CrossTermProperties.hpp
+ ../src/CubicEquationSolver.hpp
+ ../src/DerivativeBounds.hpp
+ ../src/DerivativeEvaluator.hpp
+ /home/david/Code/path_generator/PathObjectivesAndConstraints/tests/UnitTestCrossTermBounds.cpp
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCrossTermEvaluator.cpp.o
  ../src/CBindingHelper.hpp
  ../src/CrossTermEvaluator.hpp
@@ -15,17 +24,26 @@ tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCrossTermEval
  ../src/DerivativeBounds.hpp
  ../src/DerivativeEvaluator.hpp
  /home/david/Code/path_generator/PathObjectivesAndConstraints/tests/UnitTestCrossTermEvaluator.cpp
+tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCrossTermProperties.cpp.o
+ ../src/CBindingHelper.hpp
+ ../src/CrossTermEvaluator.hpp
+ ../src/CrossTermProperties.hpp
+ ../src/CubicEquationSolver.hpp
+ ../src/DerivativeBounds.hpp
+ ../src/DerivativeEvaluator.hpp
+ /home/david/Code/path_generator/PathObjectivesAndConstraints/tests/UnitTestCrossTermProperties.cpp
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCubicEquationSolver.cpp.o
  ../src/CubicEquationSolver.hpp
  /home/david/Code/path_generator/PathObjectivesAndConstraints/tests/UnitTestCubicEquationSolver.cpp
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCurvatureConstraints.cpp.o
  ../src/CBindingHelper.hpp
+ ../src/CrossTermBounds.hpp
  ../src/CrossTermEvaluator.hpp
+ ../src/CrossTermProperties.hpp
  ../src/CubicEquationSolver.hpp
  ../src/CurvatureConstraints.hpp
  ../src/DerivativeBounds.hpp
  ../src/DerivativeEvaluator.hpp
- ../src/ThirdOrderCurvatureBounds.hpp
  /home/david/Code/path_generator/PathObjectivesAndConstraints/tests/UnitTestCurvatureConstraints.cpp
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestDerivativeBounds.cpp.o
  ../src/CBindingHelper.hpp
@@ -52,14 +70,6 @@ tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestObstacleConst
  ../src/MDMAlgorithmClass.hpp
  ../src/ObstacleConstraints.hpp
  /home/david/Code/path_generator/PathObjectivesAndConstraints/tests/UnitTestObstacleConstraints.cpp
-tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestThirdOrderCurvatureBounds.cpp.o
- ../src/CBindingHelper.hpp
- ../src/CrossTermEvaluator.hpp
- ../src/CubicEquationSolver.hpp
- ../src/DerivativeBounds.hpp
- ../src/DerivativeEvaluator.hpp
- ../src/ThirdOrderCurvatureBounds.hpp
- /home/david/Code/path_generator/PathObjectivesAndConstraints/tests/UnitTestThirdOrderCurvatureBounds.cpp
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraints.cpp.o
  ../src/CBindingHelper.hpp
  ../src/CrossTermEvaluator.hpp

@@ -206,6 +206,33 @@ ConvexHullCollisionChecker.cpp.s:
 	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/ConvexHullCollisionChecker.cpp.s
 .PHONY : ConvexHullCollisionChecker.cpp.s
 
+CrossTermBounds.o: CrossTermBounds.cpp.o
+
+.PHONY : CrossTermBounds.o
+
+# target to build an object file
+CrossTermBounds.cpp.o:
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermBounds.cpp.o
+.PHONY : CrossTermBounds.cpp.o
+
+CrossTermBounds.i: CrossTermBounds.cpp.i
+
+.PHONY : CrossTermBounds.i
+
+# target to preprocess a source file
+CrossTermBounds.cpp.i:
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermBounds.cpp.i
+.PHONY : CrossTermBounds.cpp.i
+
+CrossTermBounds.s: CrossTermBounds.cpp.s
+
+.PHONY : CrossTermBounds.s
+
+# target to generate assembly for a file
+CrossTermBounds.cpp.s:
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermBounds.cpp.s
+.PHONY : CrossTermBounds.cpp.s
+
 CrossTermEvaluator.o: CrossTermEvaluator.cpp.o
 
 .PHONY : CrossTermEvaluator.o
@@ -232,6 +259,33 @@ CrossTermEvaluator.s: CrossTermEvaluator.cpp.s
 CrossTermEvaluator.cpp.s:
 	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermEvaluator.cpp.s
 .PHONY : CrossTermEvaluator.cpp.s
+
+CrossTermProperties.o: CrossTermProperties.cpp.o
+
+.PHONY : CrossTermProperties.o
+
+# target to build an object file
+CrossTermProperties.cpp.o:
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermProperties.cpp.o
+.PHONY : CrossTermProperties.cpp.o
+
+CrossTermProperties.i: CrossTermProperties.cpp.i
+
+.PHONY : CrossTermProperties.i
+
+# target to preprocess a source file
+CrossTermProperties.cpp.i:
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermProperties.cpp.i
+.PHONY : CrossTermProperties.cpp.i
+
+CrossTermProperties.s: CrossTermProperties.cpp.s
+
+.PHONY : CrossTermProperties.s
+
+# target to generate assembly for a file
+CrossTermProperties.cpp.s:
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermProperties.cpp.s
+.PHONY : CrossTermProperties.cpp.s
 
 CubicEquationSolver.o: CubicEquationSolver.cpp.o
 
@@ -422,33 +476,6 @@ ObstacleConstraints.cpp.s:
 	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/ObstacleConstraints.cpp.s
 .PHONY : ObstacleConstraints.cpp.s
 
-ThirdOrderCurvatureBounds.o: ThirdOrderCurvatureBounds.cpp.o
-
-.PHONY : ThirdOrderCurvatureBounds.o
-
-# target to build an object file
-ThirdOrderCurvatureBounds.cpp.o:
-	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/ThirdOrderCurvatureBounds.cpp.o
-.PHONY : ThirdOrderCurvatureBounds.cpp.o
-
-ThirdOrderCurvatureBounds.i: ThirdOrderCurvatureBounds.cpp.i
-
-.PHONY : ThirdOrderCurvatureBounds.i
-
-# target to preprocess a source file
-ThirdOrderCurvatureBounds.cpp.i:
-	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/ThirdOrderCurvatureBounds.cpp.i
-.PHONY : ThirdOrderCurvatureBounds.cpp.i
-
-ThirdOrderCurvatureBounds.s: ThirdOrderCurvatureBounds.cpp.s
-
-.PHONY : ThirdOrderCurvatureBounds.s
-
-# target to generate assembly for a file
-ThirdOrderCurvatureBounds.cpp.s:
-	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/ThirdOrderCurvatureBounds.cpp.s
-.PHONY : ThirdOrderCurvatureBounds.cpp.s
-
 WaypointConstraints.o: WaypointConstraints.cpp.o
 
 .PHONY : WaypointConstraints.o
@@ -494,9 +521,15 @@ help:
 	@echo "... ConvexHullCollisionChecker.o"
 	@echo "... ConvexHullCollisionChecker.i"
 	@echo "... ConvexHullCollisionChecker.s"
+	@echo "... CrossTermBounds.o"
+	@echo "... CrossTermBounds.i"
+	@echo "... CrossTermBounds.s"
 	@echo "... CrossTermEvaluator.o"
 	@echo "... CrossTermEvaluator.i"
 	@echo "... CrossTermEvaluator.s"
+	@echo "... CrossTermProperties.o"
+	@echo "... CrossTermProperties.i"
+	@echo "... CrossTermProperties.s"
 	@echo "... CubicEquationSolver.o"
 	@echo "... CubicEquationSolver.i"
 	@echo "... CubicEquationSolver.s"
@@ -518,9 +551,6 @@ help:
 	@echo "... ObstacleConstraints.o"
 	@echo "... ObstacleConstraints.i"
 	@echo "... ObstacleConstraints.s"
-	@echo "... ThirdOrderCurvatureBounds.o"
-	@echo "... ThirdOrderCurvatureBounds.i"
-	@echo "... ThirdOrderCurvatureBounds.s"
 	@echo "... WaypointConstraints.o"
 	@echo "... WaypointConstraints.i"
 	@echo "... WaypointConstraints.s"

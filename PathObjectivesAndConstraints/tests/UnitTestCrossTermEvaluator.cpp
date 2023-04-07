@@ -29,3 +29,33 @@ TEST(CrossTermEvaluatorTest, CurvatureMagnitude)
     EXPECT_NEAR(true_curvature, curvature, tolerance);
 }
 
+
+TEST(CrossTermEvaluatorTest, CurvatureMagnitudeZeroVel)
+{
+    CrossTermEvaluator<3> c_eval{};
+    Eigen::Matrix<double,3,4> control_points;
+    control_points << 0, 0, 0, 4,
+                      0, 0, 0, 7,
+                      0, 0, 0, 9;
+    double scale_factor = 1.0;
+    double t = 0.0;
+    double true_curvature = 0;
+    double curvature = c_eval.calculate_curvature(t, control_points, scale_factor);
+    double tolerance = 0.00001;
+    EXPECT_NEAR(true_curvature, curvature, tolerance);
+}
+
+TEST(CrossTermEvaluatorTest, CurvatureMagnitudeSharp180Turn)
+{
+    CrossTermEvaluator<3> c_eval{};
+    Eigen::Matrix<double,3,4> control_points;
+    control_points << 0, 3, 3, 0,
+                      0, 5, 5, 0,
+                      0, 2, 2, 0;
+    double scale_factor = 1.0;
+    double t = 0.5;
+    double true_curvature = std::numeric_limits<double>::max();
+    double curvature = c_eval.calculate_curvature(t, control_points, scale_factor);
+    double tolerance = 0.00001;
+    EXPECT_NEAR(true_curvature, curvature, tolerance);
+}

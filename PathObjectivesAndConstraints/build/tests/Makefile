@@ -179,6 +179,33 @@ UnitTestConvexHullCollisionChecker.cpp.s:
 	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/build.make tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestConvexHullCollisionChecker.cpp.s
 .PHONY : UnitTestConvexHullCollisionChecker.cpp.s
 
+UnitTestCrossTermBounds.o: UnitTestCrossTermBounds.cpp.o
+
+.PHONY : UnitTestCrossTermBounds.o
+
+# target to build an object file
+UnitTestCrossTermBounds.cpp.o:
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/build.make tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCrossTermBounds.cpp.o
+.PHONY : UnitTestCrossTermBounds.cpp.o
+
+UnitTestCrossTermBounds.i: UnitTestCrossTermBounds.cpp.i
+
+.PHONY : UnitTestCrossTermBounds.i
+
+# target to preprocess a source file
+UnitTestCrossTermBounds.cpp.i:
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/build.make tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCrossTermBounds.cpp.i
+.PHONY : UnitTestCrossTermBounds.cpp.i
+
+UnitTestCrossTermBounds.s: UnitTestCrossTermBounds.cpp.s
+
+.PHONY : UnitTestCrossTermBounds.s
+
+# target to generate assembly for a file
+UnitTestCrossTermBounds.cpp.s:
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/build.make tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCrossTermBounds.cpp.s
+.PHONY : UnitTestCrossTermBounds.cpp.s
+
 UnitTestCrossTermEvaluator.o: UnitTestCrossTermEvaluator.cpp.o
 
 .PHONY : UnitTestCrossTermEvaluator.o
@@ -205,6 +232,33 @@ UnitTestCrossTermEvaluator.s: UnitTestCrossTermEvaluator.cpp.s
 UnitTestCrossTermEvaluator.cpp.s:
 	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/build.make tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCrossTermEvaluator.cpp.s
 .PHONY : UnitTestCrossTermEvaluator.cpp.s
+
+UnitTestCrossTermProperties.o: UnitTestCrossTermProperties.cpp.o
+
+.PHONY : UnitTestCrossTermProperties.o
+
+# target to build an object file
+UnitTestCrossTermProperties.cpp.o:
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/build.make tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCrossTermProperties.cpp.o
+.PHONY : UnitTestCrossTermProperties.cpp.o
+
+UnitTestCrossTermProperties.i: UnitTestCrossTermProperties.cpp.i
+
+.PHONY : UnitTestCrossTermProperties.i
+
+# target to preprocess a source file
+UnitTestCrossTermProperties.cpp.i:
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/build.make tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCrossTermProperties.cpp.i
+.PHONY : UnitTestCrossTermProperties.cpp.i
+
+UnitTestCrossTermProperties.s: UnitTestCrossTermProperties.cpp.s
+
+.PHONY : UnitTestCrossTermProperties.s
+
+# target to generate assembly for a file
+UnitTestCrossTermProperties.cpp.s:
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/build.make tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCrossTermProperties.cpp.s
+.PHONY : UnitTestCrossTermProperties.cpp.s
 
 UnitTestCubicEquationSolver.o: UnitTestCubicEquationSolver.cpp.o
 
@@ -395,33 +449,6 @@ UnitTestObstacleConstraints.cpp.s:
 	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/build.make tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestObstacleConstraints.cpp.s
 .PHONY : UnitTestObstacleConstraints.cpp.s
 
-UnitTestThirdOrderCurvatureBounds.o: UnitTestThirdOrderCurvatureBounds.cpp.o
-
-.PHONY : UnitTestThirdOrderCurvatureBounds.o
-
-# target to build an object file
-UnitTestThirdOrderCurvatureBounds.cpp.o:
-	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/build.make tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestThirdOrderCurvatureBounds.cpp.o
-.PHONY : UnitTestThirdOrderCurvatureBounds.cpp.o
-
-UnitTestThirdOrderCurvatureBounds.i: UnitTestThirdOrderCurvatureBounds.cpp.i
-
-.PHONY : UnitTestThirdOrderCurvatureBounds.i
-
-# target to preprocess a source file
-UnitTestThirdOrderCurvatureBounds.cpp.i:
-	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/build.make tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestThirdOrderCurvatureBounds.cpp.i
-.PHONY : UnitTestThirdOrderCurvatureBounds.cpp.i
-
-UnitTestThirdOrderCurvatureBounds.s: UnitTestThirdOrderCurvatureBounds.cpp.s
-
-.PHONY : UnitTestThirdOrderCurvatureBounds.s
-
-# target to generate assembly for a file
-UnitTestThirdOrderCurvatureBounds.cpp.s:
-	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/build.make tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestThirdOrderCurvatureBounds.cpp.s
-.PHONY : UnitTestThirdOrderCurvatureBounds.cpp.s
-
 UnitTestWaypointConstraints.o: UnitTestWaypointConstraints.cpp.o
 
 .PHONY : UnitTestWaypointConstraints.o
@@ -464,9 +491,15 @@ help:
 	@echo "... UnitTestConvexHullCollisionChecker.o"
 	@echo "... UnitTestConvexHullCollisionChecker.i"
 	@echo "... UnitTestConvexHullCollisionChecker.s"
+	@echo "... UnitTestCrossTermBounds.o"
+	@echo "... UnitTestCrossTermBounds.i"
+	@echo "... UnitTestCrossTermBounds.s"
 	@echo "... UnitTestCrossTermEvaluator.o"
 	@echo "... UnitTestCrossTermEvaluator.i"
 	@echo "... UnitTestCrossTermEvaluator.s"
+	@echo "... UnitTestCrossTermProperties.o"
+	@echo "... UnitTestCrossTermProperties.i"
+	@echo "... UnitTestCrossTermProperties.s"
 	@echo "... UnitTestCubicEquationSolver.o"
 	@echo "... UnitTestCubicEquationSolver.i"
 	@echo "... UnitTestCubicEquationSolver.s"
@@ -488,9 +521,6 @@ help:
 	@echo "... UnitTestObstacleConstraints.o"
 	@echo "... UnitTestObstacleConstraints.i"
 	@echo "... UnitTestObstacleConstraints.s"
-	@echo "... UnitTestThirdOrderCurvatureBounds.o"
-	@echo "... UnitTestThirdOrderCurvatureBounds.i"
-	@echo "... UnitTestThirdOrderCurvatureBounds.s"
 	@echo "... UnitTestWaypointConstraints.o"
 	@echo "... UnitTestWaypointConstraints.i"
 	@echo "... UnitTestWaypointConstraints.s"

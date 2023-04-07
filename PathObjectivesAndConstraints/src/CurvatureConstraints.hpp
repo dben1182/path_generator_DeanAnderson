@@ -1,6 +1,6 @@
 #ifndef CURVATURECONSTRAINTS_HPP
 #define CURVATURECONSTRAINTS_HPP
-#include "ThirdOrderCurvatureBounds.hpp"
+#include "CrossTermBounds.hpp"
 #include "CBindingHelper.hpp"
 
 template <int D>
@@ -11,7 +11,7 @@ class CurvatureConstraints
         double get_spline_curvature_constraint(double cont_pts[], int num_cont_pts, double max_curvature);
         double* get_interval_curvature_constraints(double cont_pts[], int num_cont_pts, double max_curvature);
     private:
-        ThirdOrderCurvatureBounds<D> curv_bound{};
+        CrossTermBounds<D> curv_bound{};
         CBindingHelper<D> cbind_help{};
 };
 

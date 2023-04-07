@@ -11,6 +11,15 @@ src/CMakeFiles/PathObjectivesAndConstraints.dir/ConvexHullCollisionChecker.cpp.o
 src/CMakeFiles/PathObjectivesAndConstraints.dir/ConvexHullCollisionChecker.cpp.o: ../src/ConvexHullCollisionChecker.hpp
 src/CMakeFiles/PathObjectivesAndConstraints.dir/ConvexHullCollisionChecker.cpp.o: ../src/MDMAlgorithmClass.hpp
 
+src/CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermBounds.cpp.o: ../src/CBindingHelper.hpp
+src/CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermBounds.cpp.o: ../src/CrossTermBounds.cpp
+src/CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermBounds.cpp.o: ../src/CrossTermBounds.hpp
+src/CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermBounds.cpp.o: ../src/CrossTermEvaluator.hpp
+src/CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermBounds.cpp.o: ../src/CrossTermProperties.hpp
+src/CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermBounds.cpp.o: ../src/CubicEquationSolver.hpp
+src/CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermBounds.cpp.o: ../src/DerivativeBounds.hpp
+src/CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermBounds.cpp.o: ../src/DerivativeEvaluator.hpp
+
 src/CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermEvaluator.cpp.o: ../src/CBindingHelper.hpp
 src/CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermEvaluator.cpp.o: ../src/CrossTermEvaluator.cpp
 src/CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermEvaluator.cpp.o: ../src/CrossTermEvaluator.hpp
@@ -18,17 +27,26 @@ src/CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermEvaluator.cpp.o: ../src
 src/CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermEvaluator.cpp.o: ../src/DerivativeBounds.hpp
 src/CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermEvaluator.cpp.o: ../src/DerivativeEvaluator.hpp
 
+src/CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermProperties.cpp.o: ../src/CBindingHelper.hpp
+src/CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermProperties.cpp.o: ../src/CrossTermEvaluator.hpp
+src/CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermProperties.cpp.o: ../src/CrossTermProperties.cpp
+src/CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermProperties.cpp.o: ../src/CrossTermProperties.hpp
+src/CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermProperties.cpp.o: ../src/CubicEquationSolver.hpp
+src/CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermProperties.cpp.o: ../src/DerivativeBounds.hpp
+src/CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermProperties.cpp.o: ../src/DerivativeEvaluator.hpp
+
 src/CMakeFiles/PathObjectivesAndConstraints.dir/CubicEquationSolver.cpp.o: ../src/CubicEquationSolver.cpp
 src/CMakeFiles/PathObjectivesAndConstraints.dir/CubicEquationSolver.cpp.o: ../src/CubicEquationSolver.hpp
 
 src/CMakeFiles/PathObjectivesAndConstraints.dir/CurvatureConstraints.cpp.o: ../src/CBindingHelper.hpp
+src/CMakeFiles/PathObjectivesAndConstraints.dir/CurvatureConstraints.cpp.o: ../src/CrossTermBounds.hpp
 src/CMakeFiles/PathObjectivesAndConstraints.dir/CurvatureConstraints.cpp.o: ../src/CrossTermEvaluator.hpp
+src/CMakeFiles/PathObjectivesAndConstraints.dir/CurvatureConstraints.cpp.o: ../src/CrossTermProperties.hpp
 src/CMakeFiles/PathObjectivesAndConstraints.dir/CurvatureConstraints.cpp.o: ../src/CubicEquationSolver.hpp
 src/CMakeFiles/PathObjectivesAndConstraints.dir/CurvatureConstraints.cpp.o: ../src/CurvatureConstraints.cpp
 src/CMakeFiles/PathObjectivesAndConstraints.dir/CurvatureConstraints.cpp.o: ../src/CurvatureConstraints.hpp
 src/CMakeFiles/PathObjectivesAndConstraints.dir/CurvatureConstraints.cpp.o: ../src/DerivativeBounds.hpp
 src/CMakeFiles/PathObjectivesAndConstraints.dir/CurvatureConstraints.cpp.o: ../src/DerivativeEvaluator.hpp
-src/CMakeFiles/PathObjectivesAndConstraints.dir/CurvatureConstraints.cpp.o: ../src/ThirdOrderCurvatureBounds.hpp
 
 src/CMakeFiles/PathObjectivesAndConstraints.dir/DerivativeBounds.cpp.o: ../src/CBindingHelper.hpp
 src/CMakeFiles/PathObjectivesAndConstraints.dir/DerivativeBounds.cpp.o: ../src/CubicEquationSolver.hpp
@@ -54,14 +72,6 @@ src/CMakeFiles/PathObjectivesAndConstraints.dir/ObstacleConstraints.cpp.o: ../sr
 src/CMakeFiles/PathObjectivesAndConstraints.dir/ObstacleConstraints.cpp.o: ../src/MDMAlgorithmClass.hpp
 src/CMakeFiles/PathObjectivesAndConstraints.dir/ObstacleConstraints.cpp.o: ../src/ObstacleConstraints.cpp
 src/CMakeFiles/PathObjectivesAndConstraints.dir/ObstacleConstraints.cpp.o: ../src/ObstacleConstraints.hpp
-
-src/CMakeFiles/PathObjectivesAndConstraints.dir/ThirdOrderCurvatureBounds.cpp.o: ../src/CBindingHelper.hpp
-src/CMakeFiles/PathObjectivesAndConstraints.dir/ThirdOrderCurvatureBounds.cpp.o: ../src/CrossTermEvaluator.hpp
-src/CMakeFiles/PathObjectivesAndConstraints.dir/ThirdOrderCurvatureBounds.cpp.o: ../src/CubicEquationSolver.hpp
-src/CMakeFiles/PathObjectivesAndConstraints.dir/ThirdOrderCurvatureBounds.cpp.o: ../src/DerivativeBounds.hpp
-src/CMakeFiles/PathObjectivesAndConstraints.dir/ThirdOrderCurvatureBounds.cpp.o: ../src/DerivativeEvaluator.hpp
-src/CMakeFiles/PathObjectivesAndConstraints.dir/ThirdOrderCurvatureBounds.cpp.o: ../src/ThirdOrderCurvatureBounds.cpp
-src/CMakeFiles/PathObjectivesAndConstraints.dir/ThirdOrderCurvatureBounds.cpp.o: ../src/ThirdOrderCurvatureBounds.hpp
 
 src/CMakeFiles/PathObjectivesAndConstraints.dir/WaypointConstraints.cpp.o: ../src/CBindingHelper.hpp
 src/CMakeFiles/PathObjectivesAndConstraints.dir/WaypointConstraints.cpp.o: ../src/CrossTermEvaluator.hpp

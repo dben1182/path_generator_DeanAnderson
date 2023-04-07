@@ -9,8 +9,6 @@ add_library(${PROJECT_NAME} SHARED
     MDMAlgorithmClass.hpp
     DerivativeEvaluator.cpp 
     DerivativeEvaluator.hpp
-    ThirdOrderCurvatureBounds.cpp
-    ThirdOrderCurvatureBounds.hpp
     WaypointConstraints.cpp
     WaypointConstraints.hpp
     ObjectiveFunctions.cpp
@@ -24,6 +22,10 @@ add_library(${PROJECT_NAME} SHARED
     DerivativeBounds.cpp
     DerivativeBounds.hpp
     CrossTermEvaluator.cpp
-    CrossTermEvaluator.hpp)
+    CrossTermEvaluator.hpp
+    CrossTermProperties.cpp
+    CrossTermProperties.hpp
+    CrossTermBounds.hpp
+    CrossTermBounds.cpp)
 
 target_include_directories(${PROJECT_NAME} PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/src")
