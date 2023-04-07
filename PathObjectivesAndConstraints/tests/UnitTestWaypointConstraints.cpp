@@ -75,11 +75,10 @@ TEST(WaypointConstraintTests, CurvatureCase)
                                5, 4, 5, 6, 8, 7, 5, 9};
     bool switches[] = {true, true};
     int num_control_points = 8;
-    double scale_factor = 2;
     double true_constraints[] = {0,0};
     double desired_curvatures[] = {0, 1.5574517574154207 };
     double* constraints = waypoint_const.curvature_at_waypoints_constraints(control_points, num_control_points,
-                        scale_factor, desired_curvatures, switches);
+            desired_curvatures, switches);
     double tolerance = 0.00001;
     EXPECT_NEAR(constraints[0], true_constraints[0], tolerance);
     EXPECT_NEAR(constraints[1], true_constraints[1], tolerance);

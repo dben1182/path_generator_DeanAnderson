@@ -14,6 +14,18 @@ TEST(DerivativeEvaluationTest, MatrixRetrieval)
     EXPECT_TRUE(true_M.isApprox(M,tolerance));
 }
 
+TEST(DerivativeEvaluationTest, TVectorRetrieval)
+{
+    DerivativeEvaluator<2> c_eval{};
+    double scale_factor = 1.5;
+    Eigen::Vector4d true_t_vector;
+    true_t_vector << 0.012703703703703701, 0.054444444444444434, 0.2333333333333333, 1;
+    double t = 0.35;
+    Eigen::Vector4d t_vector = c_eval.get_third_order_T_vector(t,scale_factor);
+    double tolerance = 0.00001;
+    EXPECT_TRUE(true_t_vector.isApprox(t_vector, tolerance));
+}
+
 TEST(DerivativeEvaluationTest, DerivativeVectorRetrieval)
 {
     DerivativeEvaluator<2> c_eval{};
@@ -72,6 +84,22 @@ TEST(DerivativeEvaluationTest, SecondDerivativeVectorRetrievalError)
         EXPECT_STREQ("t value should be between 0 and 1", e.what());
         throw;
     }, std::invalid_argument);
+}
+
+TEST(DerivativeEvaluationTest, PositionVector)
+{
+    DerivativeEvaluator<3> c_eval{};
+    double scale_factor = 1.5;
+    Eigen::Matrix<double, 3,4> control_points;
+    control_points << 5, 8, 6, 7,
+                      5, 4, 2, 7,
+                      8, 7, 5, 9;
+    Eigen::Vector3d true_position;
+    true_position << 7.14750617, 3.42306173, 6.41990123;
+    double time_t = 0.4;
+    Eigen::Vector3d position = c_eval.calculate_position_vector(time_t, control_points,scale_factor);
+    double tolerance = 0.000000001;
+    EXPECT_TRUE(true_position.isApprox(position, tolerance));
 }
 
 TEST(DerivativeEvaluationTest, VelocityMagnitude)

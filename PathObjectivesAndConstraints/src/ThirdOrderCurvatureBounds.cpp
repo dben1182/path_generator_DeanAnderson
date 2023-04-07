@@ -203,9 +203,7 @@ Eigen::Vector4d ThirdOrderCurvatureBounds<D>::get_3D_cross_coefficients(Eigen::M
 template <int D>
 double ThirdOrderCurvatureBounds<D>::calculate_cross_term_magnitude(double &t, Eigen::Matrix<double,D,4> &control_points, double &scale_factor)
 {
-    Eigen::Matrix<double,D,1> velocity_vector = d_dt_eval.calculate_velocity_vector(t, control_points, scale_factor);
-    Eigen::Matrix<double,D,1> acceleration_vector = d_dt_eval.calculate_acceleration_vector(t, control_points, scale_factor);
-    double cross_term_magnitude = cbind_help.cross_term_magnitude(velocity_vector, acceleration_vector);
+    double cross_term_magnitude = c_eval.calculate_cross_term_magnitude(t, control_points, scale_factor);
     return cross_term_magnitude;
 }
 

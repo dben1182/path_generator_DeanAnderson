@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestBsplineToMinvo.cpp.o"
   "CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestConvexHullCollisionChecker.cpp.o"
+  "CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCrossTermEvaluator.cpp.o"
   "CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCubicEquationSolver.cpp.o"
   "CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCurvatureConstraints.cpp.o"
   "CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestDerivativeBounds.cpp.o"

@@ -206,6 +206,33 @@ ConvexHullCollisionChecker.cpp.s:
 	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/ConvexHullCollisionChecker.cpp.s
 .PHONY : ConvexHullCollisionChecker.cpp.s
 
+CrossTermEvaluator.o: CrossTermEvaluator.cpp.o
+
+.PHONY : CrossTermEvaluator.o
+
+# target to build an object file
+CrossTermEvaluator.cpp.o:
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermEvaluator.cpp.o
+.PHONY : CrossTermEvaluator.cpp.o
+
+CrossTermEvaluator.i: CrossTermEvaluator.cpp.i
+
+.PHONY : CrossTermEvaluator.i
+
+# target to preprocess a source file
+CrossTermEvaluator.cpp.i:
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermEvaluator.cpp.i
+.PHONY : CrossTermEvaluator.cpp.i
+
+CrossTermEvaluator.s: CrossTermEvaluator.cpp.s
+
+.PHONY : CrossTermEvaluator.s
+
+# target to generate assembly for a file
+CrossTermEvaluator.cpp.s:
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermEvaluator.cpp.s
+.PHONY : CrossTermEvaluator.cpp.s
+
 CubicEquationSolver.o: CubicEquationSolver.cpp.o
 
 .PHONY : CubicEquationSolver.o
@@ -467,6 +494,9 @@ help:
 	@echo "... ConvexHullCollisionChecker.o"
 	@echo "... ConvexHullCollisionChecker.i"
 	@echo "... ConvexHullCollisionChecker.s"
+	@echo "... CrossTermEvaluator.o"
+	@echo "... CrossTermEvaluator.i"
+	@echo "... CrossTermEvaluator.s"
 	@echo "... CubicEquationSolver.o"
 	@echo "... CubicEquationSolver.i"
 	@echo "... CubicEquationSolver.s"

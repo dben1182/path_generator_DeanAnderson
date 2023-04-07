@@ -10,6 +10,15 @@ DerivativeEvaluator<D>::DerivativeEvaluator()
 }
 
 template <int D>
+Eigen::Matrix<double,D,1> DerivativeEvaluator<D>::calculate_position_vector(double &t, Eigen::Matrix<double,D,4> &control_points, double &scale_factor)
+{
+    Eigen::Vector4d T = get_third_order_T_vector(t, scale_factor);
+    Eigen::Matrix<double,4,4> M = get_third_order_M_matrix();
+    Eigen::Matrix<double,D,1> position_vector = control_points*M*T;
+    return position_vector;
+}
+
+template <int D>
 Eigen::Matrix<double,D,1> DerivativeEvaluator<D>::calculate_velocity_vector(double &t, Eigen::Matrix<double,D,4> &control_points, double &scale_factor)
 {
     Eigen::Vector4d dT = get_third_order_T_derivative_vector(t, scale_factor);
@@ -55,6 +64,22 @@ Eigen::Matrix<double, 4,4> DerivativeEvaluator<D>::get_third_order_M_matrix()
 }
 
 template <int D>
+Eigen::Vector4d DerivativeEvaluator<D>::get_third_order_T_vector(double &t, double &scale_factor)
+{
+    Eigen::Vector4d t_vector;
+    if (t < 0 || t/scale_factor > 1)
+    {
+        throw std::invalid_argument("t value should be between 0 and 1");
+    }
+    else
+    {
+        double alpha = scale_factor;
+        t_vector << t*t*t/(alpha*alpha*alpha) , t*t/(alpha*alpha) , t/alpha , 1;
+    }
+    return t_vector;
+}
+
+template <int D>
 Eigen::Vector4d DerivativeEvaluator<D>::get_third_order_T_derivative_vector(double &t, double &scale_factor)
 {
     double alpha = scale_factor;
@@ -76,6 +101,7 @@ Eigen::Vector4d DerivativeEvaluator<D>::get_third_order_T_derivative_vector(doub
     }
     return t_vector;
 }
+
 
 template <int D>
 Eigen::Vector4d DerivativeEvaluator<D>::get_third_order_T_second_derivative_vector(double &t,  double &scale_factor)

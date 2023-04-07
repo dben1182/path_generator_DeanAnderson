@@ -8,11 +8,19 @@ tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestConvexHullCol
  ../src/ConvexHullCollisionChecker.hpp
  ../src/MDMAlgorithmClass.hpp
  /home/david/Code/path_generator/PathObjectivesAndConstraints/tests/UnitTestConvexHullCollisionChecker.cpp
+tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCrossTermEvaluator.cpp.o
+ ../src/CBindingHelper.hpp
+ ../src/CrossTermEvaluator.hpp
+ ../src/CubicEquationSolver.hpp
+ ../src/DerivativeBounds.hpp
+ ../src/DerivativeEvaluator.hpp
+ /home/david/Code/path_generator/PathObjectivesAndConstraints/tests/UnitTestCrossTermEvaluator.cpp
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCubicEquationSolver.cpp.o
  ../src/CubicEquationSolver.hpp
  /home/david/Code/path_generator/PathObjectivesAndConstraints/tests/UnitTestCubicEquationSolver.cpp
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCurvatureConstraints.cpp.o
  ../src/CBindingHelper.hpp
+ ../src/CrossTermEvaluator.hpp
  ../src/CubicEquationSolver.hpp
  ../src/CurvatureConstraints.hpp
  ../src/DerivativeBounds.hpp
@@ -46,6 +54,7 @@ tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestObstacleConst
  /home/david/Code/path_generator/PathObjectivesAndConstraints/tests/UnitTestObstacleConstraints.cpp
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestThirdOrderCurvatureBounds.cpp.o
  ../src/CBindingHelper.hpp
+ ../src/CrossTermEvaluator.hpp
  ../src/CubicEquationSolver.hpp
  ../src/DerivativeBounds.hpp
  ../src/DerivativeEvaluator.hpp
@@ -53,7 +62,9 @@ tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestThirdOrderCur
  /home/david/Code/path_generator/PathObjectivesAndConstraints/tests/UnitTestThirdOrderCurvatureBounds.cpp
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraints.cpp.o
  ../src/CBindingHelper.hpp
+ ../src/CrossTermEvaluator.hpp
  ../src/CubicEquationSolver.hpp
+ ../src/DerivativeBounds.hpp
  ../src/DerivativeEvaluator.hpp
  ../src/WaypointConstraints.hpp
  /home/david/Code/path_generator/PathObjectivesAndConstraints/tests/UnitTestWaypointConstraints.cpp

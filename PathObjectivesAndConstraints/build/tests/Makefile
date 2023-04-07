@@ -179,6 +179,33 @@ UnitTestConvexHullCollisionChecker.cpp.s:
 	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/build.make tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestConvexHullCollisionChecker.cpp.s
 .PHONY : UnitTestConvexHullCollisionChecker.cpp.s
 
+UnitTestCrossTermEvaluator.o: UnitTestCrossTermEvaluator.cpp.o
+
+.PHONY : UnitTestCrossTermEvaluator.o
+
+# target to build an object file
+UnitTestCrossTermEvaluator.cpp.o:
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/build.make tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCrossTermEvaluator.cpp.o
+.PHONY : UnitTestCrossTermEvaluator.cpp.o
+
+UnitTestCrossTermEvaluator.i: UnitTestCrossTermEvaluator.cpp.i
+
+.PHONY : UnitTestCrossTermEvaluator.i
+
+# target to preprocess a source file
+UnitTestCrossTermEvaluator.cpp.i:
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/build.make tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCrossTermEvaluator.cpp.i
+.PHONY : UnitTestCrossTermEvaluator.cpp.i
+
+UnitTestCrossTermEvaluator.s: UnitTestCrossTermEvaluator.cpp.s
+
+.PHONY : UnitTestCrossTermEvaluator.s
+
+# target to generate assembly for a file
+UnitTestCrossTermEvaluator.cpp.s:
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/build.make tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCrossTermEvaluator.cpp.s
+.PHONY : UnitTestCrossTermEvaluator.cpp.s
+
 UnitTestCubicEquationSolver.o: UnitTestCubicEquationSolver.cpp.o
 
 .PHONY : UnitTestCubicEquationSolver.o
@@ -437,6 +464,9 @@ help:
 	@echo "... UnitTestConvexHullCollisionChecker.o"
 	@echo "... UnitTestConvexHullCollisionChecker.i"
 	@echo "... UnitTestConvexHullCollisionChecker.s"
+	@echo "... UnitTestCrossTermEvaluator.o"
+	@echo "... UnitTestCrossTermEvaluator.i"
+	@echo "... UnitTestCrossTermEvaluator.s"
 	@echo "... UnitTestCubicEquationSolver.o"
 	@echo "... UnitTestCubicEquationSolver.i"
 	@echo "... UnitTestCubicEquationSolver.s"

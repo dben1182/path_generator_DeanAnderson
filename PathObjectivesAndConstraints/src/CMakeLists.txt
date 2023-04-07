@@ -22,6 +22,8 @@ add_library(${PROJECT_NAME} SHARED
     CurvatureConstraints.cpp
     CurvatureConstraints.hpp
     DerivativeBounds.cpp
-    DerivativeBounds.hpp)
+    DerivativeBounds.hpp
+    CrossTermEvaluator.cpp
+    CrossTermEvaluator.hpp)
 
 target_include_directories(${PROJECT_NAME} PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/src")

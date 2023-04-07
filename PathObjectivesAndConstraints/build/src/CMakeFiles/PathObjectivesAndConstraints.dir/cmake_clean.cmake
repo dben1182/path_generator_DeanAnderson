@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/PathObjectivesAndConstraints.dir/BsplineToMinvo.cpp.o"
   "CMakeFiles/PathObjectivesAndConstraints.dir/CBindingHelper.cpp.o"
   "CMakeFiles/PathObjectivesAndConstraints.dir/ConvexHullCollisionChecker.cpp.o"
+  "CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermEvaluator.cpp.o"
   "CMakeFiles/PathObjectivesAndConstraints.dir/CubicEquationSolver.cpp.o"
   "CMakeFiles/PathObjectivesAndConstraints.dir/CurvatureConstraints.cpp.o"
   "CMakeFiles/PathObjectivesAndConstraints.dir/DerivativeBounds.cpp.o"

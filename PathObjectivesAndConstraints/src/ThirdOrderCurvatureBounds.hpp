@@ -7,6 +7,7 @@
 #include "CBindingHelper.hpp"
 #include "DerivativeBounds.hpp"
 #include "DerivativeEvaluator.hpp"
+#include "CrossTermEvaluator.hpp"
 
 template <int D> // D is the dimension of the spline
 class ThirdOrderCurvatureBounds
@@ -20,6 +21,7 @@ class ThirdOrderCurvatureBounds
         CBindingHelper<D> cbind_help{};
         DerivativeBounds<D> d_dt_bounds{};
         DerivativeEvaluator<D> d_dt_eval{};
+        CrossTermEvaluator<D> c_eval{};
         double find_maximum_cross_term(Eigen::Matrix<double,D,4> &control_points, double &scale_factor);
         Eigen::Vector4d get_2D_cross_coefficients(Eigen::Matrix<double,D,4> &control_points);
         Eigen::Vector4d get_3D_cross_coefficients(Eigen::Matrix<double,D,4> &control_points);

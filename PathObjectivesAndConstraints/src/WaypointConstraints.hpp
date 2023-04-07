@@ -2,6 +2,7 @@
 #define WAYPOINTCONSTRAINTS_HPP
 #include "DerivativeEvaluator.hpp"
 #include "CBindingHelper.hpp"
+#include "CrossTermEvaluator.hpp"
 
 template<int D>
 class WaypointConstraints
@@ -15,12 +16,14 @@ class WaypointConstraints
             int num_control_points, double scale_factor, double desired_velocities[]);
 
         double* curvature_at_waypoints_constraints(double cont_pts[], int num_control_points, 
-            double scale_factor, double desired_curvatures[], bool switches[]);
+                double desired_curvatures[], bool switches[]);
         
         double* direction_at_waypoints_constraints(double cont_pts[], 
             int num_control_points, double scale_factor, double desired_directions[]);
     private:
         CBindingHelper<D> cbind_help{};
+        CrossTermEvaluator<D> c_eval{};
+        DerivativeEvaluator<D> d_dt_eval{};
 };
 
 extern "C"
@@ -33,8 +36,8 @@ extern "C"
             double scale_factor, double desired_accelerations[]){return obj->acceleration_at_waypoints_constraints(
             cont_pts, num_control_points, scale_factor, desired_accelerations);}
     double* curvature_at_waypoints_constraints_2(WaypointConstraints<2>* obj, double cont_pts[], int num_control_points,
-            double scale_factor, double desired_curvatures[], bool switches[]){return obj->curvature_at_waypoints_constraints(
-            cont_pts, num_control_points, scale_factor, desired_curvatures, switches);}
+            double desired_curvatures[], bool switches[]){return obj->curvature_at_waypoints_constraints(
+            cont_pts, num_control_points, desired_curvatures, switches);}
     double* direction_at_waypoints_constraints_2(WaypointConstraints<2>* obj, double cont_pts[], int num_control_points,
             double scale_factor, double desired_directions[]){return obj->direction_at_waypoints_constraints(
             cont_pts, num_control_points, scale_factor, desired_directions);}
@@ -47,8 +50,8 @@ extern "C"
             double scale_factor, double desired_accelerations[]){return obj->acceleration_at_waypoints_constraints(
             cont_pts, num_control_points, scale_factor, desired_accelerations);}
     double* curvature_at_waypoints_constraints_3(WaypointConstraints<3>* obj, double cont_pts[], int num_control_points,
-            double scale_factor, double desired_curvatures[], bool switches[]){return obj->curvature_at_waypoints_constraints(
-            cont_pts, num_control_points, scale_factor, desired_curvatures, switches);}
+            double desired_curvatures[], bool switches[]){return obj->curvature_at_waypoints_constraints(
+            cont_pts, num_control_points, desired_curvatures, switches);}
     double* direction_at_waypoints_constraints_3(WaypointConstraints<3>* obj, double cont_pts[], int num_control_points,
             double scale_factor, double desired_directions[]){return obj->direction_at_waypoints_constraints(
             cont_pts, num_control_points, scale_factor, desired_directions);}
