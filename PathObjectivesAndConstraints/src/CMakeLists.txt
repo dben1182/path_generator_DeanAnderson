@@ -26,6 +26,8 @@ add_library(${PROJECT_NAME} SHARED
     CrossTermProperties.cpp
     CrossTermProperties.hpp
     CrossTermBounds.hpp
-    CrossTermBounds.cpp)
+    CrossTermBounds.cpp
+    InclinationConstraint.cpp
+    InclinationConstraint.hpp)
 
 target_include_directories(${PROJECT_NAME} PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/src")

@@ -395,6 +395,33 @@ DerivativeEvaluator.cpp.s:
 	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/DerivativeEvaluator.cpp.s
 .PHONY : DerivativeEvaluator.cpp.s
 
+InclinationConstraint.o: InclinationConstraint.cpp.o
+
+.PHONY : InclinationConstraint.o
+
+# target to build an object file
+InclinationConstraint.cpp.o:
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/InclinationConstraint.cpp.o
+.PHONY : InclinationConstraint.cpp.o
+
+InclinationConstraint.i: InclinationConstraint.cpp.i
+
+.PHONY : InclinationConstraint.i
+
+# target to preprocess a source file
+InclinationConstraint.cpp.i:
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/InclinationConstraint.cpp.i
+.PHONY : InclinationConstraint.cpp.i
+
+InclinationConstraint.s: InclinationConstraint.cpp.s
+
+.PHONY : InclinationConstraint.s
+
+# target to generate assembly for a file
+InclinationConstraint.cpp.s:
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/InclinationConstraint.cpp.s
+.PHONY : InclinationConstraint.cpp.s
+
 MDMAlgorithmClass.o: MDMAlgorithmClass.cpp.o
 
 .PHONY : MDMAlgorithmClass.o
@@ -542,6 +569,9 @@ help:
 	@echo "... DerivativeEvaluator.o"
 	@echo "... DerivativeEvaluator.i"
 	@echo "... DerivativeEvaluator.s"
+	@echo "... InclinationConstraint.o"
+	@echo "... InclinationConstraint.i"
+	@echo "... InclinationConstraint.s"
 	@echo "... MDMAlgorithmClass.o"
 	@echo "... MDMAlgorithmClass.i"
 	@echo "... MDMAlgorithmClass.s"

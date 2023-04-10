@@ -22,14 +22,6 @@ list
 limits
 -
 
-/home/david/Code/path_generator/PathObjectivesAndConstraints/src/DerivativeBounds.cpp
-DerivativeBounds.hpp
-/home/david/Code/path_generator/PathObjectivesAndConstraints/src/DerivativeBounds.hpp
-iostream
--
-stdexcept
--
-
 /home/david/Code/path_generator/PathObjectivesAndConstraints/src/DerivativeBounds.hpp
 array
 -
@@ -43,6 +35,8 @@ CBindingHelper.hpp
 /home/david/Code/path_generator/PathObjectivesAndConstraints/src/CBindingHelper.hpp
 DerivativeEvaluator.hpp
 /home/david/Code/path_generator/PathObjectivesAndConstraints/src/DerivativeEvaluator.hpp
+CubicEquationSolver.hpp
+/home/david/Code/path_generator/PathObjectivesAndConstraints/src/CubicEquationSolver.hpp
 
 /home/david/Code/path_generator/PathObjectivesAndConstraints/src/DerivativeEvaluator.hpp
 array
@@ -55,6 +49,16 @@ CubicEquationSolver.hpp
 /home/david/Code/path_generator/PathObjectivesAndConstraints/src/CubicEquationSolver.hpp
 gtest/gtest_prod.h
 /home/david/Code/path_generator/PathObjectivesAndConstraints/src/gtest/gtest_prod.h
+CBindingHelper.hpp
+/home/david/Code/path_generator/PathObjectivesAndConstraints/src/CBindingHelper.hpp
+
+/home/david/Code/path_generator/PathObjectivesAndConstraints/src/InclinationConstraint.cpp
+InclinationConstraint.hpp
+/home/david/Code/path_generator/PathObjectivesAndConstraints/src/InclinationConstraint.hpp
+
+/home/david/Code/path_generator/PathObjectivesAndConstraints/src/InclinationConstraint.hpp
+DerivativeBounds.hpp
+/home/david/Code/path_generator/PathObjectivesAndConstraints/src/DerivativeBounds.hpp
 CBindingHelper.hpp
 /home/david/Code/path_generator/PathObjectivesAndConstraints/src/CBindingHelper.hpp
 

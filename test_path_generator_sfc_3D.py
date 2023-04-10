@@ -55,9 +55,9 @@ ax.scatter(waypoints[0,:],waypoints[1,:],waypoints[2,:])
 # plt.scatter(minvo_cps[0,:],minvo_cps[1,:])
 plt.show()
 
-plt.figure()
-plt.plot(time_data, curvature_data)
-plt.show()
+# plt.figure()
+# plt.plot(time_data, curvature_data)
+# plt.show()
 
 print("start curvature: " , curvature_data[0])
 print("end curvature: " , curvature_data[-1])

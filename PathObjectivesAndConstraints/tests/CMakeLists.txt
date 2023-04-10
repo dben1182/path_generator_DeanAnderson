@@ -13,7 +13,8 @@ add_executable(${TEST_NAME}
     UnitTestDerivativeBounds.cpp
     UnitTestCrossTermEvaluator.cpp
     UnitTestCrossTermProperties.cpp
-    UnitTestCrossTermBounds.cpp)
+    UnitTestCrossTermBounds.cpp
+    UnitTestInclineConstraints.cpp)
 
 target_include_directories(${PROJECT_NAME} PUBLIC "${PROJECT_SOURCE_DIR}/src")
 

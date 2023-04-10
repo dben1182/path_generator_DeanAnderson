@@ -32,6 +32,21 @@ TEST(DerivativeBoundsTest, MaxVelocity)
     EXPECT_NEAR(true_max_velocity, max_velocity,tolerance);
 }
 
+TEST(DerivativeBoundsTest, MaxVelocitySingleDim)
+{
+    DerivativeBounds<3> d_bounds{};
+    double scale_factor = 1.5;
+    double true_max_velocity = 3.5862069;
+    unsigned int dimension = 2;
+    Eigen::Matrix<double, 3,4> control_points;
+    control_points << 5, 8, 6, 7,
+                    5, 11, 2, 7,
+                    8, 7, 5, 9; 
+    double max_velocity = d_bounds.find_max_velocity_magnitude_in_single_dimension(control_points, scale_factor, dimension);
+    double tolerance = 0.00001;
+    EXPECT_NEAR(true_max_velocity, max_velocity,tolerance);
+}
+
 TEST(DerivativeBoundsTest, MaxAcceleration)
 {
     DerivativeBounds<2> d_bounds{};

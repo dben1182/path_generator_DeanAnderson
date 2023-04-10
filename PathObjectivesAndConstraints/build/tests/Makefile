@@ -368,6 +368,33 @@ UnitTestDerivativeEvaluator.cpp.s:
 	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/build.make tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestDerivativeEvaluator.cpp.s
 .PHONY : UnitTestDerivativeEvaluator.cpp.s
 
+UnitTestInclineConstraints.o: UnitTestInclineConstraints.cpp.o
+
+.PHONY : UnitTestInclineConstraints.o
+
+# target to build an object file
+UnitTestInclineConstraints.cpp.o:
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/build.make tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestInclineConstraints.cpp.o
+.PHONY : UnitTestInclineConstraints.cpp.o
+
+UnitTestInclineConstraints.i: UnitTestInclineConstraints.cpp.i
+
+.PHONY : UnitTestInclineConstraints.i
+
+# target to preprocess a source file
+UnitTestInclineConstraints.cpp.i:
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/build.make tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestInclineConstraints.cpp.i
+.PHONY : UnitTestInclineConstraints.cpp.i
+
+UnitTestInclineConstraints.s: UnitTestInclineConstraints.cpp.s
+
+.PHONY : UnitTestInclineConstraints.s
+
+# target to generate assembly for a file
+UnitTestInclineConstraints.cpp.s:
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/build.make tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestInclineConstraints.cpp.s
+.PHONY : UnitTestInclineConstraints.cpp.s
+
 UnitTestMDMAlgorithmClass.o: UnitTestMDMAlgorithmClass.cpp.o
 
 .PHONY : UnitTestMDMAlgorithmClass.o
@@ -512,6 +539,9 @@ help:
 	@echo "... UnitTestDerivativeEvaluator.o"
 	@echo "... UnitTestDerivativeEvaluator.i"
 	@echo "... UnitTestDerivativeEvaluator.s"
+	@echo "... UnitTestInclineConstraints.o"
+	@echo "... UnitTestInclineConstraints.i"
+	@echo "... UnitTestInclineConstraints.s"
 	@echo "... UnitTestMDMAlgorithmClass.o"
 	@echo "... UnitTestMDMAlgorithmClass.i"
 	@echo "... UnitTestMDMAlgorithmClass.s"

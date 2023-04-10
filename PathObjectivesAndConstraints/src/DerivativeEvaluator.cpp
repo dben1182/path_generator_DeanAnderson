@@ -127,5 +127,6 @@ Eigen::Vector4d DerivativeEvaluator<D>::get_third_order_T_second_derivative_vect
 }
 
 //Explicit template instantiations
+template class DerivativeEvaluator<1>;
 template class DerivativeEvaluator<2>;
 template class DerivativeEvaluator<3>;

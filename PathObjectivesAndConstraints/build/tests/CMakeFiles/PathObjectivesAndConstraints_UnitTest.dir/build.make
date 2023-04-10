@@ -226,6 +226,19 @@ tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCrossTermBoun
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCrossTermBounds.cpp.s"
 	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/david/Code/path_generator/PathObjectivesAndConstraints/tests/UnitTestCrossTermBounds.cpp -o CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCrossTermBounds.cpp.s
 
+tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestInclineConstraints.cpp.o: tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/flags.make
+tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestInclineConstraints.cpp.o: ../tests/UnitTestInclineConstraints.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/david/Code/path_generator/PathObjectivesAndConstraints/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestInclineConstraints.cpp.o"
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build/tests && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestInclineConstraints.cpp.o -c /home/david/Code/path_generator/PathObjectivesAndConstraints/tests/UnitTestInclineConstraints.cpp
+
+tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestInclineConstraints.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestInclineConstraints.cpp.i"
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/david/Code/path_generator/PathObjectivesAndConstraints/tests/UnitTestInclineConstraints.cpp > CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestInclineConstraints.cpp.i
+
+tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestInclineConstraints.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestInclineConstraints.cpp.s"
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/david/Code/path_generator/PathObjectivesAndConstraints/tests/UnitTestInclineConstraints.cpp -o CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestInclineConstraints.cpp.s
+
 # Object files for target PathObjectivesAndConstraints_UnitTest
 PathObjectivesAndConstraints_UnitTest_OBJECTS = \
 "CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestBsplineToMinvo.cpp.o" \
@@ -240,7 +253,8 @@ PathObjectivesAndConstraints_UnitTest_OBJECTS = \
 "CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestDerivativeBounds.cpp.o" \
 "CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCrossTermEvaluator.cpp.o" \
 "CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCrossTermProperties.cpp.o" \
-"CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCrossTermBounds.cpp.o"
+"CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCrossTermBounds.cpp.o" \
+"CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestInclineConstraints.cpp.o"
 
 # External object files for target PathObjectivesAndConstraints_UnitTest
 PathObjectivesAndConstraints_UnitTest_EXTERNAL_OBJECTS =
@@ -258,12 +272,13 @@ tests/PathObjectivesAndConstraints_UnitTest: tests/CMakeFiles/PathObjectivesAndC
 tests/PathObjectivesAndConstraints_UnitTest: tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCrossTermEvaluator.cpp.o
 tests/PathObjectivesAndConstraints_UnitTest: tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCrossTermProperties.cpp.o
 tests/PathObjectivesAndConstraints_UnitTest: tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCrossTermBounds.cpp.o
+tests/PathObjectivesAndConstraints_UnitTest: tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestInclineConstraints.cpp.o
 tests/PathObjectivesAndConstraints_UnitTest: tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/build.make
 tests/PathObjectivesAndConstraints_UnitTest: /usr/lib/x86_64-linux-gnu/libgtest.a
 tests/PathObjectivesAndConstraints_UnitTest: /usr/lib/x86_64-linux-gnu/libgtest_main.a
 tests/PathObjectivesAndConstraints_UnitTest: src/libPathObjectivesAndConstraints.so
 tests/PathObjectivesAndConstraints_UnitTest: tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/david/Code/path_generator/PathObjectivesAndConstraints/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable PathObjectivesAndConstraints_UnitTest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/david/Code/path_generator/PathObjectivesAndConstraints/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable PathObjectivesAndConstraints_UnitTest"
 	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

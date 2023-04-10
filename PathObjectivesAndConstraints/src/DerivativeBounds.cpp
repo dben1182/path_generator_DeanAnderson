@@ -143,6 +143,37 @@ std::array<double,2> DerivativeBounds<D>::find_max_acceleration_and_time(Eigen::
     return max_acceleration_and_time;
 }
 
+template <int D>
+double DerivativeBounds<D>::find_max_velocity_magnitude_in_single_dimension(Eigen::Matrix<double,D,4> &control_points, 
+    double &scale_factor, unsigned int &dimension)
+{
+    double p0 = control_points.coeff(dimension-1,0);
+    double p1 = control_points.coeff(dimension-1,1);
+    double p2 = control_points.coeff(dimension-1,2);
+    double p3 = control_points.coeff(dimension-1,3);
+    double a_term = -6*(p0/6 - p1/2 + p2/2 - p3/6)/(scale_factor*scale_factor*scale_factor);
+    double b_term = 2*(p0/2 - p1 + p2/2)/(scale_factor*scale_factor);
+    double t = CubicEquationSolver::solve_linear_equation(a_term, b_term);
+    Eigen::Matrix<double,1,4> control_points_single_dimension;
+    control_points_single_dimension << p0, p1, p2, p3;
+    double t0 = 0;
+    double v_max = abs(d_eval_single.calculate_velocity_vector(t0,control_points_single_dimension,scale_factor).coeff(0));
+    double v_final = abs(d_eval_single.calculate_velocity_vector(scale_factor,control_points_single_dimension,scale_factor).coeff(0));
+    if (v_final > v_max)
+    {
+        v_max = v_final;
+    }
+    if (t > 0 && t < scale_factor)
+    {
+        double v_t = abs(d_eval_single.calculate_velocity_vector(t,control_points_single_dimension,scale_factor).coeff(0));
+        if (v_t > v_max)
+        {
+            v_max = v_t;
+        }
+    }
+    return v_max;
+}
+
 //Explicit template instantiations
 template class DerivativeBounds<2>;
 template class DerivativeBounds<3>;

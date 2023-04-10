@@ -59,6 +59,13 @@ src/CMakeFiles/PathObjectivesAndConstraints.dir/DerivativeEvaluator.cpp.o: ../sr
 src/CMakeFiles/PathObjectivesAndConstraints.dir/DerivativeEvaluator.cpp.o: ../src/DerivativeEvaluator.cpp
 src/CMakeFiles/PathObjectivesAndConstraints.dir/DerivativeEvaluator.cpp.o: ../src/DerivativeEvaluator.hpp
 
+src/CMakeFiles/PathObjectivesAndConstraints.dir/InclinationConstraint.cpp.o: ../src/CBindingHelper.hpp
+src/CMakeFiles/PathObjectivesAndConstraints.dir/InclinationConstraint.cpp.o: ../src/CubicEquationSolver.hpp
+src/CMakeFiles/PathObjectivesAndConstraints.dir/InclinationConstraint.cpp.o: ../src/DerivativeBounds.hpp
+src/CMakeFiles/PathObjectivesAndConstraints.dir/InclinationConstraint.cpp.o: ../src/DerivativeEvaluator.hpp
+src/CMakeFiles/PathObjectivesAndConstraints.dir/InclinationConstraint.cpp.o: ../src/InclinationConstraint.cpp
+src/CMakeFiles/PathObjectivesAndConstraints.dir/InclinationConstraint.cpp.o: ../src/InclinationConstraint.hpp
+
 src/CMakeFiles/PathObjectivesAndConstraints.dir/MDMAlgorithmClass.cpp.o: ../src/MDMAlgorithmClass.cpp
 src/CMakeFiles/PathObjectivesAndConstraints.dir/MDMAlgorithmClass.cpp.o: ../src/MDMAlgorithmClass.hpp
 

@@ -11,6 +11,10 @@ template<int D>
 Eigen::Matrix<double,D,4> CBindingHelper<D>::array_section_to_eigen(double cont_pts[], int &num_cps, unsigned int &index)
 {
     Eigen::Matrix<double,D,4> interval_control_points;
+    if (D == 1)
+    {
+        interval_control_points << cont_pts[index], cont_pts[index+1], cont_pts[index+2], cont_pts[index+3];
+    }
     if (D == 2)
     {
         interval_control_points << cont_pts[index], cont_pts[index+1], cont_pts[index+2], cont_pts[index+3],
@@ -40,5 +44,6 @@ Eigen::MatrixXd CBindingHelper<D>::array_to_eigen(double cont_pts[], int &num_cp
 };
 
 // explicit instantiations
+template class CBindingHelper<1>;
 template class CBindingHelper<2>;
 template class CBindingHelper<3>;

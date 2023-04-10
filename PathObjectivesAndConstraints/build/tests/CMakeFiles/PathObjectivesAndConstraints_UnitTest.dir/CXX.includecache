@@ -35,6 +35,8 @@ CBindingHelper.hpp
 ../src/CBindingHelper.hpp
 DerivativeEvaluator.hpp
 ../src/DerivativeEvaluator.hpp
+CubicEquationSolver.hpp
+../src/CubicEquationSolver.hpp
 
 ../src/DerivativeEvaluator.hpp
 array
@@ -50,9 +52,15 @@ gtest/gtest_prod.h
 CBindingHelper.hpp
 ../src/CBindingHelper.hpp
 
-/home/david/Code/path_generator/PathObjectivesAndConstraints/tests/UnitTestDerivativeBounds.cpp
+../src/InclinationConstraint.hpp
+DerivativeBounds.hpp
+../src/DerivativeBounds.hpp
+CBindingHelper.hpp
+../src/CBindingHelper.hpp
+
+/home/david/Code/path_generator/PathObjectivesAndConstraints/tests/UnitTestInclineConstraints.cpp
 gtest/gtest.h
 /home/david/Code/path_generator/PathObjectivesAndConstraints/tests/gtest/gtest.h
-DerivativeBounds.hpp
-/home/david/Code/path_generator/PathObjectivesAndConstraints/tests/DerivativeBounds.hpp
+InclinationConstraint.hpp
+/home/david/Code/path_generator/PathObjectivesAndConstraints/tests/InclinationConstraint.hpp
 

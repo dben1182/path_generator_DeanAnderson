@@ -59,6 +59,13 @@ src/CMakeFiles/PathObjectivesAndConstraints.dir/DerivativeEvaluator.cpp.o
  /home/david/Code/path_generator/PathObjectivesAndConstraints/src/CubicEquationSolver.hpp
  /home/david/Code/path_generator/PathObjectivesAndConstraints/src/DerivativeEvaluator.cpp
  /home/david/Code/path_generator/PathObjectivesAndConstraints/src/DerivativeEvaluator.hpp
+src/CMakeFiles/PathObjectivesAndConstraints.dir/InclinationConstraint.cpp.o
+ /home/david/Code/path_generator/PathObjectivesAndConstraints/src/CBindingHelper.hpp
+ /home/david/Code/path_generator/PathObjectivesAndConstraints/src/CubicEquationSolver.hpp
+ /home/david/Code/path_generator/PathObjectivesAndConstraints/src/DerivativeBounds.hpp
+ /home/david/Code/path_generator/PathObjectivesAndConstraints/src/DerivativeEvaluator.hpp
+ /home/david/Code/path_generator/PathObjectivesAndConstraints/src/InclinationConstraint.cpp
+ /home/david/Code/path_generator/PathObjectivesAndConstraints/src/InclinationConstraint.hpp
 src/CMakeFiles/PathObjectivesAndConstraints.dir/MDMAlgorithmClass.cpp.o
  /home/david/Code/path_generator/PathObjectivesAndConstraints/src/MDMAlgorithmClass.cpp
  /home/david/Code/path_generator/PathObjectivesAndConstraints/src/MDMAlgorithmClass.hpp
