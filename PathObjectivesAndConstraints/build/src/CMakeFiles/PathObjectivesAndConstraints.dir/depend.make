@@ -7,10 +7,6 @@ src/CMakeFiles/PathObjectivesAndConstraints.dir/BsplineToMinvo.cpp.o: ../src/Bsp
 src/CMakeFiles/PathObjectivesAndConstraints.dir/CBindingHelper.cpp.o: ../src/CBindingHelper.cpp
 src/CMakeFiles/PathObjectivesAndConstraints.dir/CBindingHelper.cpp.o: ../src/CBindingHelper.hpp
 
-src/CMakeFiles/PathObjectivesAndConstraints.dir/ConvexHullCollisionChecker.cpp.o: ../src/ConvexHullCollisionChecker.cpp
-src/CMakeFiles/PathObjectivesAndConstraints.dir/ConvexHullCollisionChecker.cpp.o: ../src/ConvexHullCollisionChecker.hpp
-src/CMakeFiles/PathObjectivesAndConstraints.dir/ConvexHullCollisionChecker.cpp.o: ../src/MDMAlgorithmClass.hpp
-
 src/CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermBounds.cpp.o: ../src/CBindingHelper.hpp
 src/CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermBounds.cpp.o: ../src/CrossTermBounds.cpp
 src/CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermBounds.cpp.o: ../src/CrossTermBounds.hpp
@@ -75,10 +71,14 @@ src/CMakeFiles/PathObjectivesAndConstraints.dir/ObjectiveFunctions.cpp.o: ../src
 
 src/CMakeFiles/PathObjectivesAndConstraints.dir/ObstacleConstraints.cpp.o: ../src/BsplineToMinvo.hpp
 src/CMakeFiles/PathObjectivesAndConstraints.dir/ObstacleConstraints.cpp.o: ../src/CBindingHelper.hpp
-src/CMakeFiles/PathObjectivesAndConstraints.dir/ObstacleConstraints.cpp.o: ../src/ConvexHullCollisionChecker.hpp
-src/CMakeFiles/PathObjectivesAndConstraints.dir/ObstacleConstraints.cpp.o: ../src/MDMAlgorithmClass.hpp
 src/CMakeFiles/PathObjectivesAndConstraints.dir/ObstacleConstraints.cpp.o: ../src/ObstacleConstraints.cpp
 src/CMakeFiles/PathObjectivesAndConstraints.dir/ObstacleConstraints.cpp.o: ../src/ObstacleConstraints.hpp
+src/CMakeFiles/PathObjectivesAndConstraints.dir/ObstacleConstraints.cpp.o: ../src/SphereCollisionEvaluator.hpp
+
+src/CMakeFiles/PathObjectivesAndConstraints.dir/SphereCollisionEvaluator.cpp.o: ../src/BsplineToMinvo.hpp
+src/CMakeFiles/PathObjectivesAndConstraints.dir/SphereCollisionEvaluator.cpp.o: ../src/CBindingHelper.hpp
+src/CMakeFiles/PathObjectivesAndConstraints.dir/SphereCollisionEvaluator.cpp.o: ../src/SphereCollisionEvaluator.cpp
+src/CMakeFiles/PathObjectivesAndConstraints.dir/SphereCollisionEvaluator.cpp.o: ../src/SphereCollisionEvaluator.hpp
 
 src/CMakeFiles/PathObjectivesAndConstraints.dir/WaypointConstraints.cpp.o: ../src/CBindingHelper.hpp
 src/CMakeFiles/PathObjectivesAndConstraints.dir/WaypointConstraints.cpp.o: ../src/CrossTermEvaluator.hpp

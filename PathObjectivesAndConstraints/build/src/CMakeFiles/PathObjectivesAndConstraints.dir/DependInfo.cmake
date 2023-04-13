@@ -6,7 +6,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/david/Code/path_generator/PathObjectivesAndConstraints/src/BsplineToMinvo.cpp" "/home/david/Code/path_generator/PathObjectivesAndConstraints/build/src/CMakeFiles/PathObjectivesAndConstraints.dir/BsplineToMinvo.cpp.o"
   "/home/david/Code/path_generator/PathObjectivesAndConstraints/src/CBindingHelper.cpp" "/home/david/Code/path_generator/PathObjectivesAndConstraints/build/src/CMakeFiles/PathObjectivesAndConstraints.dir/CBindingHelper.cpp.o"
-  "/home/david/Code/path_generator/PathObjectivesAndConstraints/src/ConvexHullCollisionChecker.cpp" "/home/david/Code/path_generator/PathObjectivesAndConstraints/build/src/CMakeFiles/PathObjectivesAndConstraints.dir/ConvexHullCollisionChecker.cpp.o"
   "/home/david/Code/path_generator/PathObjectivesAndConstraints/src/CrossTermBounds.cpp" "/home/david/Code/path_generator/PathObjectivesAndConstraints/build/src/CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermBounds.cpp.o"
   "/home/david/Code/path_generator/PathObjectivesAndConstraints/src/CrossTermEvaluator.cpp" "/home/david/Code/path_generator/PathObjectivesAndConstraints/build/src/CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermEvaluator.cpp.o"
   "/home/david/Code/path_generator/PathObjectivesAndConstraints/src/CrossTermProperties.cpp" "/home/david/Code/path_generator/PathObjectivesAndConstraints/build/src/CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermProperties.cpp.o"
@@ -18,6 +17,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/david/Code/path_generator/PathObjectivesAndConstraints/src/MDMAlgorithmClass.cpp" "/home/david/Code/path_generator/PathObjectivesAndConstraints/build/src/CMakeFiles/PathObjectivesAndConstraints.dir/MDMAlgorithmClass.cpp.o"
   "/home/david/Code/path_generator/PathObjectivesAndConstraints/src/ObjectiveFunctions.cpp" "/home/david/Code/path_generator/PathObjectivesAndConstraints/build/src/CMakeFiles/PathObjectivesAndConstraints.dir/ObjectiveFunctions.cpp.o"
   "/home/david/Code/path_generator/PathObjectivesAndConstraints/src/ObstacleConstraints.cpp" "/home/david/Code/path_generator/PathObjectivesAndConstraints/build/src/CMakeFiles/PathObjectivesAndConstraints.dir/ObstacleConstraints.cpp.o"
+  "/home/david/Code/path_generator/PathObjectivesAndConstraints/src/SphereCollisionEvaluator.cpp" "/home/david/Code/path_generator/PathObjectivesAndConstraints/build/src/CMakeFiles/PathObjectivesAndConstraints.dir/SphereCollisionEvaluator.cpp.o"
   "/home/david/Code/path_generator/PathObjectivesAndConstraints/src/WaypointConstraints.cpp" "/home/david/Code/path_generator/PathObjectivesAndConstraints/build/src/CMakeFiles/PathObjectivesAndConstraints.dir/WaypointConstraints.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

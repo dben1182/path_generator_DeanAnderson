@@ -179,33 +179,6 @@ CBindingHelper.cpp.s:
 	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/CBindingHelper.cpp.s
 .PHONY : CBindingHelper.cpp.s
 
-ConvexHullCollisionChecker.o: ConvexHullCollisionChecker.cpp.o
-
-.PHONY : ConvexHullCollisionChecker.o
-
-# target to build an object file
-ConvexHullCollisionChecker.cpp.o:
-	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/ConvexHullCollisionChecker.cpp.o
-.PHONY : ConvexHullCollisionChecker.cpp.o
-
-ConvexHullCollisionChecker.i: ConvexHullCollisionChecker.cpp.i
-
-.PHONY : ConvexHullCollisionChecker.i
-
-# target to preprocess a source file
-ConvexHullCollisionChecker.cpp.i:
-	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/ConvexHullCollisionChecker.cpp.i
-.PHONY : ConvexHullCollisionChecker.cpp.i
-
-ConvexHullCollisionChecker.s: ConvexHullCollisionChecker.cpp.s
-
-.PHONY : ConvexHullCollisionChecker.s
-
-# target to generate assembly for a file
-ConvexHullCollisionChecker.cpp.s:
-	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/ConvexHullCollisionChecker.cpp.s
-.PHONY : ConvexHullCollisionChecker.cpp.s
-
 CrossTermBounds.o: CrossTermBounds.cpp.o
 
 .PHONY : CrossTermBounds.o
@@ -503,6 +476,33 @@ ObstacleConstraints.cpp.s:
 	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/ObstacleConstraints.cpp.s
 .PHONY : ObstacleConstraints.cpp.s
 
+SphereCollisionEvaluator.o: SphereCollisionEvaluator.cpp.o
+
+.PHONY : SphereCollisionEvaluator.o
+
+# target to build an object file
+SphereCollisionEvaluator.cpp.o:
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/SphereCollisionEvaluator.cpp.o
+.PHONY : SphereCollisionEvaluator.cpp.o
+
+SphereCollisionEvaluator.i: SphereCollisionEvaluator.cpp.i
+
+.PHONY : SphereCollisionEvaluator.i
+
+# target to preprocess a source file
+SphereCollisionEvaluator.cpp.i:
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/SphereCollisionEvaluator.cpp.i
+.PHONY : SphereCollisionEvaluator.cpp.i
+
+SphereCollisionEvaluator.s: SphereCollisionEvaluator.cpp.s
+
+.PHONY : SphereCollisionEvaluator.s
+
+# target to generate assembly for a file
+SphereCollisionEvaluator.cpp.s:
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/SphereCollisionEvaluator.cpp.s
+.PHONY : SphereCollisionEvaluator.cpp.s
+
 WaypointConstraints.o: WaypointConstraints.cpp.o
 
 .PHONY : WaypointConstraints.o
@@ -545,9 +545,6 @@ help:
 	@echo "... CBindingHelper.o"
 	@echo "... CBindingHelper.i"
 	@echo "... CBindingHelper.s"
-	@echo "... ConvexHullCollisionChecker.o"
-	@echo "... ConvexHullCollisionChecker.i"
-	@echo "... ConvexHullCollisionChecker.s"
 	@echo "... CrossTermBounds.o"
 	@echo "... CrossTermBounds.i"
 	@echo "... CrossTermBounds.s"
@@ -581,6 +578,9 @@ help:
 	@echo "... ObstacleConstraints.o"
 	@echo "... ObstacleConstraints.i"
 	@echo "... ObstacleConstraints.s"
+	@echo "... SphereCollisionEvaluator.o"
+	@echo "... SphereCollisionEvaluator.i"
+	@echo "... SphereCollisionEvaluator.s"
 	@echo "... WaypointConstraints.o"
 	@echo "... WaypointConstraints.i"
 	@echo "... WaypointConstraints.s"

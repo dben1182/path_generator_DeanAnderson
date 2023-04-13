@@ -7,14 +7,14 @@ add_executable(${TEST_NAME}
     UnitTestDerivativeEvaluator.cpp
     UnitTestWaypointConstraints.cpp
     UnitTestObjectiveFunctions.cpp
-    UnitTestConvexHullCollisionChecker.cpp
-    UnitTestObstacleConstraints.cpp
     UnitTestCurvatureConstraints.cpp
     UnitTestDerivativeBounds.cpp
     UnitTestCrossTermEvaluator.cpp
     UnitTestCrossTermProperties.cpp
     UnitTestCrossTermBounds.cpp
-    UnitTestInclineConstraints.cpp)
+    UnitTestInclineConstraints.cpp
+    UnitTestSphereCollisionEvaluator.cpp
+    UnitTestObstacleConstraints.cpp)
 
 target_include_directories(${PROJECT_NAME} PUBLIC "${PROJECT_SOURCE_DIR}/src")
 

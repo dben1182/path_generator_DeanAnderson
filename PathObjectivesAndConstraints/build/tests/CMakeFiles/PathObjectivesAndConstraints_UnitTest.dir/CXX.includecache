@@ -6,6 +6,14 @@
 
 #IncludeRegexTransform: 
 
+../src/BsplineToMinvo.hpp
+array
+-
+eigen3/Eigen/Core
+-
+eigen3/Eigen/Dense
+-
+
 ../src/CBindingHelper.hpp
 eigen3/Eigen/Core
 -
@@ -14,53 +22,31 @@ eigen3/Eigen/Dense
 gtest/gtest_prod.h
 ../src/gtest/gtest_prod.h
 
-../src/CubicEquationSolver.hpp
-array
+../src/ObstacleConstraints.hpp
+eigen3/Eigen/Core
 -
-list
+eigen3/Eigen/Dense
 -
-limits
--
+CBindingHelper.hpp
+../src/CBindingHelper.hpp
+SphereCollisionEvaluator.hpp
+../src/SphereCollisionEvaluator.hpp
 
-../src/DerivativeBounds.hpp
-array
+../src/SphereCollisionEvaluator.hpp
+vector
 -
 eigen3/Eigen/Core
 -
 eigen3/Eigen/Dense
 -
-gtest/gtest_prod.h
-../src/gtest/gtest_prod.h
 CBindingHelper.hpp
 ../src/CBindingHelper.hpp
-DerivativeEvaluator.hpp
-../src/DerivativeEvaluator.hpp
-CubicEquationSolver.hpp
-../src/CubicEquationSolver.hpp
+BsplineToMinvo.hpp
+../src/BsplineToMinvo.hpp
 
-../src/DerivativeEvaluator.hpp
-array
--
-eigen3/Eigen/Core
--
-eigen3/Eigen/Dense
--
-CubicEquationSolver.hpp
-../src/CubicEquationSolver.hpp
-gtest/gtest_prod.h
-../src/gtest/gtest_prod.h
-CBindingHelper.hpp
-../src/CBindingHelper.hpp
-
-../src/InclinationConstraint.hpp
-DerivativeBounds.hpp
-../src/DerivativeBounds.hpp
-CBindingHelper.hpp
-../src/CBindingHelper.hpp
-
-/home/david/Code/path_generator/PathObjectivesAndConstraints/tests/UnitTestInclineConstraints.cpp
+/home/david/Code/path_generator/PathObjectivesAndConstraints/tests/UnitTestObstacleConstraints.cpp
 gtest/gtest.h
 /home/david/Code/path_generator/PathObjectivesAndConstraints/tests/gtest/gtest.h
-InclinationConstraint.hpp
-/home/david/Code/path_generator/PathObjectivesAndConstraints/tests/InclinationConstraint.hpp
+ObstacleConstraints.hpp
+/home/david/Code/path_generator/PathObjectivesAndConstraints/tests/ObstacleConstraints.hpp
 

@@ -13,8 +13,6 @@ add_library(${PROJECT_NAME} SHARED
     WaypointConstraints.hpp
     ObjectiveFunctions.cpp
     ObjectiveFunctions.hpp
-    ConvexHullCollisionChecker.cpp
-    ConvexHullCollisionChecker.hpp
     ObstacleConstraints.cpp
     ObstacleConstraints.hpp
     CurvatureConstraints.cpp
@@ -28,6 +26,8 @@ add_library(${PROJECT_NAME} SHARED
     CrossTermBounds.hpp
     CrossTermBounds.cpp
     InclinationConstraint.cpp
-    InclinationConstraint.hpp)
+    InclinationConstraint.hpp
+    SphereCollisionEvaluator.cpp
+    SphereCollisionEvaluator.hpp)
 
 target_include_directories(${PROJECT_NAME} PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/src")

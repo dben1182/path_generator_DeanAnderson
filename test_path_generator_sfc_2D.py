@@ -56,7 +56,7 @@ curvature_method = "roots_numerator_and_denominator"
 path_gen = PathGenerator(dimension)
 start_time = time.time()
 control_points = path_gen.generate_path(point_sequence, waypoint_directions, waypoint_curvatures, 
-                                        max_curvature, sfcs)
+                                        max_curvature, max_incline=None, sfcs=sfcs)
 # generate_path(point_sequence, waypoint_directions, waypoint_accelerations, max_curvature,
 #                 sfcs)
 print("control_points: " , control_points)

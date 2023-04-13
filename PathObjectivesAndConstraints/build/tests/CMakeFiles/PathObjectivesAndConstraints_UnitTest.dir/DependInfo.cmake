@@ -5,7 +5,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/david/Code/path_generator/PathObjectivesAndConstraints/tests/UnitTestBsplineToMinvo.cpp" "/home/david/Code/path_generator/PathObjectivesAndConstraints/build/tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestBsplineToMinvo.cpp.o"
-  "/home/david/Code/path_generator/PathObjectivesAndConstraints/tests/UnitTestConvexHullCollisionChecker.cpp" "/home/david/Code/path_generator/PathObjectivesAndConstraints/build/tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestConvexHullCollisionChecker.cpp.o"
   "/home/david/Code/path_generator/PathObjectivesAndConstraints/tests/UnitTestCrossTermBounds.cpp" "/home/david/Code/path_generator/PathObjectivesAndConstraints/build/tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCrossTermBounds.cpp.o"
   "/home/david/Code/path_generator/PathObjectivesAndConstraints/tests/UnitTestCrossTermEvaluator.cpp" "/home/david/Code/path_generator/PathObjectivesAndConstraints/build/tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCrossTermEvaluator.cpp.o"
   "/home/david/Code/path_generator/PathObjectivesAndConstraints/tests/UnitTestCrossTermProperties.cpp" "/home/david/Code/path_generator/PathObjectivesAndConstraints/build/tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCrossTermProperties.cpp.o"
@@ -17,6 +16,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/david/Code/path_generator/PathObjectivesAndConstraints/tests/UnitTestMDMAlgorithmClass.cpp" "/home/david/Code/path_generator/PathObjectivesAndConstraints/build/tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestMDMAlgorithmClass.cpp.o"
   "/home/david/Code/path_generator/PathObjectivesAndConstraints/tests/UnitTestObjectiveFunctions.cpp" "/home/david/Code/path_generator/PathObjectivesAndConstraints/build/tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestObjectiveFunctions.cpp.o"
   "/home/david/Code/path_generator/PathObjectivesAndConstraints/tests/UnitTestObstacleConstraints.cpp" "/home/david/Code/path_generator/PathObjectivesAndConstraints/build/tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestObstacleConstraints.cpp.o"
+  "/home/david/Code/path_generator/PathObjectivesAndConstraints/tests/UnitTestSphereCollisionEvaluator.cpp" "/home/david/Code/path_generator/PathObjectivesAndConstraints/build/tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestSphereCollisionEvaluator.cpp.o"
   "/home/david/Code/path_generator/PathObjectivesAndConstraints/tests/UnitTestWaypointConstraints.cpp" "/home/david/Code/path_generator/PathObjectivesAndConstraints/build/tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraints.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

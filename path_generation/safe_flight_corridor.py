@@ -28,7 +28,7 @@ class SFC_2D:
     
 def get2DRotationAndTranslationFromPoints(point_1,point_2):
     # returns rotation transforms x_vector to vector paralell
-    distance = point_1 - point_2
+    distance = point_2 - point_1
     dx = distance.item(0)
     dy = distance.item(1)
     psi = np.arctan2(dy,dx)
@@ -78,7 +78,7 @@ class SFC_3D:
 
 def get3DRotationAndTranslationFromPoints(point_1,point_2):
     # returns rotation transforms x_vector to vector paralell
-    distance_1 = point_1 - point_2
+    distance_1 = point_2 - point_1
     dx_1 = distance_1.item(0)
     dz_1 = distance_1.item(2)
     theta = np.arctan2(dz_1,dx_1)

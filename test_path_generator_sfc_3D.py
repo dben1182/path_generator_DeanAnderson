@@ -32,7 +32,7 @@ initial_control_points = None
 path_gen = PathGenerator(dimension)
 start_time = time.time()
 control_points = path_gen.generate_path(point_sequence, waypoint_directions, waypoint_curvatures, 
-                                        max_curvature, sfcs)
+                                        max_curvature, max_incline=None, sfcs=sfcs)
 end_time = time.time()
 print("computation time: " , end_time - start_time)
 print("control_points: " , control_points)

@@ -152,33 +152,6 @@ UnitTestBsplineToMinvo.cpp.s:
 	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/build.make tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestBsplineToMinvo.cpp.s
 .PHONY : UnitTestBsplineToMinvo.cpp.s
 
-UnitTestConvexHullCollisionChecker.o: UnitTestConvexHullCollisionChecker.cpp.o
-
-.PHONY : UnitTestConvexHullCollisionChecker.o
-
-# target to build an object file
-UnitTestConvexHullCollisionChecker.cpp.o:
-	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/build.make tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestConvexHullCollisionChecker.cpp.o
-.PHONY : UnitTestConvexHullCollisionChecker.cpp.o
-
-UnitTestConvexHullCollisionChecker.i: UnitTestConvexHullCollisionChecker.cpp.i
-
-.PHONY : UnitTestConvexHullCollisionChecker.i
-
-# target to preprocess a source file
-UnitTestConvexHullCollisionChecker.cpp.i:
-	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/build.make tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestConvexHullCollisionChecker.cpp.i
-.PHONY : UnitTestConvexHullCollisionChecker.cpp.i
-
-UnitTestConvexHullCollisionChecker.s: UnitTestConvexHullCollisionChecker.cpp.s
-
-.PHONY : UnitTestConvexHullCollisionChecker.s
-
-# target to generate assembly for a file
-UnitTestConvexHullCollisionChecker.cpp.s:
-	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/build.make tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestConvexHullCollisionChecker.cpp.s
-.PHONY : UnitTestConvexHullCollisionChecker.cpp.s
-
 UnitTestCrossTermBounds.o: UnitTestCrossTermBounds.cpp.o
 
 .PHONY : UnitTestCrossTermBounds.o
@@ -476,6 +449,33 @@ UnitTestObstacleConstraints.cpp.s:
 	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/build.make tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestObstacleConstraints.cpp.s
 .PHONY : UnitTestObstacleConstraints.cpp.s
 
+UnitTestSphereCollisionEvaluator.o: UnitTestSphereCollisionEvaluator.cpp.o
+
+.PHONY : UnitTestSphereCollisionEvaluator.o
+
+# target to build an object file
+UnitTestSphereCollisionEvaluator.cpp.o:
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/build.make tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestSphereCollisionEvaluator.cpp.o
+.PHONY : UnitTestSphereCollisionEvaluator.cpp.o
+
+UnitTestSphereCollisionEvaluator.i: UnitTestSphereCollisionEvaluator.cpp.i
+
+.PHONY : UnitTestSphereCollisionEvaluator.i
+
+# target to preprocess a source file
+UnitTestSphereCollisionEvaluator.cpp.i:
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/build.make tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestSphereCollisionEvaluator.cpp.i
+.PHONY : UnitTestSphereCollisionEvaluator.cpp.i
+
+UnitTestSphereCollisionEvaluator.s: UnitTestSphereCollisionEvaluator.cpp.s
+
+.PHONY : UnitTestSphereCollisionEvaluator.s
+
+# target to generate assembly for a file
+UnitTestSphereCollisionEvaluator.cpp.s:
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/build.make tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestSphereCollisionEvaluator.cpp.s
+.PHONY : UnitTestSphereCollisionEvaluator.cpp.s
+
 UnitTestWaypointConstraints.o: UnitTestWaypointConstraints.cpp.o
 
 .PHONY : UnitTestWaypointConstraints.o
@@ -515,9 +515,6 @@ help:
 	@echo "... UnitTestBsplineToMinvo.o"
 	@echo "... UnitTestBsplineToMinvo.i"
 	@echo "... UnitTestBsplineToMinvo.s"
-	@echo "... UnitTestConvexHullCollisionChecker.o"
-	@echo "... UnitTestConvexHullCollisionChecker.i"
-	@echo "... UnitTestConvexHullCollisionChecker.s"
 	@echo "... UnitTestCrossTermBounds.o"
 	@echo "... UnitTestCrossTermBounds.i"
 	@echo "... UnitTestCrossTermBounds.s"
@@ -551,6 +548,9 @@ help:
 	@echo "... UnitTestObstacleConstraints.o"
 	@echo "... UnitTestObstacleConstraints.i"
 	@echo "... UnitTestObstacleConstraints.s"
+	@echo "... UnitTestSphereCollisionEvaluator.o"
+	@echo "... UnitTestSphereCollisionEvaluator.i"
+	@echo "... UnitTestSphereCollisionEvaluator.s"
 	@echo "... UnitTestWaypointConstraints.o"
 	@echo "... UnitTestWaypointConstraints.i"
 	@echo "... UnitTestWaypointConstraints.s"

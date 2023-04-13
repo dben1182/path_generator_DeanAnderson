@@ -4,10 +4,6 @@
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestBsplineToMinvo.cpp.o: ../src/BsplineToMinvo.hpp
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestBsplineToMinvo.cpp.o: ../tests/UnitTestBsplineToMinvo.cpp
 
-tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestConvexHullCollisionChecker.cpp.o: ../src/ConvexHullCollisionChecker.hpp
-tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestConvexHullCollisionChecker.cpp.o: ../src/MDMAlgorithmClass.hpp
-tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestConvexHullCollisionChecker.cpp.o: ../tests/UnitTestConvexHullCollisionChecker.cpp
-
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCrossTermBounds.cpp.o: ../src/CBindingHelper.hpp
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCrossTermBounds.cpp.o: ../src/CrossTermBounds.hpp
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCrossTermBounds.cpp.o: ../src/CrossTermEvaluator.hpp
@@ -72,10 +68,14 @@ tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestObjectiveFunc
 
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestObstacleConstraints.cpp.o: ../src/BsplineToMinvo.hpp
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestObstacleConstraints.cpp.o: ../src/CBindingHelper.hpp
-tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestObstacleConstraints.cpp.o: ../src/ConvexHullCollisionChecker.hpp
-tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestObstacleConstraints.cpp.o: ../src/MDMAlgorithmClass.hpp
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestObstacleConstraints.cpp.o: ../src/ObstacleConstraints.hpp
+tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestObstacleConstraints.cpp.o: ../src/SphereCollisionEvaluator.hpp
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestObstacleConstraints.cpp.o: ../tests/UnitTestObstacleConstraints.cpp
+
+tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestSphereCollisionEvaluator.cpp.o: ../src/BsplineToMinvo.hpp
+tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestSphereCollisionEvaluator.cpp.o: ../src/CBindingHelper.hpp
+tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestSphereCollisionEvaluator.cpp.o: ../src/SphereCollisionEvaluator.hpp
+tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestSphereCollisionEvaluator.cpp.o: ../tests/UnitTestSphereCollisionEvaluator.cpp
 
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraints.cpp.o: ../src/CBindingHelper.hpp
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraints.cpp.o: ../src/CrossTermEvaluator.hpp
