@@ -31,6 +31,8 @@ CBindingHelper.hpp
 ../src/CBindingHelper.hpp
 SphereCollisionEvaluator.hpp
 ../src/SphereCollisionEvaluator.hpp
+iostream
+-
 
 ../src/SphereCollisionEvaluator.hpp
 vector

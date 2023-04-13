@@ -4,7 +4,7 @@ from matplotlib.patches import Rectangle
 from bsplinegenerator.bsplines import BsplineEvaluation
 from path_generation.path_generator import PathGenerator
 from path_generation.safe_flight_corridor import SFC_2D, plot_2D_sfcs, get2DRotationAndTranslationFromPoints
-from path_generation.obstacle import Obstacle, plot_2D_obstacle
+from path_generation.obstacle import Obstacle, plot_2D_obstacles
 import time
 
 # sfc_1 = SFC(np.array([[4],[6]]), np.array([[3],[5]]), np.eye(2))
@@ -27,8 +27,8 @@ waypoints = np.concatenate((point_sequence[:,0][:,None], point_sequence[:,-1][:,
 # waypoints = np.array([[2,16],[3,13]])
 waypoint_directions = np.array([[0,1],[1,0]]) # 2
 waypoint_curvatures = np.array([-1,0.1])
-obstacle = Obstacle(center=np.array([[9.0],[7]]), radius=1)
-obstacle = None
+obstacles = [Obstacle(center=np.array([[9.0],[7]]), radius=1)]
+# obstacles = None
 # waypoint_curvatures = None
 # waypoint_directions = None
 R1, T1, min_len_1 = get2DRotationAndTranslationFromPoints(point_1, point_2)
@@ -59,7 +59,7 @@ curvature_method = "roots_numerator_and_denominator"
 path_gen = PathGenerator(dimension)
 start_time = time.time()
 control_points = path_gen.generate_path(point_sequence, waypoint_directions, waypoint_curvatures, 
-                                        max_curvature, max_incline=None, sfcs=sfcs, obstacle=obstacle)
+                                        max_curvature, max_incline=None, sfcs=sfcs, obstacles=obstacles)
 # generate_path(point_sequence, waypoint_directions, waypoint_accelerations, max_curvature,
 #                 sfcs)
 print("control_points: " , control_points)
@@ -82,8 +82,8 @@ plot_2D_sfcs(sfcs)
 ax.plot(spline_data[0,:], spline_data[1,:])
 ax.scatter(waypoints[0,:],waypoints[1,:])
 # plt.scatter(minvo_cps[0,:],minvo_cps[1,:])
-if obstacle != None:
-    plot_2D_obstacle(obstacle, ax)
+if obstacles != None:
+    plot_2D_obstacles(obstacles, ax)
 plt.show()
 
 plt.figure()

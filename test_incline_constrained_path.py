@@ -12,7 +12,7 @@ points = np.concatenate((point_1,point_2),1)
 dimension = np.shape(point_1)[0]
 
 waypoint_directions = np.array([[1,0],[0,1],[0,0]])
-waypoint_curvatures = np.array([0.48103275534121687,0])
+waypoint_curvatures = np.array([0,0])
 point_sequence = np.concatenate((point_1,point_2),axis=1)
 dimension = np.shape(point_sequence)[0]
 max_curvature = 0.5

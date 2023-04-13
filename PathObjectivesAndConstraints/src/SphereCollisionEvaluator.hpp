@@ -11,6 +11,8 @@ class SphereCollisionEvaluator
 {
     public:
         SphereCollisionEvaluator();
+        double* getSplineDistancesToSpheres(double obstacle_centers[], double obstacle_radii[], 
+            int &num_obstacles, double cont_pts[], int &num_cont_points);
         double getSplineDistanceToSphere(double obstacle_center[], 
             double &obstacle_radius, double cont_pts[], int &num_cont_points);
         double* getAllSplineIntervalDistancesToSphere(double obstacle_center[], 
@@ -23,9 +25,11 @@ class SphereCollisionEvaluator
         BsplineToMinvo<D> cp_converter{};
         Eigen::Matrix<double,D,D> getRotationForSphereToIntervalVector(
             Eigen::Matrix<double,D,1> &obstacle_center, Eigen::Matrix<double,D,4> &cont_pts);
-        Eigen::Matrix<double,D,1> getObstacleCenterFromArray(double obstacle_center[]);
+        Eigen::Matrix<double,D,1> ArrayToEigenArray(double obstacle_center[]);
         Eigen::Matrix<double,D,D> get2DVectorToXDirRotation(Eigen::Matrix<double, D, 1> vector);
         Eigen::Matrix<double,D,D> get3DVectorToXDirRotation(Eigen::Matrix<double, D, 1> vector);
+        Eigen::Matrix<double,D,1> getObstacleCenterFromArray(double obstacle_centers[], int &obstacle_num,
+                                                            int &num_obstacles);
 };      
 
 #endif

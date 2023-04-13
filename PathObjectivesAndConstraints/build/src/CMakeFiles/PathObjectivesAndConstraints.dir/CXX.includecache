@@ -37,6 +37,8 @@ CBindingHelper.hpp
 /home/david/Code/path_generator/PathObjectivesAndConstraints/src/CBindingHelper.hpp
 SphereCollisionEvaluator.hpp
 /home/david/Code/path_generator/PathObjectivesAndConstraints/src/SphereCollisionEvaluator.hpp
+iostream
+-
 
 /home/david/Code/path_generator/PathObjectivesAndConstraints/src/SphereCollisionEvaluator.hpp
 vector
