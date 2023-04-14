@@ -41,14 +41,14 @@ class PathGenerator:
             self._incline_const_obj = InclineConstraints()
         
     def generate_path(self, point_sequence: np.ndarray, waypoint_directions: np.ndarray = None, 
-                waypoint_curvatures: np.ndarray = None, max_curvature: np.float64 = None,
+                waypoint_accelerations: np.ndarray = None, max_curvature: np.float64 = None,
                 max_incline = None, sfcs: list = None, obstacles = None):
         num_sfcs = self.__get_num_sfcs(sfcs)
         intervals_per_corridor = self.get_intervals_per_corridor(num_sfcs,point_sequence)
         num_intervals = np.sum(intervals_per_corridor)
         num_cont_pts = self.__get_num_control_points(num_intervals)
         constraints = self.__get_constraints(num_cont_pts, intervals_per_corridor, point_sequence, 
-                waypoint_directions, waypoint_curvatures, max_curvature, max_incline, sfcs, obstacles)
+                waypoint_directions, waypoint_accelerations, max_curvature, max_incline, sfcs, obstacles)
         initial_control_points = self.__create_initial_control_points(point_sequence, num_cont_pts)
         initial_scale_factor = 1
         optimization_variables = np.concatenate((initial_control_points.flatten(),[initial_scale_factor]))
@@ -69,7 +69,7 @@ class PathGenerator:
         return optimized_control_points
         
     def __get_constraints(self, num_cont_pts: int, intervals_per_corridor: tuple, point_sequence: np.ndarray, 
-            waypoint_directions: np.ndarray, waypoint_curvatures: np.ndarray, max_curvature: np.float64,  
+            waypoint_directions: np.ndarray, waypoint_accelerations: np.ndarray, max_curvature: np.float64,  
             max_incline: np.float64, sfcs: list, obstacles: list):
         waypoints = np.concatenate((point_sequence[:,0][:,None], point_sequence[:,-1][:,None]),1)
         waypoint_constraint = self.__create_waypoint_constraint(waypoints, num_cont_pts)
@@ -85,15 +85,16 @@ class PathGenerator:
                     switches[1] = False
                 direction_constraint = self.__create_waypoint_direction_constraint(normalized_directions, num_cont_pts, switches)
                 constraints.append(direction_constraint)
-        if waypoint_curvatures is not None:
-            if np.any(waypoint_curvatures) > 0:
+        if waypoint_accelerations is not None:
+            accel_mags = np.linalg.norm(waypoint_accelerations,2,0)
+            if np.sum(accel_mags) > 0.000000001:
                 switches = np.array([True, True])
-                if waypoint_curvatures[0] < 0:
+                if accel_mags[0] < 0.0000000001:
                     switches[0] = False
-                if waypoint_curvatures[1] < 0:
+                if accel_mags[1] < 0.0000000001:
                     switches[1] = False
-                waypoint_curvature_constraint = self.__create_waypoint_curvature_constraint(waypoint_curvatures, num_cont_pts,switches)
-                constraints.append(waypoint_curvature_constraint)
+                waypoint_accel_constraint = self.__create_waypoint_acceleration_constraint(waypoint_accelerations, num_cont_pts, switches)
+                constraints.append(waypoint_accel_constraint)
         if max_curvature is not None:
             curvature_constraint = self.__create_curvature_constraint(max_curvature, num_cont_pts)
             constraints.append(curvature_constraint)
@@ -163,21 +164,22 @@ class PathGenerator:
         velocity_vector_constraint = NonlinearConstraint(velocity_constraint_function, lb= lower_bound, ub=upper_bound)
         return velocity_vector_constraint
     
-    def __create_waypoint_curvature_constraint(self, curvatures, num_cont_pts, switches):
+    def __create_waypoint_acceleration_constraint(self, waypoint_accelerations, num_cont_pts, switches):
         lower_bound = 0
         upper_bound = 0
-        def waypoint_curvature_constraint_function(variables):
+        def acceleration_constraint_function(variables):
             control_points = np.reshape(variables[0:num_cont_pts*self._dimension], \
             (self._dimension,num_cont_pts))
             scale_factor = variables[-1]
-            constraints = self._waypoint_const_obj.curvature_at_waypoints_constraints(control_points,scale_factor,curvatures,switches)
-            if switches[0] == False:
-                return constraints.item(1)
-            if switches[1] == False:
-                return constraints.item(2)
-            else:
-                return constraints.flatten()
-        acceleration_vector_constraint = NonlinearConstraint(waypoint_curvature_constraint_function, lb= lower_bound, ub=upper_bound)
+            # constraints = self._waypoint_const_obj.acceleration_at_waypoints_constraints(control_points,
+            #     scale_factor, waypoint_accelerations)
+            constraints = (control_points[:,0] - 2*control_points[:,1] + control_points[:,2]) - waypoint_accelerations[:,0]
+            # if switches[0] == False:
+            #     return np.reshape(constraints,(self._dimension,2))[:,1].flatten()
+            # if switches[1] == False:
+            #     return np.reshape(constraints,(self._dimension,2))[:,0].flatten()
+            return constraints.flatten()
+        acceleration_vector_constraint = NonlinearConstraint(acceleration_constraint_function, lb= lower_bound, ub=upper_bound)
         return acceleration_vector_constraint
 
     def __create_curvature_constraint(self, max_curvature, num_cont_pts):

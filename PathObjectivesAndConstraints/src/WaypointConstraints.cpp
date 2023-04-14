@@ -20,7 +20,10 @@ double* WaypointConstraints<D>::velocity_at_waypoints_constraints(double cont_pt
     if (switches[0] == true)
     {
         Eigen::Matrix<double,D,4> initial_control_points = cbind_help.array_section_to_eigen(cont_pts, num_cont_pts, start_index);
-        Eigen::Matrix<double,D,1> velocity_vector_0 = d_dt_eval.calculate_velocity_vector(t0, initial_control_points, scale_factor);
+        // Eigen::Matrix<double,D,1> velocity_vector_0 = d_dt_eval.calculate_velocity_vector(t0, initial_control_points, scale_factor);
+        Eigen::Matrix<double,D,1> p1 = initial_control_points.block(0,0,D,1);
+        Eigen::Matrix<double,D,1> p3 = initial_control_points.block(0,2,D,1);
+        Eigen::Matrix<double,D,1> velocity_vector_0 = (p3 - p1)/(2*scale_factor);
         for(unsigned int i = 0; i < D; i++)
         {
             constraints[2*i] = velocity_vector_0.coeff(i) - desired_velocities[2*i];
@@ -36,7 +39,10 @@ double* WaypointConstraints<D>::velocity_at_waypoints_constraints(double cont_pt
     if (switches[1] == true)
     {
         Eigen::Matrix<double,D,4> final_control_points = cbind_help.array_section_to_eigen(cont_pts, num_cont_pts, end_index);
-        Eigen::Matrix<double,D,1> velocity_vector_f = d_dt_eval.calculate_velocity_vector(tf, final_control_points, scale_factor);
+        // Eigen::Matrix<double,D,1> velocity_vector_f = d_dt_eval.calculate_velocity_vector(tf, final_control_points, scale_factor);
+        Eigen::Matrix<double,D,1> p2 = final_control_points.block(0,1,D,1);
+        Eigen::Matrix<double,D,1> p4 = final_control_points.block(0,3,D,1);
+        Eigen::Matrix<double,D,1> velocity_vector_f = (p4 - p2)/(2*scale_factor);
         for(unsigned int i = 0; i < D; i++)
         {
             constraints[2*i+1] = velocity_vector_f.coeff(i) - desired_velocities[2*i+1];
@@ -54,81 +60,53 @@ double* WaypointConstraints<D>::velocity_at_waypoints_constraints(double cont_pt
 }
 
 template<int D>
-double* WaypointConstraints<D>::acceleration_at_waypoints_constraints(double cont_pts[], 
-    int num_cont_pts, double scale_factor, double desired_accelerations[])
+double* WaypointConstraints<D>::acceleration_at_waypoints_constraints(double cont_pts[], int num_cont_pts, 
+            double scale_factor, double desired_accelerations[], bool switches[])
 {
     int order = 3;
     double* constraints = new double[D*2];
     double t0 = 0;
-    double tf = scale_factor;
-    unsigned int start_index = 0;
-    unsigned int end_index = num_cont_pts - order - 1;
-    Eigen::Matrix<double,D,4> initial_control_points = cbind_help.array_section_to_eigen(cont_pts, num_cont_pts, start_index);
-    Eigen::Matrix<double,D,4> final_control_points = cbind_help.array_section_to_eigen(cont_pts, num_cont_pts, end_index);
-    Eigen::Matrix<double,D,1> acceleration_vector_0 = d_dt_eval.calculate_acceleration_vector(t0, initial_control_points, scale_factor);
-    Eigen::Matrix<double,D,1> acceleration_vector_f = d_dt_eval.calculate_acceleration_vector(tf, final_control_points, scale_factor);
-    for(unsigned int i = 0; i < D; i++)
-    {
-        constraints[2*i] = acceleration_vector_0.coeff(i) - desired_accelerations[2*i];
-        constraints[2*i+1] = acceleration_vector_f.coeff(i) - desired_accelerations[2*i+1];
-    }
-    return constraints;
-}
-
-template<int D>
-double* WaypointConstraints<D>::curvature_at_waypoints_constraints(double cont_pts[], 
-            int num_cont_pts, double desired_curvatures[], bool switches[])
-{
-    int order = 3;
-    double* constraints = new double[2];
-    double t0 = 0;
-    double scale_factor = 1.0;
     double tf = scale_factor;
     unsigned int start_index = 0;
     unsigned int end_index = num_cont_pts - order - 1;
     if (switches[0] == true)
     {
         Eigen::Matrix<double,D,4> initial_control_points = cbind_help.array_section_to_eigen(cont_pts, num_cont_pts, start_index);
-        double curvature_0 =  c_eval.calculate_curvature(t0, initial_control_points, scale_factor);
-        constraints[0] = curvature_0 - desired_curvatures[0];
+        Eigen::Matrix<double,D,1> p1 = initial_control_points.block(0,0,D,1);
+        Eigen::Matrix<double,D,1> p2 = initial_control_points.block(0,1,D,1);
+        Eigen::Matrix<double,D,1> p3 = initial_control_points.block(0,2,D,1);
+        Eigen::Matrix<double,D,1> acceleration_vector_0 = (p1 - 2*p2 + p3)/(scale_factor * scale_factor);
+        for(unsigned int i = 0; i < D; i++)
+        {
+            constraints[2*i] = acceleration_vector_0.coeff(i) - desired_accelerations[2*i];
+        }
     }
     else
     {
-        constraints[0] = 0;
+        for(unsigned int i = 0; i < D; i++)
+        {
+            constraints[2*i] = 0;
+        }
     }
     if (switches[1] == true)
     {
         Eigen::Matrix<double,D,4> final_control_points = cbind_help.array_section_to_eigen(cont_pts, num_cont_pts, end_index);
-        double curvature_f =  c_eval.calculate_curvature(tf, final_control_points, scale_factor);
-        constraints[1] = curvature_f - desired_curvatures[1];
+        Eigen::Matrix<double,D,1> p2 = final_control_points.block(0,1,D,1);
+        Eigen::Matrix<double,D,1> p3 = final_control_points.block(0,2,D,1);
+        Eigen::Matrix<double,D,1> p4 = final_control_points.block(0,3,D,1);
+        Eigen::Matrix<double,D,1> acceleration_vector_f = (p2 - 2*p3 + p4)/(scale_factor * scale_factor);
+        for(unsigned int i = 0; i < D; i++)
+        {
+            constraints[2*i+1] = acceleration_vector_f.coeff(i) - desired_accelerations[2*i+1];
+        }
     }
     else
     {
-        constraints[1] = 0;
-    }
-    return constraints;
-}
+        for(unsigned int i = 0; i < D; i++)
+        {
+            constraints[2*i+1] = 0;
+        }
 
-template<int D>
-double* WaypointConstraints<D>::direction_at_waypoints_constraints(double cont_pts[], 
-            int num_cont_pts, double scale_factor, double desired_directions[])
-{
-    int order = 3;
-    double* constraints = new double[D*2];
-    double t0 = 0;
-    double tf = scale_factor;
-    unsigned int start_index = 0;
-    unsigned int end_index = num_cont_pts - order - 1;
-    Eigen::Matrix<double,D,4> initial_control_points = cbind_help.array_section_to_eigen(cont_pts, num_cont_pts, start_index);
-    Eigen::Matrix<double,D,1> velocity_vector_0 = d_dt_eval.calculate_velocity_vector(t0, initial_control_points, scale_factor);
-    Eigen::Matrix<double,D,1> direction_vector_0 = velocity_vector_0/velocity_vector_0.norm();
-    Eigen::Matrix<double,D,4> final_control_points = cbind_help.array_section_to_eigen(cont_pts, num_cont_pts, end_index);
-    Eigen::Matrix<double,D,1> velocity_vector_f = d_dt_eval.calculate_velocity_vector(tf, final_control_points, scale_factor);
-    Eigen::Matrix<double,D,1> direction_vector_f = velocity_vector_f/velocity_vector_f.norm();
-    for(unsigned int i = 0; i < D; i++)
-    {
-        constraints[2*i] = direction_vector_0.coeff(i) - desired_directions[2*i];
-        constraints[2*i+1] = direction_vector_f.coeff(i) - desired_directions[2*i+1];
     }
     return constraints;
 }
