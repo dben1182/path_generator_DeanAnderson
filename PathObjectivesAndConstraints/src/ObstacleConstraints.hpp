@@ -2,7 +2,7 @@
 #define OBSTACLECONSTRAINTS_HPP
 #include <eigen3/Eigen/Core>
 #include <eigen3/Eigen/Dense>
-#include "CBindingHelper.hpp"
+#include "CBindHelperFunctions.hpp"
 #include "SphereCollisionEvaluator.hpp"
 #include <iostream>
 
@@ -18,7 +18,7 @@ class ObstacleConstraints
         double getObstacleConstraintForSpline(double cont_pts[], int num_control_points,
                                 double obstacle_radius, double obstacle_center[]);
     private:
-        CBindingHelper<D> helper{};
+        CBindHelperFunctions<D> helper{};
         SphereCollisionEvaluator<D> colision_eval{};
 };
 

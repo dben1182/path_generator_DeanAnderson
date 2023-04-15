@@ -4,7 +4,7 @@
 #include <eigen3/Eigen/Core>
 #include <eigen3/Eigen/Dense>
 #include "gtest/gtest_prod.h"
-#include "CBindingHelper.hpp"
+#include "CBindHelperFunctions.hpp"
 #include "DerivativeEvaluator.hpp"
 #include "CubicEquationSolver.hpp"
 
@@ -20,7 +20,7 @@ class DerivativeBounds
         std::array<double,2> find_max_acceleration_and_time(Eigen::Matrix<double,D,4> &control_points, double &scale_factor);
         double find_max_velocity_magnitude_in_single_dimension(Eigen::Matrix<double,D,4> &control_points, double &scale_factor, unsigned int &dimension);
     private:
-        CBindingHelper<D> cbind_help{};
+        CBindHelperFunctions<D> cbind_help{};
         DerivativeEvaluator<D> d_eval{};
         DerivativeEvaluator<1> d_eval_single{};
         std::array<double,3> get_velocity_roots(Eigen::Matrix<double,D,4> &control_points, double &scale_factor);

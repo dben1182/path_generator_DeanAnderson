@@ -4,7 +4,7 @@
 #include <eigen3/Eigen/Core>
 #include <eigen3/Eigen/Dense>
 #include "gtest/gtest_prod.h"
-#include "CBindingHelper.hpp"
+#include "CBindHelperFunctions.hpp"
 #include "DerivativeBounds.hpp"
 #include "DerivativeEvaluator.hpp"
 #include "CrossTermProperties.hpp"
@@ -19,7 +19,7 @@ class CrossTermBounds
         Eigen::VectorXd get_interval_curvature_bounds(double cont_pts[], int &num_control_points);
         double evaluate_interval_curvature_bound(Eigen::Matrix<double,D,4> &control_points);
     private:
-        CBindingHelper<D> cbind_help{};
+        CBindHelperFunctions<D> cbind_help{};
         DerivativeBounds<D> d_dt_bounds{};
         DerivativeEvaluator<D> d_dt_eval{};
         CrossTermProperties<D> c_prop{};

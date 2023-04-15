@@ -3,14 +3,16 @@ add_library(${PROJECT_NAME} SHARED
     BsplineToMinvo.hpp
     CubicEquationSolver.cpp
     CubicEquationSolver.hpp
-    CBindingHelper.cpp
-    CBindingHelper.hpp
+    CBindHelperFunctions.cpp
+    CBindHelperFunctions.hpp
+    RotationHelperFunctions.cpp
+    RotationHelperFunctions.hpp
     MDMAlgorithmClass.cpp
     MDMAlgorithmClass.hpp
     DerivativeEvaluator.cpp 
     DerivativeEvaluator.hpp
-    WaypointConstraints.cpp
-    WaypointConstraints.hpp
+    WaypointConstraintsOld.cpp
+    WaypointConstraintsOld.hpp
     ObjectiveFunctions.cpp
     ObjectiveFunctions.hpp
     ObstacleConstraints.cpp

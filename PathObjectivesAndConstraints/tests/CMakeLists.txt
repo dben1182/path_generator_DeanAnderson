@@ -5,7 +5,7 @@ add_executable(${TEST_NAME}
     UnitTestCubicEquationSolver.cpp
     UnitTestMDMAlgorithmClass.cpp
     UnitTestDerivativeEvaluator.cpp
-    UnitTestWaypointConstraints.cpp
+    UnitTestWaypointConstraintsOld.cpp
     UnitTestObjectiveFunctions.cpp
     UnitTestCurvatureConstraints.cpp
     UnitTestDerivativeBounds.cpp

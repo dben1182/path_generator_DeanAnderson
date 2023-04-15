@@ -4,7 +4,7 @@
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestBsplineToMinvo.cpp.o: ../src/BsplineToMinvo.hpp
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestBsplineToMinvo.cpp.o: ../tests/UnitTestBsplineToMinvo.cpp
 
-tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCrossTermBounds.cpp.o: ../src/CBindingHelper.hpp
+tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCrossTermBounds.cpp.o: ../src/CBindHelperFunctions.hpp
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCrossTermBounds.cpp.o: ../src/CrossTermBounds.hpp
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCrossTermBounds.cpp.o: ../src/CrossTermEvaluator.hpp
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCrossTermBounds.cpp.o: ../src/CrossTermProperties.hpp
@@ -13,14 +13,14 @@ tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCrossTermBoun
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCrossTermBounds.cpp.o: ../src/DerivativeEvaluator.hpp
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCrossTermBounds.cpp.o: ../tests/UnitTestCrossTermBounds.cpp
 
-tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCrossTermEvaluator.cpp.o: ../src/CBindingHelper.hpp
+tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCrossTermEvaluator.cpp.o: ../src/CBindHelperFunctions.hpp
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCrossTermEvaluator.cpp.o: ../src/CrossTermEvaluator.hpp
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCrossTermEvaluator.cpp.o: ../src/CubicEquationSolver.hpp
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCrossTermEvaluator.cpp.o: ../src/DerivativeBounds.hpp
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCrossTermEvaluator.cpp.o: ../src/DerivativeEvaluator.hpp
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCrossTermEvaluator.cpp.o: ../tests/UnitTestCrossTermEvaluator.cpp
 
-tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCrossTermProperties.cpp.o: ../src/CBindingHelper.hpp
+tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCrossTermProperties.cpp.o: ../src/CBindHelperFunctions.hpp
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCrossTermProperties.cpp.o: ../src/CrossTermEvaluator.hpp
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCrossTermProperties.cpp.o: ../src/CrossTermProperties.hpp
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCrossTermProperties.cpp.o: ../src/CubicEquationSolver.hpp
@@ -31,7 +31,7 @@ tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCrossTermProp
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCubicEquationSolver.cpp.o: ../src/CubicEquationSolver.hpp
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCubicEquationSolver.cpp.o: ../tests/UnitTestCubicEquationSolver.cpp
 
-tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCurvatureConstraints.cpp.o: ../src/CBindingHelper.hpp
+tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCurvatureConstraints.cpp.o: ../src/CBindHelperFunctions.hpp
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCurvatureConstraints.cpp.o: ../src/CrossTermBounds.hpp
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCurvatureConstraints.cpp.o: ../src/CrossTermEvaluator.hpp
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCurvatureConstraints.cpp.o: ../src/CrossTermProperties.hpp
@@ -41,18 +41,18 @@ tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCurvatureCons
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCurvatureConstraints.cpp.o: ../src/DerivativeEvaluator.hpp
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCurvatureConstraints.cpp.o: ../tests/UnitTestCurvatureConstraints.cpp
 
-tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestDerivativeBounds.cpp.o: ../src/CBindingHelper.hpp
+tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestDerivativeBounds.cpp.o: ../src/CBindHelperFunctions.hpp
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestDerivativeBounds.cpp.o: ../src/CubicEquationSolver.hpp
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestDerivativeBounds.cpp.o: ../src/DerivativeBounds.hpp
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestDerivativeBounds.cpp.o: ../src/DerivativeEvaluator.hpp
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestDerivativeBounds.cpp.o: ../tests/UnitTestDerivativeBounds.cpp
 
-tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestDerivativeEvaluator.cpp.o: ../src/CBindingHelper.hpp
+tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestDerivativeEvaluator.cpp.o: ../src/CBindHelperFunctions.hpp
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestDerivativeEvaluator.cpp.o: ../src/CubicEquationSolver.hpp
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestDerivativeEvaluator.cpp.o: ../src/DerivativeEvaluator.hpp
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestDerivativeEvaluator.cpp.o: ../tests/UnitTestDerivativeEvaluator.cpp
 
-tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestInclineConstraints.cpp.o: ../src/CBindingHelper.hpp
+tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestInclineConstraints.cpp.o: ../src/CBindHelperFunctions.hpp
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestInclineConstraints.cpp.o: ../src/CubicEquationSolver.hpp
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestInclineConstraints.cpp.o: ../src/DerivativeBounds.hpp
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestInclineConstraints.cpp.o: ../src/DerivativeEvaluator.hpp
@@ -62,26 +62,28 @@ tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestInclineConstr
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestMDMAlgorithmClass.cpp.o: ../src/MDMAlgorithmClass.hpp
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestMDMAlgorithmClass.cpp.o: ../tests/UnitTestMDMAlgorithmClass.cpp
 
-tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestObjectiveFunctions.cpp.o: ../src/CBindingHelper.hpp
+tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestObjectiveFunctions.cpp.o: ../src/CBindHelperFunctions.hpp
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestObjectiveFunctions.cpp.o: ../src/ObjectiveFunctions.hpp
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestObjectiveFunctions.cpp.o: ../tests/UnitTestObjectiveFunctions.cpp
 
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestObstacleConstraints.cpp.o: ../src/BsplineToMinvo.hpp
-tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestObstacleConstraints.cpp.o: ../src/CBindingHelper.hpp
+tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestObstacleConstraints.cpp.o: ../src/CBindHelperFunctions.hpp
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestObstacleConstraints.cpp.o: ../src/ObstacleConstraints.hpp
+tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestObstacleConstraints.cpp.o: ../src/RotationHelperFunctions.hpp
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestObstacleConstraints.cpp.o: ../src/SphereCollisionEvaluator.hpp
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestObstacleConstraints.cpp.o: ../tests/UnitTestObstacleConstraints.cpp
 
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestSphereCollisionEvaluator.cpp.o: ../src/BsplineToMinvo.hpp
-tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestSphereCollisionEvaluator.cpp.o: ../src/CBindingHelper.hpp
+tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestSphereCollisionEvaluator.cpp.o: ../src/CBindHelperFunctions.hpp
+tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestSphereCollisionEvaluator.cpp.o: ../src/RotationHelperFunctions.hpp
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestSphereCollisionEvaluator.cpp.o: ../src/SphereCollisionEvaluator.hpp
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestSphereCollisionEvaluator.cpp.o: ../tests/UnitTestSphereCollisionEvaluator.cpp
 
-tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraints.cpp.o: ../src/CBindingHelper.hpp
-tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraints.cpp.o: ../src/CrossTermEvaluator.hpp
-tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraints.cpp.o: ../src/CubicEquationSolver.hpp
-tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraints.cpp.o: ../src/DerivativeBounds.hpp
-tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraints.cpp.o: ../src/DerivativeEvaluator.hpp
-tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraints.cpp.o: ../src/WaypointConstraints.hpp
-tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraints.cpp.o: ../tests/UnitTestWaypointConstraints.cpp
+tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraintsOld.cpp.o: ../src/CBindHelperFunctions.hpp
+tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraintsOld.cpp.o: ../src/CrossTermEvaluator.hpp
+tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraintsOld.cpp.o: ../src/CubicEquationSolver.hpp
+tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraintsOld.cpp.o: ../src/DerivativeBounds.hpp
+tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraintsOld.cpp.o: ../src/DerivativeEvaluator.hpp
+tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraintsOld.cpp.o: ../src/WaypointConstraintsOld.hpp
+tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraintsOld.cpp.o: ../tests/UnitTestWaypointConstraintsOld.cpp
 

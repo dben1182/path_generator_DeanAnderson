@@ -476,32 +476,32 @@ UnitTestSphereCollisionEvaluator.cpp.s:
 	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/build.make tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestSphereCollisionEvaluator.cpp.s
 .PHONY : UnitTestSphereCollisionEvaluator.cpp.s
 
-UnitTestWaypointConstraints.o: UnitTestWaypointConstraints.cpp.o
+UnitTestWaypointConstraintsOld.o: UnitTestWaypointConstraintsOld.cpp.o
 
-.PHONY : UnitTestWaypointConstraints.o
+.PHONY : UnitTestWaypointConstraintsOld.o
 
 # target to build an object file
-UnitTestWaypointConstraints.cpp.o:
-	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/build.make tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraints.cpp.o
-.PHONY : UnitTestWaypointConstraints.cpp.o
+UnitTestWaypointConstraintsOld.cpp.o:
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/build.make tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraintsOld.cpp.o
+.PHONY : UnitTestWaypointConstraintsOld.cpp.o
 
-UnitTestWaypointConstraints.i: UnitTestWaypointConstraints.cpp.i
+UnitTestWaypointConstraintsOld.i: UnitTestWaypointConstraintsOld.cpp.i
 
-.PHONY : UnitTestWaypointConstraints.i
+.PHONY : UnitTestWaypointConstraintsOld.i
 
 # target to preprocess a source file
-UnitTestWaypointConstraints.cpp.i:
-	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/build.make tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraints.cpp.i
-.PHONY : UnitTestWaypointConstraints.cpp.i
+UnitTestWaypointConstraintsOld.cpp.i:
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/build.make tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraintsOld.cpp.i
+.PHONY : UnitTestWaypointConstraintsOld.cpp.i
 
-UnitTestWaypointConstraints.s: UnitTestWaypointConstraints.cpp.s
+UnitTestWaypointConstraintsOld.s: UnitTestWaypointConstraintsOld.cpp.s
 
-.PHONY : UnitTestWaypointConstraints.s
+.PHONY : UnitTestWaypointConstraintsOld.s
 
 # target to generate assembly for a file
-UnitTestWaypointConstraints.cpp.s:
-	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/build.make tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraints.cpp.s
-.PHONY : UnitTestWaypointConstraints.cpp.s
+UnitTestWaypointConstraintsOld.cpp.s:
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/build.make tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraintsOld.cpp.s
+.PHONY : UnitTestWaypointConstraintsOld.cpp.s
 
 # Help Target
 help:
@@ -551,9 +551,9 @@ help:
 	@echo "... UnitTestSphereCollisionEvaluator.o"
 	@echo "... UnitTestSphereCollisionEvaluator.i"
 	@echo "... UnitTestSphereCollisionEvaluator.s"
-	@echo "... UnitTestWaypointConstraints.o"
-	@echo "... UnitTestWaypointConstraints.i"
-	@echo "... UnitTestWaypointConstraints.s"
+	@echo "... UnitTestWaypointConstraintsOld.o"
+	@echo "... UnitTestWaypointConstraintsOld.i"
+	@echo "... UnitTestWaypointConstraintsOld.s"
 .PHONY : help
 
 

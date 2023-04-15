@@ -109,18 +109,18 @@ tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestDerivativeEva
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestDerivativeEvaluator.cpp.s"
 	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/david/Code/path_generator/PathObjectivesAndConstraints/tests/UnitTestDerivativeEvaluator.cpp -o CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestDerivativeEvaluator.cpp.s
 
-tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraints.cpp.o: tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/flags.make
-tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraints.cpp.o: ../tests/UnitTestWaypointConstraints.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/david/Code/path_generator/PathObjectivesAndConstraints/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraints.cpp.o"
-	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build/tests && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraints.cpp.o -c /home/david/Code/path_generator/PathObjectivesAndConstraints/tests/UnitTestWaypointConstraints.cpp
+tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraintsOld.cpp.o: tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/flags.make
+tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraintsOld.cpp.o: ../tests/UnitTestWaypointConstraintsOld.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/david/Code/path_generator/PathObjectivesAndConstraints/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraintsOld.cpp.o"
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build/tests && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraintsOld.cpp.o -c /home/david/Code/path_generator/PathObjectivesAndConstraints/tests/UnitTestWaypointConstraintsOld.cpp
 
-tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraints.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraints.cpp.i"
-	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/david/Code/path_generator/PathObjectivesAndConstraints/tests/UnitTestWaypointConstraints.cpp > CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraints.cpp.i
+tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraintsOld.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraintsOld.cpp.i"
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/david/Code/path_generator/PathObjectivesAndConstraints/tests/UnitTestWaypointConstraintsOld.cpp > CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraintsOld.cpp.i
 
-tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraints.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraints.cpp.s"
-	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/david/Code/path_generator/PathObjectivesAndConstraints/tests/UnitTestWaypointConstraints.cpp -o CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraints.cpp.s
+tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraintsOld.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraintsOld.cpp.s"
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/david/Code/path_generator/PathObjectivesAndConstraints/tests/UnitTestWaypointConstraintsOld.cpp -o CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraintsOld.cpp.s
 
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestObjectiveFunctions.cpp.o: tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/flags.make
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestObjectiveFunctions.cpp.o: ../tests/UnitTestObjectiveFunctions.cpp
@@ -245,7 +245,7 @@ PathObjectivesAndConstraints_UnitTest_OBJECTS = \
 "CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCubicEquationSolver.cpp.o" \
 "CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestMDMAlgorithmClass.cpp.o" \
 "CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestDerivativeEvaluator.cpp.o" \
-"CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraints.cpp.o" \
+"CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraintsOld.cpp.o" \
 "CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestObjectiveFunctions.cpp.o" \
 "CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCurvatureConstraints.cpp.o" \
 "CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestDerivativeBounds.cpp.o" \
@@ -263,7 +263,7 @@ tests/PathObjectivesAndConstraints_UnitTest: tests/CMakeFiles/PathObjectivesAndC
 tests/PathObjectivesAndConstraints_UnitTest: tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCubicEquationSolver.cpp.o
 tests/PathObjectivesAndConstraints_UnitTest: tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestMDMAlgorithmClass.cpp.o
 tests/PathObjectivesAndConstraints_UnitTest: tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestDerivativeEvaluator.cpp.o
-tests/PathObjectivesAndConstraints_UnitTest: tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraints.cpp.o
+tests/PathObjectivesAndConstraints_UnitTest: tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraintsOld.cpp.o
 tests/PathObjectivesAndConstraints_UnitTest: tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestObjectiveFunctions.cpp.o
 tests/PathObjectivesAndConstraints_UnitTest: tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestCurvatureConstraints.cpp.o
 tests/PathObjectivesAndConstraints_UnitTest: tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestDerivativeBounds.cpp.o

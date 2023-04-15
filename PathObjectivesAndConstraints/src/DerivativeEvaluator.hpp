@@ -5,7 +5,7 @@
 #include <eigen3/Eigen/Dense>
 #include "CubicEquationSolver.hpp"
 #include "gtest/gtest_prod.h"
-#include "CBindingHelper.hpp"
+#include "CBindHelperFunctions.hpp"
 
 template <int D> // D is the dimension of the spline
 class DerivativeEvaluator
@@ -22,7 +22,7 @@ class DerivativeEvaluator
         Eigen::Vector4d get_third_order_T_derivative_vector(double &t, double &scale_factor);
         Eigen::Vector4d get_third_order_T_second_derivative_vector(double &t, double &scale_factor);
     private:
-        CBindingHelper<D> cbind_help{};
+        CBindHelperFunctions<D> cbind_help{};
 };
 #endif
 

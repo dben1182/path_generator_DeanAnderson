@@ -4,7 +4,7 @@
 #include <eigen3/Eigen/Core>
 #include <eigen3/Eigen/Dense>
 #include "gtest/gtest_prod.h"
-#include "CBindingHelper.hpp"
+#include "CBindHelperFunctions.hpp"
 #include "CrossTermEvaluator.hpp"
 
 template <int D> // D is the dimension of the spline

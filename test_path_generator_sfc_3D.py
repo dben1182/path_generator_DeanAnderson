@@ -21,7 +21,7 @@ sfc_3 = SFC_3D(np.array([[min_len_3+3],[2],[2]]), T3, R3)
 sfcs = (sfc_1, sfc_2, sfc_3)
 
 waypoint_directions = np.concatenate((point_2-point_1, point_4-point_3),1)
-waypoint_curvatures = None #np.array([0,0])
+waypoint_accelerations = None #np.array([0,0])
 point_sequence = np.concatenate((point_1,point_2,point_3,point_4),axis=1)
 dimension = np.shape(point_sequence)[0]
 max_curvature = 0.5
@@ -31,7 +31,7 @@ initial_control_points = None
 
 path_gen = PathGenerator(dimension)
 start_time = time.time()
-control_points = path_gen.generate_path(point_sequence, waypoint_directions, waypoint_curvatures, 
+control_points = path_gen.generate_path(point_sequence, waypoint_directions, waypoint_accelerations, 
                                         max_curvature, max_incline=None, sfcs=sfcs)
 end_time = time.time()
 print("computation time: " , end_time - start_time)

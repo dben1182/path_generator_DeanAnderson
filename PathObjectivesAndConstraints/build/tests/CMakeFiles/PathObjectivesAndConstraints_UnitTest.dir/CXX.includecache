@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-../src/CBindingHelper.hpp
+../src/CBindHelperFunctions.hpp
 eigen3/Eigen/Core
 -
 eigen3/Eigen/Dense
@@ -45,8 +45,8 @@ eigen3/Eigen/Dense
 -
 gtest/gtest_prod.h
 ../src/gtest/gtest_prod.h
-CBindingHelper.hpp
-../src/CBindingHelper.hpp
+CBindHelperFunctions.hpp
+../src/CBindHelperFunctions.hpp
 DerivativeEvaluator.hpp
 ../src/DerivativeEvaluator.hpp
 CubicEquationSolver.hpp
@@ -63,20 +63,20 @@ CubicEquationSolver.hpp
 ../src/CubicEquationSolver.hpp
 gtest/gtest_prod.h
 ../src/gtest/gtest_prod.h
-CBindingHelper.hpp
-../src/CBindingHelper.hpp
+CBindHelperFunctions.hpp
+../src/CBindHelperFunctions.hpp
 
-../src/WaypointConstraints.hpp
+../src/WaypointConstraintsOld.hpp
 DerivativeEvaluator.hpp
 ../src/DerivativeEvaluator.hpp
-CBindingHelper.hpp
-../src/CBindingHelper.hpp
+CBindHelperFunctions.hpp
+../src/CBindHelperFunctions.hpp
 CrossTermEvaluator.hpp
 ../src/CrossTermEvaluator.hpp
 
-/home/david/Code/path_generator/PathObjectivesAndConstraints/tests/UnitTestWaypointConstraints.cpp
+/home/david/Code/path_generator/PathObjectivesAndConstraints/tests/UnitTestWaypointConstraintsOld.cpp
 gtest/gtest.h
 /home/david/Code/path_generator/PathObjectivesAndConstraints/tests/gtest/gtest.h
-WaypointConstraints.hpp
-/home/david/Code/path_generator/PathObjectivesAndConstraints/tests/WaypointConstraints.hpp
+WaypointConstraintsOld.hpp
+/home/david/Code/path_generator/PathObjectivesAndConstraints/tests/WaypointConstraintsOld.hpp
 

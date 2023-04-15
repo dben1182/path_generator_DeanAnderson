@@ -12,7 +12,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestObjectiveFunctions.cpp.o"
   "CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestObstacleConstraints.cpp.o"
   "CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestSphereCollisionEvaluator.cpp.o"
-  "CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraints.cpp.o"
+  "CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraintsOld.cpp.o"
   "PathObjectivesAndConstraints_UnitTest"
   "PathObjectivesAndConstraints_UnitTest.pdb"
 )

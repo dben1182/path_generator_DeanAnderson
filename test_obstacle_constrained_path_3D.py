@@ -13,23 +13,22 @@ points = np.concatenate((point_1,point_2),1)
 dimension = np.shape(point_1)[0]
 
 waypoint_directions = np.array([[1,0],[0,0],[0,0]])
-# waypoint_directions = None 
-# waypoint_accelerations = np.array([[-0.13720318, 0],
-#                                   [0.43450137, 0],
-#                                   [0.94102469, 0]])
+waypoint_directions = None 
 waypoint_accelerations = np.array([[-0.2, 0],
-                                  [0.43450137, 0],
-                                  [0.94102469, 0]])
+                            [0.43450137, .3],
+                            [0.94102469, 0]])
+waypoint_accelerations = None
 
 # waypoint_accelerations = None
 point_sequence = np.concatenate((point_1,point_2),axis=1)
 dimension = np.shape(point_sequence)[0]
 max_curvature = 0.5
-max_incline = None
+max_incline = 2
+max_incline = 2
 obstacles = [Obstacle(np.array([[4.5],[5.5],[3]]), 1.0),
              Obstacle(np.array([[4],[8],[9.5]]), 1.5)]
 # obstacles = [Obstacle(np.array([[4],[6],[3]]), 1.0)]
-obstacles = None
+# obstacles = None
 order = 3
 initial_control_points = None
 
@@ -58,6 +57,12 @@ waypoints = np.concatenate((point_sequence[:,0][:,None], point_sequence[:,-1][:,
 
 print("max incline" , np.max(incline_data))
 print("max curvature" , np.max(curvature_data))
+
+cp_accel = (control_points[:,0] - 2*control_points[:,1] + control_points[:,2])
+print("cp_accel:  " , cp_accel)
+print("start accel: " , acceleration_data[:,0])
+print("end accel: " , acceleration_data[:,-1])
+
 # print("sfcs: " , sfcs)
 plt.figure()
 ax = plt.axes(projection='3d')
@@ -81,10 +86,5 @@ plt.show()
 # plt.figure()
 # plt.plot(time_data, curvature_data)
 # plt.show()
-
-cp_accel = (control_points[:,0] - 2*control_points[:,1] + control_points[:,2])
-print("cp_accel:  " , cp_accel)
-print("start accel: " , acceleration_data[:,0])
-print("end accel: " , acceleration_data[:,-1])
 
 

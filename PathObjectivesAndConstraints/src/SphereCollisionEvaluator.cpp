@@ -133,42 +133,22 @@ Eigen::Matrix<double,D,D> SphereCollisionEvaluator<D>::getRotationForSphereToInt
 }
 
 template <int D>
-Eigen::Matrix<double,D,D> SphereCollisionEvaluator<D>::get2DVectorToXDirRotation(Eigen::Matrix<double, D, 1> vector)
+Eigen::Matrix<double,D,D> SphereCollisionEvaluator<D>::get2DVectorToXDirRotation(Eigen::Matrix<double, D, 1> &vector)
 {
-    double dx = vector.coeff(0);
-    double dy = vector.coeff(1);
-    double psi = -atan2(dy,dx);
-    double c_psi = cos(psi);
-    double s_psi = sin(psi);
-    Eigen::Matrix<double,D,D> rotation;
-    rotation << c_psi, -s_psi, 
-                s_psi,  c_psi;
+    double psi = -rot_helper.get2DXDirToVectorAngle(vector);
+    Eigen::Matrix<double,D,D> rotation = rot_helper.get_2D_Z_rotation(psi);
     return rotation;
 }
 
 template <int D>
-Eigen::Matrix<double,D,D> SphereCollisionEvaluator<D>::get3DVectorToXDirRotation(Eigen::Matrix<double, D, 1> vector)
+Eigen::Matrix<double,D,D> SphereCollisionEvaluator<D>::get3DVectorToXDirRotation(Eigen::Matrix<double, D, 1> &vector)
 {
-    double dx_1 = vector.coeff(0);
-    double dz_1 = vector.coeff(2);
-    double theta = atan2(dz_1,dx_1);
-    double c_theta = cos(theta);
-    double s_theta = sin(theta);
-    Eigen::Matrix<double,D,D> Ry;
-    Ry << c_theta, 0, s_theta,
-                0, 1,       0,
-         -s_theta, 0, c_theta;
-    Eigen::Matrix<double,D,1> vector_2 = Ry * vector;
-    double dx_2 = vector_2.coeff(0);
-    double dy_2 = vector_2.coeff(1);
-    double psi = atan2(dy_2,dx_2);
-    double c_psi = cos(psi);
-    double s_psi = sin(psi);
-    Eigen::Matrix<double,D,D> Rz;
-    Rz << c_psi, -s_psi, 0,
-          s_psi,  c_psi, 0,
-              0,      0, 1;
-    Eigen::Matrix<double,D,D> rotation = Rz.transpose() * Ry;
+    Eigen::Matrix<double, 2, 1> angles = rot_helper.get3DXDirToVectorAngles(vector);
+    double theta = -angles.coeff(1);
+    double psi = -angles.coeff(0);
+    Eigen::Matrix<double,D,D> R_y = rot_helper.get_3D_Y_rotation(theta);
+    Eigen::Matrix<double,D,D> R_z = rot_helper.get_3D_Z_rotation(psi);
+    Eigen::Matrix<double,D,D> rotation = R_z * R_y;
     return rotation;
 }
 

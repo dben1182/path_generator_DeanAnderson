@@ -2,7 +2,7 @@
 #define OBJECTIVEFUNCTIONS_HPP
 #include <eigen3/Eigen/Core>
 #include <eigen3/Eigen/Dense>
-#include "CBindingHelper.hpp"
+#include "CBindHelperFunctions.hpp"
 
 template <int D>
 class ObjectiveFunctions
@@ -12,7 +12,7 @@ class ObjectiveFunctions
         double minimize_acceleration_and_time(double cont_pts[], int num_control_points, double scale_factor);
         double minimize_distance_and_time(double cont_pts[], int num_control_points, double scale_factor);
     private:
-        CBindingHelper<D> cbind_help{};
+        CBindHelperFunctions<D> cbind_help{};
         double minimize_acceleration(double cont_pts[], int &num_control_points);
         double minimize_distance(double cont_pts[], int &num_control_points);
 };

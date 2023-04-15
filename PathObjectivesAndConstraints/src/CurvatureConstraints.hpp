@@ -1,7 +1,7 @@
 #ifndef CURVATURECONSTRAINTS_HPP
 #define CURVATURECONSTRAINTS_HPP
 #include "CrossTermBounds.hpp"
-#include "CBindingHelper.hpp"
+#include "CBindHelperFunctions.hpp"
 
 template <int D>
 class CurvatureConstraints
@@ -12,7 +12,7 @@ class CurvatureConstraints
         double* get_interval_curvature_constraints(double cont_pts[], int num_cont_pts, double max_curvature);
     private:
         CrossTermBounds<D> curv_bound{};
-        CBindingHelper<D> cbind_help{};
+        CBindHelperFunctions<D> cbind_help{};
 };
 
 

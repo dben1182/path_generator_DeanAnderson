@@ -1,7 +1,7 @@
 #ifndef INCLINATIONCONSTRAINT_HPP
 #define INCLINATIONCONSTRAINT_HPP
 #include "DerivativeBounds.hpp"
-#include "CBindingHelper.hpp"
+#include "CBindHelperFunctions.hpp"
 
 template <int D> // D is the dimension of the spline
 class InclinationConstraint
@@ -16,7 +16,7 @@ class InclinationConstraint
     private:
         DerivativeBounds<3> d_bounds_3{};
         DerivativeBounds<2> d_bounds_2{};
-        CBindingHelper<D> cbind_help{};
+        CBindHelperFunctions<D> cbind_help{};
         
         double evaluate_bound(Eigen::Matrix<double,D,4> &control_points, double &scale_factor);
 };

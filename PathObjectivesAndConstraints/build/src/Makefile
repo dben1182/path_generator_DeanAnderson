@@ -152,32 +152,32 @@ BsplineToMinvo.cpp.s:
 	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/BsplineToMinvo.cpp.s
 .PHONY : BsplineToMinvo.cpp.s
 
-CBindingHelper.o: CBindingHelper.cpp.o
+CBindHelperFunctions.o: CBindHelperFunctions.cpp.o
 
-.PHONY : CBindingHelper.o
+.PHONY : CBindHelperFunctions.o
 
 # target to build an object file
-CBindingHelper.cpp.o:
-	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/CBindingHelper.cpp.o
-.PHONY : CBindingHelper.cpp.o
+CBindHelperFunctions.cpp.o:
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/CBindHelperFunctions.cpp.o
+.PHONY : CBindHelperFunctions.cpp.o
 
-CBindingHelper.i: CBindingHelper.cpp.i
+CBindHelperFunctions.i: CBindHelperFunctions.cpp.i
 
-.PHONY : CBindingHelper.i
+.PHONY : CBindHelperFunctions.i
 
 # target to preprocess a source file
-CBindingHelper.cpp.i:
-	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/CBindingHelper.cpp.i
-.PHONY : CBindingHelper.cpp.i
+CBindHelperFunctions.cpp.i:
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/CBindHelperFunctions.cpp.i
+.PHONY : CBindHelperFunctions.cpp.i
 
-CBindingHelper.s: CBindingHelper.cpp.s
+CBindHelperFunctions.s: CBindHelperFunctions.cpp.s
 
-.PHONY : CBindingHelper.s
+.PHONY : CBindHelperFunctions.s
 
 # target to generate assembly for a file
-CBindingHelper.cpp.s:
-	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/CBindingHelper.cpp.s
-.PHONY : CBindingHelper.cpp.s
+CBindHelperFunctions.cpp.s:
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/CBindHelperFunctions.cpp.s
+.PHONY : CBindHelperFunctions.cpp.s
 
 CrossTermBounds.o: CrossTermBounds.cpp.o
 
@@ -476,6 +476,33 @@ ObstacleConstraints.cpp.s:
 	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/ObstacleConstraints.cpp.s
 .PHONY : ObstacleConstraints.cpp.s
 
+RotationHelperFunctions.o: RotationHelperFunctions.cpp.o
+
+.PHONY : RotationHelperFunctions.o
+
+# target to build an object file
+RotationHelperFunctions.cpp.o:
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/RotationHelperFunctions.cpp.o
+.PHONY : RotationHelperFunctions.cpp.o
+
+RotationHelperFunctions.i: RotationHelperFunctions.cpp.i
+
+.PHONY : RotationHelperFunctions.i
+
+# target to preprocess a source file
+RotationHelperFunctions.cpp.i:
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/RotationHelperFunctions.cpp.i
+.PHONY : RotationHelperFunctions.cpp.i
+
+RotationHelperFunctions.s: RotationHelperFunctions.cpp.s
+
+.PHONY : RotationHelperFunctions.s
+
+# target to generate assembly for a file
+RotationHelperFunctions.cpp.s:
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/RotationHelperFunctions.cpp.s
+.PHONY : RotationHelperFunctions.cpp.s
+
 SphereCollisionEvaluator.o: SphereCollisionEvaluator.cpp.o
 
 .PHONY : SphereCollisionEvaluator.o
@@ -503,32 +530,32 @@ SphereCollisionEvaluator.cpp.s:
 	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/SphereCollisionEvaluator.cpp.s
 .PHONY : SphereCollisionEvaluator.cpp.s
 
-WaypointConstraints.o: WaypointConstraints.cpp.o
+WaypointConstraintsOld.o: WaypointConstraintsOld.cpp.o
 
-.PHONY : WaypointConstraints.o
+.PHONY : WaypointConstraintsOld.o
 
 # target to build an object file
-WaypointConstraints.cpp.o:
-	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/WaypointConstraints.cpp.o
-.PHONY : WaypointConstraints.cpp.o
+WaypointConstraintsOld.cpp.o:
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/WaypointConstraintsOld.cpp.o
+.PHONY : WaypointConstraintsOld.cpp.o
 
-WaypointConstraints.i: WaypointConstraints.cpp.i
+WaypointConstraintsOld.i: WaypointConstraintsOld.cpp.i
 
-.PHONY : WaypointConstraints.i
+.PHONY : WaypointConstraintsOld.i
 
 # target to preprocess a source file
-WaypointConstraints.cpp.i:
-	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/WaypointConstraints.cpp.i
-.PHONY : WaypointConstraints.cpp.i
+WaypointConstraintsOld.cpp.i:
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/WaypointConstraintsOld.cpp.i
+.PHONY : WaypointConstraintsOld.cpp.i
 
-WaypointConstraints.s: WaypointConstraints.cpp.s
+WaypointConstraintsOld.s: WaypointConstraintsOld.cpp.s
 
-.PHONY : WaypointConstraints.s
+.PHONY : WaypointConstraintsOld.s
 
 # target to generate assembly for a file
-WaypointConstraints.cpp.s:
-	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/WaypointConstraints.cpp.s
-.PHONY : WaypointConstraints.cpp.s
+WaypointConstraintsOld.cpp.s:
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/WaypointConstraintsOld.cpp.s
+.PHONY : WaypointConstraintsOld.cpp.s
 
 # Help Target
 help:
@@ -542,9 +569,9 @@ help:
 	@echo "... BsplineToMinvo.o"
 	@echo "... BsplineToMinvo.i"
 	@echo "... BsplineToMinvo.s"
-	@echo "... CBindingHelper.o"
-	@echo "... CBindingHelper.i"
-	@echo "... CBindingHelper.s"
+	@echo "... CBindHelperFunctions.o"
+	@echo "... CBindHelperFunctions.i"
+	@echo "... CBindHelperFunctions.s"
 	@echo "... CrossTermBounds.o"
 	@echo "... CrossTermBounds.i"
 	@echo "... CrossTermBounds.s"
@@ -578,12 +605,15 @@ help:
 	@echo "... ObstacleConstraints.o"
 	@echo "... ObstacleConstraints.i"
 	@echo "... ObstacleConstraints.s"
+	@echo "... RotationHelperFunctions.o"
+	@echo "... RotationHelperFunctions.i"
+	@echo "... RotationHelperFunctions.s"
 	@echo "... SphereCollisionEvaluator.o"
 	@echo "... SphereCollisionEvaluator.i"
 	@echo "... SphereCollisionEvaluator.s"
-	@echo "... WaypointConstraints.o"
-	@echo "... WaypointConstraints.i"
-	@echo "... WaypointConstraints.s"
+	@echo "... WaypointConstraintsOld.o"
+	@echo "... WaypointConstraintsOld.i"
+	@echo "... WaypointConstraintsOld.s"
 .PHONY : help
 
 

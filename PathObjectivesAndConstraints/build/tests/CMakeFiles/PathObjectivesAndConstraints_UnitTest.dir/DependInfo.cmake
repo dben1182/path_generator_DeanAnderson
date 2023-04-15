@@ -17,7 +17,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/david/Code/path_generator/PathObjectivesAndConstraints/tests/UnitTestObjectiveFunctions.cpp" "/home/david/Code/path_generator/PathObjectivesAndConstraints/build/tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestObjectiveFunctions.cpp.o"
   "/home/david/Code/path_generator/PathObjectivesAndConstraints/tests/UnitTestObstacleConstraints.cpp" "/home/david/Code/path_generator/PathObjectivesAndConstraints/build/tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestObstacleConstraints.cpp.o"
   "/home/david/Code/path_generator/PathObjectivesAndConstraints/tests/UnitTestSphereCollisionEvaluator.cpp" "/home/david/Code/path_generator/PathObjectivesAndConstraints/build/tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestSphereCollisionEvaluator.cpp.o"
-  "/home/david/Code/path_generator/PathObjectivesAndConstraints/tests/UnitTestWaypointConstraints.cpp" "/home/david/Code/path_generator/PathObjectivesAndConstraints/build/tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraints.cpp.o"
+  "/home/david/Code/path_generator/PathObjectivesAndConstraints/tests/UnitTestWaypointConstraintsOld.cpp" "/home/david/Code/path_generator/PathObjectivesAndConstraints/build/tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraintsOld.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
