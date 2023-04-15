@@ -14,6 +14,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/PathObjectivesAndConstraints.dir/ObstacleConstraints.cpp.o"
   "CMakeFiles/PathObjectivesAndConstraints.dir/RotationHelperFunctions.cpp.o"
   "CMakeFiles/PathObjectivesAndConstraints.dir/SphereCollisionEvaluator.cpp.o"
+  "CMakeFiles/PathObjectivesAndConstraints.dir/WaypointConstraints.cpp.o"
   "CMakeFiles/PathObjectivesAndConstraints.dir/WaypointConstraintsOld.cpp.o"
   "libPathObjectivesAndConstraints.pdb"
   "libPathObjectivesAndConstraints.so"

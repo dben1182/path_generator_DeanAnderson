@@ -13,6 +13,8 @@ add_library(${PROJECT_NAME} SHARED
     DerivativeEvaluator.hpp
     WaypointConstraintsOld.cpp
     WaypointConstraintsOld.hpp
+    WaypointConstraints.cpp
+    WaypointConstraints.hpp
     ObjectiveFunctions.cpp
     ObjectiveFunctions.hpp
     ObstacleConstraints.cpp

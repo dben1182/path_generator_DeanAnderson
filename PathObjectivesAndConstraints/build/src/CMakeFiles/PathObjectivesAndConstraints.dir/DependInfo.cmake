@@ -19,6 +19,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/david/Code/path_generator/PathObjectivesAndConstraints/src/ObstacleConstraints.cpp" "/home/david/Code/path_generator/PathObjectivesAndConstraints/build/src/CMakeFiles/PathObjectivesAndConstraints.dir/ObstacleConstraints.cpp.o"
   "/home/david/Code/path_generator/PathObjectivesAndConstraints/src/RotationHelperFunctions.cpp" "/home/david/Code/path_generator/PathObjectivesAndConstraints/build/src/CMakeFiles/PathObjectivesAndConstraints.dir/RotationHelperFunctions.cpp.o"
   "/home/david/Code/path_generator/PathObjectivesAndConstraints/src/SphereCollisionEvaluator.cpp" "/home/david/Code/path_generator/PathObjectivesAndConstraints/build/src/CMakeFiles/PathObjectivesAndConstraints.dir/SphereCollisionEvaluator.cpp.o"
+  "/home/david/Code/path_generator/PathObjectivesAndConstraints/src/WaypointConstraints.cpp" "/home/david/Code/path_generator/PathObjectivesAndConstraints/build/src/CMakeFiles/PathObjectivesAndConstraints.dir/WaypointConstraints.cpp.o"
   "/home/david/Code/path_generator/PathObjectivesAndConstraints/src/WaypointConstraintsOld.cpp" "/home/david/Code/path_generator/PathObjectivesAndConstraints/build/src/CMakeFiles/PathObjectivesAndConstraints.dir/WaypointConstraintsOld.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

@@ -148,9 +148,22 @@ src/CMakeFiles/PathObjectivesAndConstraints.dir/WaypointConstraintsOld.cpp.s: cm
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PathObjectivesAndConstraints.dir/WaypointConstraintsOld.cpp.s"
 	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/david/Code/path_generator/PathObjectivesAndConstraints/src/WaypointConstraintsOld.cpp -o CMakeFiles/PathObjectivesAndConstraints.dir/WaypointConstraintsOld.cpp.s
 
+src/CMakeFiles/PathObjectivesAndConstraints.dir/WaypointConstraints.cpp.o: src/CMakeFiles/PathObjectivesAndConstraints.dir/flags.make
+src/CMakeFiles/PathObjectivesAndConstraints.dir/WaypointConstraints.cpp.o: ../src/WaypointConstraints.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/david/Code/path_generator/PathObjectivesAndConstraints/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/CMakeFiles/PathObjectivesAndConstraints.dir/WaypointConstraints.cpp.o"
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PathObjectivesAndConstraints.dir/WaypointConstraints.cpp.o -c /home/david/Code/path_generator/PathObjectivesAndConstraints/src/WaypointConstraints.cpp
+
+src/CMakeFiles/PathObjectivesAndConstraints.dir/WaypointConstraints.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PathObjectivesAndConstraints.dir/WaypointConstraints.cpp.i"
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/david/Code/path_generator/PathObjectivesAndConstraints/src/WaypointConstraints.cpp > CMakeFiles/PathObjectivesAndConstraints.dir/WaypointConstraints.cpp.i
+
+src/CMakeFiles/PathObjectivesAndConstraints.dir/WaypointConstraints.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PathObjectivesAndConstraints.dir/WaypointConstraints.cpp.s"
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/david/Code/path_generator/PathObjectivesAndConstraints/src/WaypointConstraints.cpp -o CMakeFiles/PathObjectivesAndConstraints.dir/WaypointConstraints.cpp.s
+
 src/CMakeFiles/PathObjectivesAndConstraints.dir/ObjectiveFunctions.cpp.o: src/CMakeFiles/PathObjectivesAndConstraints.dir/flags.make
 src/CMakeFiles/PathObjectivesAndConstraints.dir/ObjectiveFunctions.cpp.o: ../src/ObjectiveFunctions.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/david/Code/path_generator/PathObjectivesAndConstraints/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/CMakeFiles/PathObjectivesAndConstraints.dir/ObjectiveFunctions.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/david/Code/path_generator/PathObjectivesAndConstraints/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/CMakeFiles/PathObjectivesAndConstraints.dir/ObjectiveFunctions.cpp.o"
 	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PathObjectivesAndConstraints.dir/ObjectiveFunctions.cpp.o -c /home/david/Code/path_generator/PathObjectivesAndConstraints/src/ObjectiveFunctions.cpp
 
 src/CMakeFiles/PathObjectivesAndConstraints.dir/ObjectiveFunctions.cpp.i: cmake_force
@@ -163,7 +176,7 @@ src/CMakeFiles/PathObjectivesAndConstraints.dir/ObjectiveFunctions.cpp.s: cmake_
 
 src/CMakeFiles/PathObjectivesAndConstraints.dir/ObstacleConstraints.cpp.o: src/CMakeFiles/PathObjectivesAndConstraints.dir/flags.make
 src/CMakeFiles/PathObjectivesAndConstraints.dir/ObstacleConstraints.cpp.o: ../src/ObstacleConstraints.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/david/Code/path_generator/PathObjectivesAndConstraints/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/CMakeFiles/PathObjectivesAndConstraints.dir/ObstacleConstraints.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/david/Code/path_generator/PathObjectivesAndConstraints/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/CMakeFiles/PathObjectivesAndConstraints.dir/ObstacleConstraints.cpp.o"
 	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PathObjectivesAndConstraints.dir/ObstacleConstraints.cpp.o -c /home/david/Code/path_generator/PathObjectivesAndConstraints/src/ObstacleConstraints.cpp
 
 src/CMakeFiles/PathObjectivesAndConstraints.dir/ObstacleConstraints.cpp.i: cmake_force
@@ -176,7 +189,7 @@ src/CMakeFiles/PathObjectivesAndConstraints.dir/ObstacleConstraints.cpp.s: cmake
 
 src/CMakeFiles/PathObjectivesAndConstraints.dir/CurvatureConstraints.cpp.o: src/CMakeFiles/PathObjectivesAndConstraints.dir/flags.make
 src/CMakeFiles/PathObjectivesAndConstraints.dir/CurvatureConstraints.cpp.o: ../src/CurvatureConstraints.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/david/Code/path_generator/PathObjectivesAndConstraints/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/CMakeFiles/PathObjectivesAndConstraints.dir/CurvatureConstraints.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/david/Code/path_generator/PathObjectivesAndConstraints/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object src/CMakeFiles/PathObjectivesAndConstraints.dir/CurvatureConstraints.cpp.o"
 	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PathObjectivesAndConstraints.dir/CurvatureConstraints.cpp.o -c /home/david/Code/path_generator/PathObjectivesAndConstraints/src/CurvatureConstraints.cpp
 
 src/CMakeFiles/PathObjectivesAndConstraints.dir/CurvatureConstraints.cpp.i: cmake_force
@@ -189,7 +202,7 @@ src/CMakeFiles/PathObjectivesAndConstraints.dir/CurvatureConstraints.cpp.s: cmak
 
 src/CMakeFiles/PathObjectivesAndConstraints.dir/DerivativeBounds.cpp.o: src/CMakeFiles/PathObjectivesAndConstraints.dir/flags.make
 src/CMakeFiles/PathObjectivesAndConstraints.dir/DerivativeBounds.cpp.o: ../src/DerivativeBounds.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/david/Code/path_generator/PathObjectivesAndConstraints/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object src/CMakeFiles/PathObjectivesAndConstraints.dir/DerivativeBounds.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/david/Code/path_generator/PathObjectivesAndConstraints/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object src/CMakeFiles/PathObjectivesAndConstraints.dir/DerivativeBounds.cpp.o"
 	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PathObjectivesAndConstraints.dir/DerivativeBounds.cpp.o -c /home/david/Code/path_generator/PathObjectivesAndConstraints/src/DerivativeBounds.cpp
 
 src/CMakeFiles/PathObjectivesAndConstraints.dir/DerivativeBounds.cpp.i: cmake_force
@@ -202,7 +215,7 @@ src/CMakeFiles/PathObjectivesAndConstraints.dir/DerivativeBounds.cpp.s: cmake_fo
 
 src/CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermEvaluator.cpp.o: src/CMakeFiles/PathObjectivesAndConstraints.dir/flags.make
 src/CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermEvaluator.cpp.o: ../src/CrossTermEvaluator.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/david/Code/path_generator/PathObjectivesAndConstraints/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object src/CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermEvaluator.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/david/Code/path_generator/PathObjectivesAndConstraints/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object src/CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermEvaluator.cpp.o"
 	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermEvaluator.cpp.o -c /home/david/Code/path_generator/PathObjectivesAndConstraints/src/CrossTermEvaluator.cpp
 
 src/CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermEvaluator.cpp.i: cmake_force
@@ -215,7 +228,7 @@ src/CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermEvaluator.cpp.s: cmake_
 
 src/CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermProperties.cpp.o: src/CMakeFiles/PathObjectivesAndConstraints.dir/flags.make
 src/CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermProperties.cpp.o: ../src/CrossTermProperties.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/david/Code/path_generator/PathObjectivesAndConstraints/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object src/CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermProperties.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/david/Code/path_generator/PathObjectivesAndConstraints/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object src/CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermProperties.cpp.o"
 	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermProperties.cpp.o -c /home/david/Code/path_generator/PathObjectivesAndConstraints/src/CrossTermProperties.cpp
 
 src/CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermProperties.cpp.i: cmake_force
@@ -228,7 +241,7 @@ src/CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermProperties.cpp.s: cmake
 
 src/CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermBounds.cpp.o: src/CMakeFiles/PathObjectivesAndConstraints.dir/flags.make
 src/CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermBounds.cpp.o: ../src/CrossTermBounds.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/david/Code/path_generator/PathObjectivesAndConstraints/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object src/CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermBounds.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/david/Code/path_generator/PathObjectivesAndConstraints/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object src/CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermBounds.cpp.o"
 	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermBounds.cpp.o -c /home/david/Code/path_generator/PathObjectivesAndConstraints/src/CrossTermBounds.cpp
 
 src/CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermBounds.cpp.i: cmake_force
@@ -241,7 +254,7 @@ src/CMakeFiles/PathObjectivesAndConstraints.dir/CrossTermBounds.cpp.s: cmake_for
 
 src/CMakeFiles/PathObjectivesAndConstraints.dir/InclinationConstraint.cpp.o: src/CMakeFiles/PathObjectivesAndConstraints.dir/flags.make
 src/CMakeFiles/PathObjectivesAndConstraints.dir/InclinationConstraint.cpp.o: ../src/InclinationConstraint.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/david/Code/path_generator/PathObjectivesAndConstraints/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object src/CMakeFiles/PathObjectivesAndConstraints.dir/InclinationConstraint.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/david/Code/path_generator/PathObjectivesAndConstraints/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object src/CMakeFiles/PathObjectivesAndConstraints.dir/InclinationConstraint.cpp.o"
 	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PathObjectivesAndConstraints.dir/InclinationConstraint.cpp.o -c /home/david/Code/path_generator/PathObjectivesAndConstraints/src/InclinationConstraint.cpp
 
 src/CMakeFiles/PathObjectivesAndConstraints.dir/InclinationConstraint.cpp.i: cmake_force
@@ -254,7 +267,7 @@ src/CMakeFiles/PathObjectivesAndConstraints.dir/InclinationConstraint.cpp.s: cma
 
 src/CMakeFiles/PathObjectivesAndConstraints.dir/SphereCollisionEvaluator.cpp.o: src/CMakeFiles/PathObjectivesAndConstraints.dir/flags.make
 src/CMakeFiles/PathObjectivesAndConstraints.dir/SphereCollisionEvaluator.cpp.o: ../src/SphereCollisionEvaluator.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/david/Code/path_generator/PathObjectivesAndConstraints/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object src/CMakeFiles/PathObjectivesAndConstraints.dir/SphereCollisionEvaluator.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/david/Code/path_generator/PathObjectivesAndConstraints/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object src/CMakeFiles/PathObjectivesAndConstraints.dir/SphereCollisionEvaluator.cpp.o"
 	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PathObjectivesAndConstraints.dir/SphereCollisionEvaluator.cpp.o -c /home/david/Code/path_generator/PathObjectivesAndConstraints/src/SphereCollisionEvaluator.cpp
 
 src/CMakeFiles/PathObjectivesAndConstraints.dir/SphereCollisionEvaluator.cpp.i: cmake_force
@@ -274,6 +287,7 @@ PathObjectivesAndConstraints_OBJECTS = \
 "CMakeFiles/PathObjectivesAndConstraints.dir/MDMAlgorithmClass.cpp.o" \
 "CMakeFiles/PathObjectivesAndConstraints.dir/DerivativeEvaluator.cpp.o" \
 "CMakeFiles/PathObjectivesAndConstraints.dir/WaypointConstraintsOld.cpp.o" \
+"CMakeFiles/PathObjectivesAndConstraints.dir/WaypointConstraints.cpp.o" \
 "CMakeFiles/PathObjectivesAndConstraints.dir/ObjectiveFunctions.cpp.o" \
 "CMakeFiles/PathObjectivesAndConstraints.dir/ObstacleConstraints.cpp.o" \
 "CMakeFiles/PathObjectivesAndConstraints.dir/CurvatureConstraints.cpp.o" \
@@ -294,6 +308,7 @@ src/libPathObjectivesAndConstraints.so: src/CMakeFiles/PathObjectivesAndConstrai
 src/libPathObjectivesAndConstraints.so: src/CMakeFiles/PathObjectivesAndConstraints.dir/MDMAlgorithmClass.cpp.o
 src/libPathObjectivesAndConstraints.so: src/CMakeFiles/PathObjectivesAndConstraints.dir/DerivativeEvaluator.cpp.o
 src/libPathObjectivesAndConstraints.so: src/CMakeFiles/PathObjectivesAndConstraints.dir/WaypointConstraintsOld.cpp.o
+src/libPathObjectivesAndConstraints.so: src/CMakeFiles/PathObjectivesAndConstraints.dir/WaypointConstraints.cpp.o
 src/libPathObjectivesAndConstraints.so: src/CMakeFiles/PathObjectivesAndConstraints.dir/ObjectiveFunctions.cpp.o
 src/libPathObjectivesAndConstraints.so: src/CMakeFiles/PathObjectivesAndConstraints.dir/ObstacleConstraints.cpp.o
 src/libPathObjectivesAndConstraints.so: src/CMakeFiles/PathObjectivesAndConstraints.dir/CurvatureConstraints.cpp.o
@@ -305,7 +320,7 @@ src/libPathObjectivesAndConstraints.so: src/CMakeFiles/PathObjectivesAndConstrai
 src/libPathObjectivesAndConstraints.so: src/CMakeFiles/PathObjectivesAndConstraints.dir/SphereCollisionEvaluator.cpp.o
 src/libPathObjectivesAndConstraints.so: src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make
 src/libPathObjectivesAndConstraints.so: src/CMakeFiles/PathObjectivesAndConstraints.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/david/Code/path_generator/PathObjectivesAndConstraints/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX shared library libPathObjectivesAndConstraints.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/david/Code/path_generator/PathObjectivesAndConstraints/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Linking CXX shared library libPathObjectivesAndConstraints.so"
 	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/PathObjectivesAndConstraints.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

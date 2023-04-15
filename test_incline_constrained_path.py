@@ -27,7 +27,7 @@ point_sequence = np.concatenate((point_1,point_2),axis=1)
 dimension = np.shape(point_sequence)[0]
 max_curvature = 1
 # max_curvature = None
-max_incline = 1
+max_incline = 2
 # max_incline = None
 order = 3
 initial_control_points = None

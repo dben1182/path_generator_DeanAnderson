@@ -85,6 +85,11 @@ src/CMakeFiles/PathObjectivesAndConstraints.dir/SphereCollisionEvaluator.cpp.o: 
 src/CMakeFiles/PathObjectivesAndConstraints.dir/SphereCollisionEvaluator.cpp.o: ../src/SphereCollisionEvaluator.cpp
 src/CMakeFiles/PathObjectivesAndConstraints.dir/SphereCollisionEvaluator.cpp.o: ../src/SphereCollisionEvaluator.hpp
 
+src/CMakeFiles/PathObjectivesAndConstraints.dir/WaypointConstraints.cpp.o: ../src/CBindHelperFunctions.hpp
+src/CMakeFiles/PathObjectivesAndConstraints.dir/WaypointConstraints.cpp.o: ../src/RotationHelperFunctions.hpp
+src/CMakeFiles/PathObjectivesAndConstraints.dir/WaypointConstraints.cpp.o: ../src/WaypointConstraints.cpp
+src/CMakeFiles/PathObjectivesAndConstraints.dir/WaypointConstraints.cpp.o: ../src/WaypointConstraints.hpp
+
 src/CMakeFiles/PathObjectivesAndConstraints.dir/WaypointConstraintsOld.cpp.o: ../src/CBindHelperFunctions.hpp
 src/CMakeFiles/PathObjectivesAndConstraints.dir/WaypointConstraintsOld.cpp.o: ../src/CrossTermEvaluator.hpp
 src/CMakeFiles/PathObjectivesAndConstraints.dir/WaypointConstraintsOld.cpp.o: ../src/CubicEquationSolver.hpp

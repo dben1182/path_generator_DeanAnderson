@@ -6,6 +6,7 @@ add_executable(${TEST_NAME}
     UnitTestMDMAlgorithmClass.cpp
     UnitTestDerivativeEvaluator.cpp
     UnitTestWaypointConstraintsOld.cpp
+    UnitTestWaypointConstraints.cpp
     UnitTestObjectiveFunctions.cpp
     UnitTestCurvatureConstraints.cpp
     UnitTestDerivativeBounds.cpp

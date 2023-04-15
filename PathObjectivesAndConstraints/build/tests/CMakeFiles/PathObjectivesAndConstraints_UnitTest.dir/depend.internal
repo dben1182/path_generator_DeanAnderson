@@ -79,6 +79,11 @@ tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestSphereCollisi
  ../src/RotationHelperFunctions.hpp
  ../src/SphereCollisionEvaluator.hpp
  /home/david/Code/path_generator/PathObjectivesAndConstraints/tests/UnitTestSphereCollisionEvaluator.cpp
+tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraints.cpp.o
+ ../src/CBindHelperFunctions.hpp
+ ../src/RotationHelperFunctions.hpp
+ ../src/WaypointConstraints.hpp
+ /home/david/Code/path_generator/PathObjectivesAndConstraints/tests/UnitTestWaypointConstraints.cpp
 tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraintsOld.cpp.o
  ../src/CBindHelperFunctions.hpp
  ../src/CrossTermEvaluator.hpp

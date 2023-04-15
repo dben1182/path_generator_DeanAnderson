@@ -476,6 +476,33 @@ UnitTestSphereCollisionEvaluator.cpp.s:
 	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/build.make tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestSphereCollisionEvaluator.cpp.s
 .PHONY : UnitTestSphereCollisionEvaluator.cpp.s
 
+UnitTestWaypointConstraints.o: UnitTestWaypointConstraints.cpp.o
+
+.PHONY : UnitTestWaypointConstraints.o
+
+# target to build an object file
+UnitTestWaypointConstraints.cpp.o:
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/build.make tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraints.cpp.o
+.PHONY : UnitTestWaypointConstraints.cpp.o
+
+UnitTestWaypointConstraints.i: UnitTestWaypointConstraints.cpp.i
+
+.PHONY : UnitTestWaypointConstraints.i
+
+# target to preprocess a source file
+UnitTestWaypointConstraints.cpp.i:
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/build.make tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraints.cpp.i
+.PHONY : UnitTestWaypointConstraints.cpp.i
+
+UnitTestWaypointConstraints.s: UnitTestWaypointConstraints.cpp.s
+
+.PHONY : UnitTestWaypointConstraints.s
+
+# target to generate assembly for a file
+UnitTestWaypointConstraints.cpp.s:
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/build.make tests/CMakeFiles/PathObjectivesAndConstraints_UnitTest.dir/UnitTestWaypointConstraints.cpp.s
+.PHONY : UnitTestWaypointConstraints.cpp.s
+
 UnitTestWaypointConstraintsOld.o: UnitTestWaypointConstraintsOld.cpp.o
 
 .PHONY : UnitTestWaypointConstraintsOld.o
@@ -551,6 +578,9 @@ help:
 	@echo "... UnitTestSphereCollisionEvaluator.o"
 	@echo "... UnitTestSphereCollisionEvaluator.i"
 	@echo "... UnitTestSphereCollisionEvaluator.s"
+	@echo "... UnitTestWaypointConstraints.o"
+	@echo "... UnitTestWaypointConstraints.i"
+	@echo "... UnitTestWaypointConstraints.s"
 	@echo "... UnitTestWaypointConstraintsOld.o"
 	@echo "... UnitTestWaypointConstraintsOld.i"
 	@echo "... UnitTestWaypointConstraintsOld.s"

@@ -530,6 +530,33 @@ SphereCollisionEvaluator.cpp.s:
 	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/SphereCollisionEvaluator.cpp.s
 .PHONY : SphereCollisionEvaluator.cpp.s
 
+WaypointConstraints.o: WaypointConstraints.cpp.o
+
+.PHONY : WaypointConstraints.o
+
+# target to build an object file
+WaypointConstraints.cpp.o:
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/WaypointConstraints.cpp.o
+.PHONY : WaypointConstraints.cpp.o
+
+WaypointConstraints.i: WaypointConstraints.cpp.i
+
+.PHONY : WaypointConstraints.i
+
+# target to preprocess a source file
+WaypointConstraints.cpp.i:
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/WaypointConstraints.cpp.i
+.PHONY : WaypointConstraints.cpp.i
+
+WaypointConstraints.s: WaypointConstraints.cpp.s
+
+.PHONY : WaypointConstraints.s
+
+# target to generate assembly for a file
+WaypointConstraints.cpp.s:
+	cd /home/david/Code/path_generator/PathObjectivesAndConstraints/build && $(MAKE) -f src/CMakeFiles/PathObjectivesAndConstraints.dir/build.make src/CMakeFiles/PathObjectivesAndConstraints.dir/WaypointConstraints.cpp.s
+.PHONY : WaypointConstraints.cpp.s
+
 WaypointConstraintsOld.o: WaypointConstraintsOld.cpp.o
 
 .PHONY : WaypointConstraintsOld.o
@@ -611,6 +638,9 @@ help:
 	@echo "... SphereCollisionEvaluator.o"
 	@echo "... SphereCollisionEvaluator.i"
 	@echo "... SphereCollisionEvaluator.s"
+	@echo "... WaypointConstraints.o"
+	@echo "... WaypointConstraints.i"
+	@echo "... WaypointConstraints.s"
 	@echo "... WaypointConstraintsOld.o"
 	@echo "... WaypointConstraintsOld.i"
 	@echo "... WaypointConstraintsOld.s"

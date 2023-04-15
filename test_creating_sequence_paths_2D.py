@@ -58,8 +58,6 @@ print("total time: " , total_end_time - total_start_time)
 spline_start_time = 0
 bspline_2 = BsplineEvaluation(control_points_2, order, spline_start_time, 1, False)
 
-
-
 spline_data_1, time_data_1 = bspline_1.get_spline_data(number_data_points)
 curvature_data_1, time_data_1 = bspline_1.get_spline_curvature_data(number_data_points)
 spline_data_2, time_data_2 = bspline_2.get_spline_data(number_data_points)
