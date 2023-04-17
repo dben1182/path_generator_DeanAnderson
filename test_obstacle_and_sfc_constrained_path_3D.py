@@ -6,6 +6,7 @@ from path_generation.path_generator import PathGenerator
 from path_generation.safe_flight_corridor import SFC, SFC_Data, plot_sfcs, get3DRotationAndTranslationFromPoints
 from path_generation.waypoint_data import Waypoint, WaypointData
 from path_generation.path_plotter import set_axes_equal
+from path_generation.obstacle import Obstacle, plot_3D_obstacles
 import time
 
 point_1 = np.array([[3],[4],[0]])
@@ -23,6 +24,8 @@ sfc_3 = SFC(np.array([[min_len_3+3],[2],[2]]), T3, R3)
 sfcs = (sfc_1, sfc_2, sfc_3)
 sfc_data = SFC_Data(sfcs, point_sequence)
 
+obstacles = [Obstacle(np.array([[10],[8],[6]]), 1.3)]
+
 waypoint_1 = Waypoint(location=point_1)
 waypoint_2 = Waypoint(location=point_4)
 # waypoint_1.velocity = point_2 - point_1
@@ -38,7 +41,7 @@ order = 3
 path_gen = PathGenerator(dimension)
 start_time = time.time()
 control_points = path_gen.generate_path(waypoint_data=waypoint_data, max_curvature=max_curvature,
-    max_incline=max_incline, sfc_data=sfc_data, obstacles=None)
+    max_incline=max_incline, sfc_data=sfc_data, obstacles=obstacles)
 end_time = time.time()
 print("computation time: " , end_time - start_time)
 # print("control_points: " , control_points)
@@ -59,6 +62,7 @@ plot_sfcs(sfcs,ax)
 ax.plot(spline_data[0,:], spline_data[1,:],spline_data[2,:])
 ax.scatter(waypoints[0,:],waypoints[1,:],waypoints[2,:])
 # plt.scatter(minvo_cps[0,:],minvo_cps[1,:])
+plot_3D_obstacles(obstacles,ax)
 ax.set_xlabel('$X$')
 ax.set_ylabel('$Y$')
 ax.set_zlabel('$Z$')

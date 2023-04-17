@@ -3,8 +3,9 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import Rectangle
 from bsplinegenerator.bsplines import BsplineEvaluation
 from path_generation.path_generator import PathGenerator
-from path_generation.safe_flight_corridor import SFC_3D, plot_3D_sfcs, get3DRotationAndTranslationFromPoints
-from path_generation.obstacle import Obstacle, plot_3D_obstacles, set_axes_equal
+from path_generation.obstacle import Obstacle, plot_3D_obstacles
+from path_generation.path_plotter import set_axes_equal
+from path_generation.waypoint_data import Waypoint, WaypointData
 import time
 
 point_1 = np.array([[3],[4],[0]])
@@ -12,33 +13,24 @@ point_2 = np.array([[7],[10],[13]])
 points = np.concatenate((point_1,point_2),1)
 dimension = np.shape(point_1)[0]
 
-waypoint_directions = np.array([[1,0],[0,0],[0,0]])
-waypoint_directions = None 
-waypoint_accelerations = np.array([[-0.2, 0],
-                            [0.43450137, .3],
-                            [0.94102469, 0]])
-waypoint_accelerations = None
+waypoint_1 = Waypoint(location=point_1)
+waypoint_2 = Waypoint(location=point_2)
+# waypoint_1.velocity = point_2- point_1
+# waypoint_2.velocity = np.array([[0],[1],[0]])
+waypoint_data = WaypointData(start_waypoint=waypoint_1,end_waypoint=waypoint_2)
 
-# waypoint_accelerations = None
-point_sequence = np.concatenate((point_1,point_2),axis=1)
-dimension = np.shape(point_sequence)[0]
 max_curvature = 0.5
-max_incline = 2
 max_incline = 2
 obstacles = [Obstacle(np.array([[4.5],[5.5],[3]]), 1.0),
              Obstacle(np.array([[4],[8],[9.5]]), 1.5)]
-# obstacles = [Obstacle(np.array([[4],[6],[3]]), 1.0)]
-# obstacles = None
-order = 3
-initial_control_points = None
 
+order = 3
 
 path_gen = PathGenerator(dimension)
 start_time = time.time()
-control_points = path_gen.generate_path(point_sequence, waypoint_directions, waypoint_accelerations, 
-        max_curvature, max_incline=max_incline, sfcs=None, obstacles=obstacles)
+control_points = path_gen.generate_path(waypoint_data=waypoint_data, max_curvature=max_curvature,
+    max_incline=max_incline, sfc_data=None, obstacles=obstacles)
 end_time = time.time()
-print("computation time: " , end_time - start_time)
 print("control_points: " , control_points)
 spline_start_time = 0
 scale_factor = 1
@@ -53,15 +45,16 @@ curvature_data, time_data = bspline.get_spline_curvature_data(number_data_points
 acceleration_data, time_data = bspline.get_spline_derivative_data(number_data_points,2)
 # acceleration_data, time_data = bspline.get_spline_derivative_data(1000,2)
 minvo_cps = bspline.get_minvo_control_points()
-waypoints = np.concatenate((point_sequence[:,0][:,None], point_sequence[:,-1][:,None]),1)
+waypoints = waypoint_data.get_waypoint_locations()
 
 print("max incline" , np.max(incline_data))
 print("max curvature" , np.max(curvature_data))
+print("computation time: " , end_time - start_time)
 
 cp_accel = (control_points[:,0] - 2*control_points[:,1] + control_points[:,2])
-print("cp_accel:  " , cp_accel)
-print("start accel: " , acceleration_data[:,0])
-print("end accel: " , acceleration_data[:,-1])
+# print("cp_accel:  " , cp_accel)
+# print("start accel: " , acceleration_data[:,0])
+# print("end accel: " , acceleration_data[:,-1])
 
 # print("sfcs: " , sfcs)
 plt.figure()
@@ -73,7 +66,10 @@ ax.scatter(waypoints[0,:],waypoints[1,:],waypoints[2,:])
 ax.set_xlabel('$X$')
 ax.set_ylabel('$Y$')
 ax.set_zlabel('$Z$')
-set_axes_equal(ax)
+set_axes_equal(ax, dimension)
+ax.set_xlabel('$X$')
+ax.set_ylabel('$Y$')
+ax.set_zlabel('$Z$')
 # plt.scatter(minvo_cps[0,:],minvo_cps[1,:])
 plt.show()
 

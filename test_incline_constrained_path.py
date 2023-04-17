@@ -4,19 +4,22 @@ from matplotlib.patches import Rectangle
 from bsplinegenerator.bsplines import BsplineEvaluation
 from path_generation.path_generator import PathGenerator
 from path_generation.safe_flight_corridor import SFC_Data, get3DRotationAndTranslationFromPoints
-from path_generation.obstacle import set_axes_equal
+from path_generation.path_plotter import set_axes_equal
 from path_generation.waypoint_data import Waypoint, WaypointData
 import time
 
 waypoint_1 = Waypoint(location=np.array([[3],[4],[0]]))
-waypoint_2 = Waypoint(location=np.array([[7],[10],[13]]))
-waypoint_1.velocity = np.array([[3],[0],[0]])
+waypoint_2 = Waypoint(location=np.array([[7],[10],[20]]))
+waypoint_1.velocity = np.array([[3],[0.5],[1.5]])
+waypoint_1.acceleration = np.array([[2],[-7],[-1]])
+waypoint_2.velocity = np.array([[-6.49980771],[ 1.76248535],[ 3.50617745]])
+waypoint_2.acceleration = np.array([[-4.84365552],[-1.50351583],[ 0.52915289]])
 waypoint_data = WaypointData(start_waypoint=waypoint_1,end_waypoint=waypoint_2)
 
 dimension = np.shape(waypoint_1.location)[0]
 max_curvature = 1
 # max_curvature = None
-max_incline = 2
+max_incline = 1
 # max_incline = None
 order = 3
 initial_control_points = None
@@ -27,7 +30,7 @@ start_time = time.time()
 control_points = path_gen.generate_path(waypoint_data=waypoint_data, max_curvature=max_curvature,
     max_incline=max_incline, sfc_data=None, obstacles=None)
 end_time = time.time()
-print("computation time: " , end_time - start_time)
+
 # print("control_points: " , control_points)
 spline_start_time = 0
 scale_factor = 1
@@ -43,10 +46,22 @@ velocity_data, time_data = bspline.get_derivative_magnitude_data(number_data_poi
 # acceleration_data, time_data = bspline.get_spline_derivative_data(1000,2)
 minvo_cps = bspline.get_minvo_control_points()
 waypoints = waypoint_data.get_waypoint_locations()
-
+end_time_spline = bspline.get_end_time()
+start_velocity = bspline.get_derivative_at_time_t(0,1)
+start_acceleration = bspline.get_derivative_at_time_t(0,2)
+end_velocity = bspline.get_derivative_at_time_t(end_time_spline,1)
+end_acceleration = bspline.get_derivative_at_time_t(end_time_spline,2)
+path_length = bspline.get_arc_length(number_data_points)
+print("start_velocity: " , start_velocity)
+print("start_acceleration: " , start_acceleration)
+print("end_velocity: " , end_velocity)
+print("end_acceleration: " , end_acceleration)
 print("max incline" , np.max(incline_data))
 print("max curvature" , np.max(curvature_data))
 print("start curvature: " , curvature_data[0])
+print("end curvature: " , curvature_data[-1])
+print("path length: " , path_length)
+print("computation time: " , end_time - start_time)
 # print("end curvature: " , curvature_data[-1])
 
 # print("sfcs: " , sfcs)
@@ -59,7 +74,7 @@ ax.scatter(control_points[0,:], control_points[1,:],control_points[2,:])
 ax.set_xlabel('$X$')
 ax.set_ylabel('$Y$')
 ax.set_zlabel('$Z$')
-set_axes_equal(ax)
+set_axes_equal(ax,dimension)
 plt.show()
 
 # plt.figure()
@@ -70,8 +85,8 @@ plt.show()
 # plt.plot(time_data, curvature_data)
 # plt.show()
 
-plt.figure()
-plt.plot(time_data, velocity_data)
-plt.show()
+# plt.figure()
+# plt.plot(time_data, velocity_data)
+# plt.show()
 
 

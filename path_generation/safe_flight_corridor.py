@@ -48,12 +48,13 @@ class SFC:
     
 
 class SFC_Data:
-    def __init__(self, sfc_list: list, point_sequence: np.ndarray):
+    def __init__(self, sfc_list: list, point_sequence: np.ndarray, min_num_intervals_per_corridor: int = 1):
         self._sfc_list = sfc_list
         self._num_corridors = len(self._sfc_list)
         self._point_sequence = point_sequence
+        self._min_num_intervals_per_corridor = min_num_intervals_per_corridor
         self._intervals_per_corridor = self.__evaluate_intervals_per_corridor()
-        self._num_intervals = self.get_num_intervals
+        self._num_intervals = np.sum(self._intervals_per_corridor)
 
     def get_sfc_list(self):
         return self._sfc_list
@@ -78,7 +79,7 @@ class SFC_Data:
             min_distance = np.min(distances)
             intervals_per_corridor = []
             for i in range(self._num_corridors):
-                num_intervals = int(np.round(distances[i]/min_distance)) + 1
+                num_intervals = (int(np.round(distances[i]/min_distance)) + 1)*self._min_num_intervals_per_corridor
                 intervals_per_corridor.append(num_intervals)
         return intervals_per_corridor
 
