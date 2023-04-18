@@ -24,7 +24,7 @@ sfc_3 = SFC(np.array([[min_len_3+3],[2],[2]]), T3, R3)
 sfcs = (sfc_1, sfc_2, sfc_3)
 sfc_data = SFC_Data(sfcs, point_sequence)
 
-obstacles = [Obstacle(np.array([[10],[8],[6]]), 1.3)]
+obstacles = [Obstacle(np.array([[10],[8],[5.5]]), 1.3)]
 
 waypoint_1 = Waypoint(location=point_1)
 waypoint_2 = Waypoint(location=point_4)

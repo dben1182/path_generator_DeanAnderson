@@ -20,12 +20,15 @@ class Waypoint:
 
 @dataclass
 class WaypointData:
-    start_waypoint: Waypoint(location=np.array([]))
-    end_waypoint: Waypoint(location=np.array([]))
-    # intermediate_locations: np.ndarray = None
+    start_waypoint: Waypoint = Waypoint(location=np.array([]))
+    end_waypoint: Waypoint = Waypoint(location=np.array([]))
+    intermediate_locations: np.ndarray = None
 
     def get_waypoint_locations(self):
-        point_sequence = np.concatenate((self.start_waypoint.location,self.end_waypoint.location),1)
+        point_sequence = self.start_waypoint.location
+        if self.intermediate_locations is not None:
+            point_sequence = np.concatenate((point_sequence, self.intermediate_locations),1)
+        point_sequence = np.concatenate((point_sequence, self.end_waypoint.location),1)
         return point_sequence
     
     def get_distance(self):
@@ -34,11 +37,20 @@ class WaypointData:
         distance = np.linalg.norm(end_pos-start_pos)
         return distance
 
-    # def set_location_data(self, point_sequence):
-    #     self.start_waypoint.location = point_sequence[:,0][:,None]
-    #     self.end_waypoint.location = point_sequence[:,-1][:,None]
-    #     if np.shape(point_sequence)[1] > 2:
-    #         self.intermediate_locations = point_sequence[:,1:-1][:,None]
+    def set_location_data(self, waypoint_sequence, set_vel = True):
+        self.start_waypoint.location = waypoint_sequence[:,0][:,None]
+        self.end_waypoint.location = waypoint_sequence[:,-1][:,None]
+        if set_vel:
+            self.start_waypoint.velocity = (waypoint_sequence[:,1] - waypoint_sequence[:,0])[:,None]
+            self.end_waypoint.velocity = (waypoint_sequence[:,-1] - waypoint_sequence[:,-2])[:,None]
+        if np.shape(waypoint_sequence)[1] > 2:
+            self.intermediate_locations = waypoint_sequence[:,1:-1]
+
+    def get_num_intermediate_waypoints(self):
+        if self.intermediate_locations is not None:
+            return np.shape(self.intermediate_locations)[1]
+        else:
+            return 0
 
 def plot3D_waypoints(waypoint_data: WaypointData, ax):
     locations = waypoint_data.get_waypoint_locations()
@@ -56,3 +68,7 @@ def plot3D_waypoints(waypoint_data: WaypointData, ax):
         ax.quiver(end_pos.item(0), end_pos.item(1), end_pos.item(2), 
                   end_vel.item(0), end_vel.item(1), end_vel.item(2), 
                   length=distance/10, normalize=True)
+    if waypoint_data.intermediate_locations is not None:
+        ax.scatter(waypoint_data.intermediate_locations[0,:], 
+                   waypoint_data.intermediate_locations[1,:],
+                   waypoint_data.intermediate_locations[2,:],color="b")

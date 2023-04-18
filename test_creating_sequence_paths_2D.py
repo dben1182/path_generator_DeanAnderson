@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.patches import Rectangle
 from bsplinegenerator.bsplines import BsplineEvaluation
-from path_generation.path_generator import PathGenerator
+from path_generation.path_generator_2 import PathGenerator
 from path_generation.safe_flight_corridor import SFC_Data, get3DRotationAndTranslationFromPoints
 from path_generation.path_plotter import set_axes_equal
 from path_generation.waypoint_data import Waypoint, WaypointData
@@ -71,8 +71,9 @@ print("max curvature" , np.max((np.max(curvature_data_1), np.max(curvature_data_
 plt.figure()
 ax = plt.axes()
 ax.plot(spline_data_1[0,:], spline_data_1[1,:], color = "b")
-# ax.scatter(control_points[0,:], control_points[1,:],control_points[2,:])
+ax.scatter(control_points[0,:], control_points[1,:], color="b")
 ax.plot(spline_data_2[0,:], spline_data_2[1,:], color = "r")
+ax.scatter(control_points_2[0,:], control_points_2[1,:], color="r")
 set_axes_equal(ax,dimension)
 plt.title("Optimized Path")
 plt.show()

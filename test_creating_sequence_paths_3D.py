@@ -2,7 +2,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.patches import Rectangle
 from bsplinegenerator.bsplines import BsplineEvaluation
-from path_generation.path_generator import PathGenerator
+# from path_generation.path_generator import PathGenerator
+from path_generation.path_generator_2 import PathGenerator
 from path_generation.safe_flight_corridor import SFC_Data, get3DRotationAndTranslationFromPoints
 from path_generation.path_plotter import set_axes_equal
 from path_generation.waypoint_data import Waypoint, WaypointData, plot3D_waypoints
@@ -185,6 +186,7 @@ set_axes_equal(ax,dimension)
 plt.show()
 
 plt.figure()
+plt.title("Curvature")
 plt.plot(time_data_1, curvature_data_1,color = "b")
 plt.plot(time_data_2, curvature_data_2, color = "r")
 plt.plot(time_data_3, curvature_data_3, color = "g")

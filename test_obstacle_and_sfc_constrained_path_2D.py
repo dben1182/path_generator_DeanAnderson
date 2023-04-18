@@ -2,7 +2,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.patches import Rectangle
 from bsplinegenerator.bsplines import BsplineEvaluation
-from path_generation.path_generator import PathGenerator
+# from path_generation.path_generator import PathGenerator
+from path_generation.path_generator_2 import PathGenerator
 from path_generation.safe_flight_corridor import SFC, SFC_Data, plot_sfcs, get2DRotationAndTranslationFromPoints
 from path_generation.obstacle import Obstacle, plot_2D_obstacles
 from path_generation.waypoint_data import Waypoint, WaypointData
@@ -47,7 +48,7 @@ start_time = time.time()
 control_points = path_gen.generate_path(waypoint_data=waypoint_data, max_curvature=max_curvature,
     max_incline=max_incline, sfc_data=sfc_data, obstacles=obstacles)
 end_time = time.time()
-print("control_points: " , control_points)
+# print("control_points: " , control_points)
 print("computation time:" , end_time - start_time)
 spline_start_time = 0
 scale_factor = 1
@@ -68,9 +69,6 @@ ax.scatter(waypoints[0,:],waypoints[1,:])
 set_axes_equal(ax, dimension)
 if obstacles != None:
     plot_2D_obstacles(obstacles, ax)
-ax.set_xlabel('$X$')
-ax.set_ylabel('$Y$')
-ax.set_zlabel('$Z$')
 plt.show()
 
 # plt.figure()

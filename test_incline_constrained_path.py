@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.patches import Rectangle
 from bsplinegenerator.bsplines import BsplineEvaluation
-from path_generation.path_generator import PathGenerator
+from path_generation.path_generator_2 import PathGenerator
 from path_generation.safe_flight_corridor import SFC_Data, get3DRotationAndTranslationFromPoints
 from path_generation.path_plotter import set_axes_equal
 from path_generation.waypoint_data import Waypoint, WaypointData
@@ -22,7 +22,6 @@ max_curvature = 1
 max_incline = 1
 # max_incline = None
 order = 3
-initial_control_points = None
 
 
 path_gen = PathGenerator(dimension)
