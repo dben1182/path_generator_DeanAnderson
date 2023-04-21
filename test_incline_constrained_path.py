@@ -14,21 +14,28 @@ waypoint_1.velocity = np.array([[3],[0.5],[1.5]])
 waypoint_1.acceleration = np.array([[2],[-7],[-1]])
 waypoint_2.velocity = np.array([[-6.49980771],[ 1.76248535],[ 3.50617745]])
 waypoint_2.acceleration = np.array([[-4.84365552],[-1.50351583],[ 0.52915289]])
+# waypoint_1 = Waypoint(location=np.array([[0],[0],[100]]))
+# waypoint_2 = Waypoint(location=np.array([[0],[100],[105]]))
+# waypoint_1.velocity = np.array([[1],[0],[0]])
+# waypoint_2.velocity = np.array([[-1],[ 0],[ 0]])
 waypoint_data = WaypointData(start_waypoint=waypoint_1,end_waypoint=waypoint_2)
 
 dimension = np.shape(waypoint_1.location)[0]
 max_curvature = 1
 # max_curvature = None
 max_incline = 1
-# max_incline = None
+max_incline = None
 order = 3
-
+# objective_function_type= "minimal_distance_path"
+objective_function_type= "minimal_velocity_path"
+# objective_function_type= "minimal_acceleration_path"
 
 path_gen = PathGenerator(dimension)
 start_time = time.time()
 control_points = path_gen.generate_path(waypoint_data=waypoint_data, max_curvature=max_curvature,
-    max_incline=max_incline, sfc_data=None, obstacles=None)
+    max_incline=max_incline, sfc_data=None, obstacles=None, objective_function_type=objective_function_type)
 end_time = time.time()
+print("control_points: " , control_points)
 
 # print("control_points: " , control_points)
 spline_start_time = 0

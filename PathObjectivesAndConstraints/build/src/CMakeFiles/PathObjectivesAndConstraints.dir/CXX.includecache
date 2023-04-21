@@ -14,23 +14,17 @@ eigen3/Eigen/Dense
 gtest/gtest_prod.h
 /home/david/Code/path_generator/PathObjectivesAndConstraints/src/gtest/gtest_prod.h
 
-/home/david/Code/path_generator/PathObjectivesAndConstraints/src/RotationHelperFunctions.hpp
+/home/david/Code/path_generator/PathObjectivesAndConstraints/src/ObjectiveFunctions.cpp
+ObjectiveFunctions.hpp
+/home/david/Code/path_generator/PathObjectivesAndConstraints/src/ObjectiveFunctions.hpp
+iostream
+-
+
+/home/david/Code/path_generator/PathObjectivesAndConstraints/src/ObjectiveFunctions.hpp
 eigen3/Eigen/Core
 -
 eigen3/Eigen/Dense
 -
-gtest/gtest_prod.h
-/home/david/Code/path_generator/PathObjectivesAndConstraints/src/gtest/gtest_prod.h
-
-/home/david/Code/path_generator/PathObjectivesAndConstraints/src/WaypointConstraints.cpp
-WaypointConstraints.hpp
-/home/david/Code/path_generator/PathObjectivesAndConstraints/src/WaypointConstraints.hpp
-iostream
--
-
-/home/david/Code/path_generator/PathObjectivesAndConstraints/src/WaypointConstraints.hpp
 CBindHelperFunctions.hpp
 /home/david/Code/path_generator/PathObjectivesAndConstraints/src/CBindHelperFunctions.hpp
-RotationHelperFunctions.hpp
-/home/david/Code/path_generator/PathObjectivesAndConstraints/src/RotationHelperFunctions.hpp
 

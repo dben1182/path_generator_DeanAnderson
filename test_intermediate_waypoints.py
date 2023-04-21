@@ -18,15 +18,16 @@ max_incline = 2
 # max_incline = None
 order = 3
 scale_factor = 1
-path_objective_type = "minimal_acceleration_path"
-# path_objective_type = "minimal_velocity_path"
+# path_objective_type = "minimal_acceleration_path"
+path_objective_type = "minimal_velocity_path"
 
 ##### Initial Settings
 # path 1
 waypoint_1_loc = np.array([[3],[4],[0]])
 waypoint_2_loc = np.array([[7],[10],[13]])
+waypoint_2_5_loc = np.array([[ 9.80919643],[ 1.8519873 ],[10.37864785]])
 waypoint_3_loc = np.array([[8],[-10],[7]])
-waypoint_sequence = np.concatenate((waypoint_1_loc, waypoint_2_loc, waypoint_3_loc),1)
+waypoint_sequence = np.concatenate((waypoint_1_loc, waypoint_2_loc, waypoint_2_5_loc, waypoint_3_loc),1)
 start_waypoint = Waypoint(location=waypoint_1_loc)
 end_waypoint= Waypoint(location=waypoint_3_loc)
 waypoint_data = WaypointData(start_waypoint, end_waypoint)

@@ -6,7 +6,7 @@ safe flight corridors.
 import os
 import numpy as np
 from scipy.optimize import minimize, Bounds, LinearConstraint, NonlinearConstraint, Bounds
-from path_generation.matrix_evaluation import get_M_matrix
+from path_generation.matrix_evaluation import get_M_matrix, evaluate_point_on_interval
 from PathObjectivesAndConstraints.python_wrappers.objective_functions import ObjectiveFunctions
 from PathObjectivesAndConstraints.python_wrappers.curvature_constraints import CurvatureConstraints
 from PathObjectivesAndConstraints.python_wrappers.obstacle_constraints import ObstacleConstraints
@@ -16,10 +16,7 @@ from bsplinegenerator.bspline_to_minvo import get_composite_bspline_to_minvo_con
 from path_generation.safe_flight_corridor import SFC_Data, SFC
 from path_generation.obstacle import Obstacle
 from path_generation.waypoint_data import Waypoint, WaypointData
-from bsplinegenerator.bsplines import BsplineEvaluation
 import time
-
-
 
 class PathGenerator:
     """
@@ -49,7 +46,7 @@ class PathGenerator:
         
     def generate_path(self, waypoint_data: WaypointData, max_curvature: np.float64 = None,
                 max_incline: np.float64 = None, sfc_data: SFC_Data = None, obstacles: list = None,
-                objective_function_type: str = "minimal_acceleration_path"):
+                objective_function_type: str = "minimal_velocity_path"):
         num_intervals = self.__get_num_intervals(sfc_data)
         num_intermediate_waypoints = waypoint_data.get_num_intermediate_waypoints()
         point_sequence = self.__get_point_sequence(waypoint_data, sfc_data)
@@ -105,7 +102,6 @@ class PathGenerator:
             [start_waypoint_scalar, final_waypoint_scalar]))
         if (num_intermediate_waypoints > 0):
             intermediate_waypoint_times = self.__create_intermediate_waypoint_times(waypoint_sequence, num_cont_pts)
-            print("intermediate_waypoint_times: " , intermediate_waypoint_times)
             variables = np.concatenate((variables, intermediate_waypoint_times))
         return variables
         
@@ -152,7 +148,6 @@ class PathGenerator:
             constraints.append(obstacle_constraint)
         return tuple(constraints)
 
-# bounds over just the scale factor
     def __create_objective_variable_bounds(self, num_cont_pts, num_intermediate_waypoints):
         lower_bounds = np.zeros(num_cont_pts*self._dimension + 2 + num_intermediate_waypoints) - np.inf
         upper_bounds = np.zeros(num_cont_pts*self._dimension + 2 + num_intermediate_waypoints) + np.inf
@@ -165,7 +160,10 @@ class PathGenerator:
     def __minimize_jerk_control_points_objective_function(self, variables, num_cont_pts):
         # for third order splines only
         control_points = self.__get_objective_variables(variables, num_cont_pts)
-        return self._objective_func_obj.minimize_acceleration_and_time(control_points, 1)
+        jerk_cps = control_points[:,3:] - 3*control_points[:,2:-1] + 3*control_points[:,1:-2] - control_points[:,0:-3]
+        square_jerk_control_points = np.sum(jerk_cps**2,0)
+        objective = np.sum(square_jerk_control_points)
+        return objective
     
     def __minimize_velocity_control_points_objective_function(self, variables, num_cont_pts):
         # for third order splines only
@@ -182,7 +180,6 @@ class PathGenerator:
         accel_control_points_squared_sum = np.sum(acceleration_cps**2,0)
         objective = np.sum(accel_control_points_squared_sum)
         return objective
-
 
     def __create_waypoint_constraint(self, waypoints, num_cont_pts, num_intermediate_waypoints):
         num_waypoints = 2
@@ -217,8 +214,9 @@ class PathGenerator:
             for i in range(num_intermediate_waypoints):
                 desired_location = intermediate_locations[:,i]
                 time = intermediate_waypoint_times[i]
-                bspline = BsplineEvaluation(control_points, order, start_time, scale_factor)
-                location = bspline.get_spline_at_time_t(time)
+                interval = int(time)
+                interval_cont_pts = control_points[:,interval:interval+self._order+1]
+                location = evaluate_point_on_interval(interval_cont_pts, time-interval, 0, 1)
                 constraints[:,i] = location.flatten() - desired_location
             return constraints.flatten()
         intermediate_waypoint_constraint = NonlinearConstraint(intermediate_waypoint_constraint_function, lb= lower_bound, ub=upper_bound)
@@ -235,7 +233,6 @@ class PathGenerator:
             constraint_matrix[i,-i-2] = 1
         constraint = LinearConstraint(constraint_matrix, lb=-np.inf, ub=0)
         return constraint
-        
 
     def __create_start_waypoint_derivative_constraints(self, start_waypoint: Waypoint, num_cont_pts):
         lower_bound = 0
@@ -417,20 +414,15 @@ class PathGenerator:
         return control_points
     
     def __create_intermediate_waypoint_times(self , point_sequence, num_cont_pts):
-        print("point_sequence: " , point_sequence)
         num_intervals = num_cont_pts - self._order
         num_segments = np.shape(point_sequence)[1] - 1
         intermediate_waypoint_times = np.array([0.5])
         if num_segments > 2:
             distances = np.linalg.norm(point_sequence[:,1:] - point_sequence[:,0:-1],2,0)
-            print("distances: " , distances)
             for i in range(num_segments-1):
                 distances[i+1] = distances[i+1] + distances[i]
-            print("distances: " , distances)
             norm_distances = distances/distances[num_segments-1]
-            print("norm distances: " , norm_distances)
             intermediate_waypoint_times = norm_distances[0:-1]*num_intervals
-            print("intermediate_waypoint_times: " , intermediate_waypoint_times)
         return intermediate_waypoint_times
 
     def __get_num_control_points(self, num_intervals):

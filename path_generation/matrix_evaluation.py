@@ -1,5 +1,12 @@
 import numpy as np
 
+def evaluate_point_on_interval(control_points, t, tj, scale_factor):
+    order = np.shape(control_points)[1] - 1
+    M = get_M_matrix(order)
+    T = get_T_vector(order, t, tj, scale_factor)
+    point = control_points @ M @ T
+    return point
+
 def get_M_matrix(order):
     if order > 5:
         print("Error: Cannot compute higher than 5th order matrix evaluation")

@@ -25,6 +25,7 @@ sfcs = (sfc_1, sfc_2, sfc_3)
 sfc_data = SFC_Data(sfcs, point_sequence)
 
 obstacles = [Obstacle(np.array([[10],[8],[5.5]]), 1.3)]
+obstacles = None
 
 waypoint_1 = Waypoint(location=point_1)
 waypoint_2 = Waypoint(location=point_4)
@@ -62,7 +63,8 @@ plot_sfcs(sfcs,ax)
 ax.plot(spline_data[0,:], spline_data[1,:],spline_data[2,:])
 ax.scatter(waypoints[0,:],waypoints[1,:],waypoints[2,:])
 # plt.scatter(minvo_cps[0,:],minvo_cps[1,:])
-plot_3D_obstacles(obstacles,ax)
+if obstacles is not None:
+    plot_3D_obstacles(obstacles,ax)
 ax.set_xlabel('$X$')
 ax.set_ylabel('$Y$')
 ax.set_zlabel('$Z$')

@@ -36,14 +36,16 @@ waypoint_data.set_location_data(waypoint_sequence)
 
 dimension = np.shape(point_sequence)[0]
 max_curvature = 0.5
+# max_curvature = None
 max_incline = None
 order = 3
+path_objective_type = "minimal_acceleration_path"
 
 
 path_gen = PathGenerator(dimension)
 start_time = time.time()
 control_points = path_gen.generate_path(waypoint_data=waypoint_data, max_curvature=max_curvature,
-    max_incline=max_incline, sfc_data=sfc_data, obstacles=None)
+    max_incline=max_incline, sfc_data=sfc_data, obstacles=None, objective_function_type= "minimal_acceleration_path")
 end_time = time.time()
 print("computation time: " , end_time - start_time)
 # print("control_points: " , control_points)

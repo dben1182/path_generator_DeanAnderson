@@ -143,6 +143,7 @@ spline_2_mid_time = (spline_2_end_time - end_time_spline_1)/2.5 + end_time_splin
 mid_point_path_2 = bspline_2.get_spline_at_time_t(spline_2_mid_time)
 
 #### third path
+# print("mid_point_path_2: " , mid_point_path_2)
 waypoint_1_three = Waypoint(location=mid_point_path_2)
 waypoint_2_three = Waypoint(location=waypoint_2_two.location)
 waypoint_1_three.velocity = bspline_2.get_derivative_at_time_t(spline_2_mid_time,1)
