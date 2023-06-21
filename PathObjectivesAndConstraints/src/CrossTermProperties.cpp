@@ -34,7 +34,7 @@ Eigen::Vector4d CrossTermProperties<D>::get_2D_cross_coefficients(Eigen::Matrix<
     double c_0 = -((p0y/2 - p2y/2)*(p0x - 2*p1x + p2x) - (p0x/2 - p2x/2)*(p0y - 2*p1y + p2y))*((p0y/2 - p2y/2)* 
         (p0x - 3*p1x + 3*p2x - p3x) - (p0x/2 - p2x/2)*(p0y - 3*p1y + 3*p2y - p3y));
     Eigen::Vector4d coeficients;
-    coeficients << c_0, c_1, c_2, c_3;
+    coeficients << c_3, c_2, c_1, c_0;
     return coeficients;
 }
 
@@ -93,7 +93,7 @@ Eigen::Vector4d CrossTermProperties<D>::get_3D_cross_coefficients(Eigen::Matrix<
         ((p0z/2 - p2z/2)*(p0y - 2*p1y + p2y) - (p0y/2 - p2y/2)*(p0z - 2*p1z + p2z))*((p0z/2 - p2z/2)* 
         (p0y - 3*p1y + 3*p2y - p3y) - (p0y/2 - p2y/2)*(p0z - 3*p1z + 3*p2z - p3z));
     Eigen::Vector4d coeficients;
-    coeficients << c_0, c_1, c_2, c_3;
+    coeficients << c_3, c_2, c_1, c_0;
     return coeficients;
 }
 
