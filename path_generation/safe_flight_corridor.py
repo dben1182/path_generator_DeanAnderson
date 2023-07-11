@@ -87,7 +87,7 @@ def plot_sfc(sfc: SFC, ax,alpha=1):
     if(len(sfc.dimensions.flatten()) == 2): #2D
         plot_2D_sfc(sfc, ax, alpha)
     else: # 3D
-        plot_3D_sfc(sfc, ax)
+        plot_3D_sfc(sfc, ax, alpha)
 
 def plot_sfcs(sfcs: list, ax, alpha=1):
     if sfcs != None:
@@ -98,9 +98,9 @@ def plot_2D_sfc(sfc: SFC, ax, alpha=1):
     points_rotated = sfc.getPointsToPlot()
     ax.plot(points_rotated[0,:], points_rotated[1,:], alpha=alpha)
 
-def plot_3D_sfc(sfc: SFC, ax):
+def plot_3D_sfc(sfc: SFC, ax, alpha=1):
     points_rotated = sfc.getPointsToPlot()
-    ax.plot(points_rotated[0,:], points_rotated[1,:],points_rotated[2,:])
+    ax.plot(points_rotated[0,:], points_rotated[1,:],points_rotated[2,:], alpha= alpha)
 
 def get2DRotationAndTranslationFromPoints(point_1,point_2):
     # returns rotation transforms x_vector to vector paralell

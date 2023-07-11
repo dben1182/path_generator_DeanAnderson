@@ -91,6 +91,7 @@ for i in range(len(waypoint_data_list)):
         control_points = path_gen.generate_path(waypoint_data=waypoint_data, max_curvature=max_curvature,
             max_incline=None, sfc_data=None, obstacles=obstacles,objective_function_type=objective_function_type)
         end_time = time.time()
+        num_cont_pts = np.shape(control_points)[1]
         eval_time = end_time - start_time
         # print("control_points: " , control_points)
         print("computation time:" , end_time - start_time)
@@ -102,7 +103,7 @@ for i in range(len(waypoint_data_list)):
         path_length = bspline.get_arc_length(number_data_points)
         waypoints = waypoint_data.get_waypoint_locations()
         ax[i,j].plot(spline_data[0,:], spline_data[1,:])
-        ax[i,j].set_xlabel("x (m) \n \n evaluation time: " + str(np.round(eval_time,2)))
+        ax[i,j].set_xlabel("x (m) \n \n evaluation time: " + str(np.round(eval_time,2)) + "\n num ctrl pts: " + str(num_cont_pts))
         ax[i,j].set_aspect('equal')
         plot2D_waypoints(waypoint_data, ax[i,j],arrow_scale = 2)
         if obstacles is not None:

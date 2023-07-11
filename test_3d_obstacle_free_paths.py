@@ -98,7 +98,7 @@ for i in range(len(waypoint_data_list)):
             max_incline=None, sfc_data=None, obstacles=obstacles,objective_function_type=objective_function_type)
         end_time = time.time()
         eval_time = end_time - start_time
-        # print("control_points: " , control_points)
+        num_cont_pts = np.shape(control_points)[1]
         print("computation time:" , end_time - start_time)
         spline_start_time = 0
         scale_factor = 1
@@ -119,7 +119,7 @@ for i in range(len(waypoint_data_list)):
         if obstacles is not None:
             plot_3D_obstacles(obstacles, ax)
         set_axes_equal(ax,dimension)
-        ax.text(-10,-10,-50,"evaluation time: " + str(np.round(eval_time,2)))
+        ax.text(-10,-10,-50,"evaluation time: " + str(np.round(eval_time,2)) + "\n num ctrl pts: " + str(num_cont_pts))
         if i ==0:
             if j == 0:
                 ax.set_title("Zero Obstacles")
