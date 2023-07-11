@@ -83,20 +83,20 @@ class SFC_Data:
                 intervals_per_corridor.append(num_intervals)
         return intervals_per_corridor
 
-def plot_sfc(sfc: SFC, ax):
+def plot_sfc(sfc: SFC, ax,alpha=1):
     if(len(sfc.dimensions.flatten()) == 2): #2D
-        plot_2D_sfc(sfc, ax)
+        plot_2D_sfc(sfc, ax, alpha)
     else: # 3D
         plot_3D_sfc(sfc, ax)
 
-def plot_sfcs(sfcs: list, ax):
+def plot_sfcs(sfcs: list, ax, alpha=1):
     if sfcs != None:
         for sfc_index in range(len(sfcs)):
-            plot_sfc(sfcs[sfc_index], ax)
+            plot_sfc(sfcs[sfc_index], ax, alpha)
 
-def plot_2D_sfc(sfc: SFC, ax):
+def plot_2D_sfc(sfc: SFC, ax, alpha=1):
     points_rotated = sfc.getPointsToPlot()
-    ax.plot(points_rotated[0,:], points_rotated[1,:])
+    ax.plot(points_rotated[0,:], points_rotated[1,:], alpha=alpha)
 
 def plot_3D_sfc(sfc: SFC, ax):
     points_rotated = sfc.getPointsToPlot()

@@ -16,6 +16,12 @@ class Waypoint:
     
     def checkIfAccelerationActive(self):
         return (self.acceleration is not None)
+    
+    def checkIfZeroVel(self):
+        if self.velocity is not None and np.linalg.norm(self.velocity) <= 0:
+            return True
+        else:
+            return False
 
 
 @dataclass
@@ -51,8 +57,30 @@ class WaypointData:
             return np.shape(self.intermediate_locations)[1]
         else:
             return 0
+        
+def plot2D_waypoints(waypoint_data: WaypointData, ax, dot_size = 0.1, arrow_scale = 2):
+    locations = waypoint_data.get_waypoint_locations()
+    ax.scatter(locations[0,:],locations[1,:],color="b")
+    if waypoint_data.start_waypoint.checkIfVelocityActive():
+        start_pos = waypoint_data.start_waypoint.location
+        if not waypoint_data.start_waypoint.checkIfZeroVel():
+            start_dir = waypoint_data.start_waypoint.velocity
+            ax.arrow(start_pos.item(0), start_pos.item(1), 
+                    start_dir.item(0)*arrow_scale, start_dir.item(1)*arrow_scale, color = "b",
+                    head_width = 0.5*arrow_scale, head_length= 0.5*arrow_scale)
+            print("arrow_scale:", arrow_scale)
+    if waypoint_data.end_waypoint.checkIfVelocityActive():
+        end_pos = waypoint_data.end_waypoint.location
+        if not waypoint_data.end_waypoint.checkIfZeroVel():
+            end_dir = waypoint_data.end_waypoint.velocity
+            ax.arrow(end_pos.item(0), end_pos.item(1), 
+                    end_dir.item(0)*arrow_scale, end_dir.item(1)*arrow_scale, color = "b",
+                    head_width = 0.5*arrow_scale, head_length= 0.5*arrow_scale)
+    if waypoint_data.intermediate_locations is not None:
+        ax.scatter(waypoint_data.intermediate_locations[0,:], 
+                   waypoint_data.intermediate_locations[1,:],color="b", s=dot_size)
 
-def plot3D_waypoints(waypoint_data: WaypointData, ax):
+def plot3D_waypoints(waypoint_data: WaypointData, ax,  arrow_scale=2):
     locations = waypoint_data.get_waypoint_locations()
     ax.scatter(locations[0,:],locations[1,:],locations[2,:],color="b")
     distance = waypoint_data.get_distance()
@@ -61,13 +89,13 @@ def plot3D_waypoints(waypoint_data: WaypointData, ax):
         start_vel = waypoint_data.start_waypoint.velocity
         ax.quiver(start_pos.item(0), start_pos.item(1), start_pos.item(2), 
                   start_vel.item(0), start_vel.item(1), start_vel.item(2), 
-                  length=distance/10, normalize=True)
+                  length=distance/10*arrow_scale, normalize=True)
     if waypoint_data.end_waypoint.checkIfVelocityActive():
         end_pos = waypoint_data.end_waypoint.location
         end_vel = waypoint_data.end_waypoint.velocity
         ax.quiver(end_pos.item(0), end_pos.item(1), end_pos.item(2), 
                   end_vel.item(0), end_vel.item(1), end_vel.item(2), 
-                  length=distance/10, normalize=True)
+                  length=distance/10*arrow_scale, normalize=True)
     if waypoint_data.intermediate_locations is not None:
         ax.scatter(waypoint_data.intermediate_locations[0,:], 
                    waypoint_data.intermediate_locations[1,:],

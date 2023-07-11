@@ -381,7 +381,6 @@ class PathGenerator:
         return M_rot
 
     def __create_initial_control_points(self, total_num_cont_pts, point_sequence):
-
         num_segments = np.shape(point_sequence)[1] - 1
         if num_segments < 2:
             start_point = point_sequence[:,0]
@@ -411,6 +410,7 @@ class PathGenerator:
                     segment_num += 1
                     prev_point_location = point_sequence[:,segment_num]
             control_points[:,-1] = point_sequence[:,-1]
+        # control_points = np.array([[1,-1,-1,3,3,7,7,5],[0,0,-3,-3,3,3,0,0]])
         return control_points
     
     def __create_intermediate_waypoint_times(self , point_sequence, num_cont_pts):
