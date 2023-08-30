@@ -70,6 +70,9 @@ class PathGenerator:
         optimized_control_points = np.reshape(result.x[0:num_cont_pts*self._dimension] ,(self._dimension,num_cont_pts))
         return optimized_control_points
     
+    def set_num_intervals_free_space(self, num):
+        self._num_intervals_free_space = num
+    
     def __get_objective_function(self, objective_function_type):
         if objective_function_type == "minimal_distance_path":
             return self.__minimize_velocity_control_points_objective_function
@@ -201,6 +204,25 @@ class PathGenerator:
         constraint = LinearConstraint(constraint_matrix, lb=waypoints.flatten(), ub=waypoints.flatten())
         return constraint
     
+    def evaluate_waypoint_constraint(self, waypoints, control_points):
+        num_cont_pts = np.shape(control_points)[1]
+        num_waypoints = 2
+        m = num_waypoints
+        n = num_cont_pts
+        k = self._order
+        d = self._dimension
+        constraint_matrix = np.zeros((m*d,n*d))
+        Gamma_0 = np.zeros((self._order+1,1))
+        Gamma_0[self._order,0] = 1
+        Gamma_f = np.ones((self._order+1,1))
+        M_Gamma_0_T = np.dot(self._M,Gamma_0).T
+        M_Gamma_f_T = np.dot(self._M,Gamma_f).T
+        for i in range(self._dimension):
+            constraint_matrix[i*m   ,  i*n        : i*n+k+1] = M_Gamma_0_T
+            constraint_matrix[i*m+1 , (i+1)*n-k-1 : (i+1)*n] = M_Gamma_f_T
+        constraint_violations = np.dot(constraint_matrix, control_points.flatten()).flatten() - waypoints.flatten()
+        return constraint_violations
+    
     def __create_intermediate_waypoint_constraints(self, intermediate_locations, num_cont_pts, num_intermediate_waypoints):
         order = 3
         start_time = 0
@@ -254,6 +276,7 @@ class PathGenerator:
                 start_acceleration_direction = start_waypoint_scalar*start_waypoint_scalar*(control_points[:,0] - 2*control_points[:,1] + control_points[:,2])
                 constraints_2 = start_acceleration_direction - start_acceleration_desired
                 constraints = np.concatenate((constraints, constraints_2))
+            # print("start: constraints: ", constraints)
             return constraints.flatten()
         start_waypoint_derivative_constraint = NonlinearConstraint(start_waypoint_derivative_constraint_function, lb= lower_bound, ub=upper_bound)
         return start_waypoint_derivative_constraint
@@ -278,6 +301,7 @@ class PathGenerator:
                 end_acceleration_direction = end_waypoint_scalar*end_waypoint_scalar*(control_points[:,-3] - 2*control_points[:,-2] + control_points[:,-1])
                 constraints_2 = end_acceleration_direction - end_acceleration_desired
                 constraints = np.concatenate((constraints, constraints_2))
+            # print("end: constraints: ", constraints)
             return constraints.flatten()
         end_waypoint_derivative_constraint = NonlinearConstraint(end_waypoint_derivative_constraint_function, lb= lower_bound, ub=upper_bound)
         return end_waypoint_derivative_constraint
