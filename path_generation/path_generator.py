@@ -46,13 +46,13 @@ class PathGenerator:
         
     def generate_path(self, waypoint_data: WaypointData, max_curvature: np.float64 = None,
                 max_incline: np.float64 = None, sfc_data: SFC_Data = None, obstacles: list = None,
-                objective_function_type: str = "minimal_velocity_path"):
+                objective_function_type: str = "minimal_velocity_path", obstacle_type = "circular"):
         num_intervals = self.__get_num_intervals(sfc_data)
         num_intermediate_waypoints = waypoint_data.get_num_intermediate_waypoints()
         point_sequence = self.__get_point_sequence(waypoint_data, sfc_data)
         num_cont_pts = self.__get_num_control_points(num_intervals)
         constraints = self.__get_constraints(num_cont_pts, waypoint_data, max_curvature, 
-                                             max_incline, sfc_data, obstacles, num_intermediate_waypoints)
+                                             max_incline, sfc_data, obstacles, num_intermediate_waypoints, obstacle_type)
         objectiveFunction = self.__get_objective_function(objective_function_type)
         objective_variable_bounds = self.__create_objective_variable_bounds(num_cont_pts, num_intermediate_waypoints)
         waypoint_sequence = waypoint_data.get_waypoint_locations()
@@ -121,7 +121,7 @@ class PathGenerator:
         return intermediate_waypoint_times
 
     def __get_constraints(self, num_cont_pts: int, waypoint_data: WaypointData, 
-            max_curvature: np.float64, max_incline: np.float64, sfc_data: SFC_Data, obstacles: list, num_intermediate_waypoints):
+            max_curvature: np.float64, max_incline: np.float64, sfc_data: SFC_Data, obstacles: list, num_intermediate_waypoints, obstacle_type: str):
         waypoints = np.concatenate((waypoint_data.start_waypoint.location, waypoint_data.end_waypoint.location),1)
         waypoint_constraint = self.__create_waypoint_constraint(waypoints, num_cont_pts, num_intermediate_waypoints)
         constraints = [waypoint_constraint]
@@ -147,8 +147,9 @@ class PathGenerator:
             sfc_constraint = self.__create_safe_flight_corridor_constraint(sfc_data, num_cont_pts, num_intermediate_waypoints)
             constraints.append(sfc_constraint)
         if (obstacles != None):
-            obstacle_constraint = self.__create_obstacle_constraints(obstacles, num_cont_pts)
+            obstacle_constraint = self.__create_obstacle_constraints(obstacles, num_cont_pts, obstacle_type)
             constraints.append(obstacle_constraint)
+           
         return tuple(constraints)
 
     def __create_objective_variable_bounds(self, num_cont_pts, num_intermediate_waypoints):
@@ -360,19 +361,21 @@ class PathGenerator:
         safe_corridor_constraints = LinearConstraint(conversion_matrix, lb=lower_bounds.flatten(), ub=upper_bounds.flatten())
         return safe_corridor_constraints
     
-    def __create_obstacle_constraints(self, obstacles, num_cont_pts):
+    def __create_obstacle_constraints(self, obstacles, num_cont_pts, obstacle_type = "sphere"):
         def obstacle_constraint_function(variables):
             control_points = self.__get_objective_variables(variables, num_cont_pts)
             # return self._obstacle_cons_obj.getObstacleConstraintsForIntervals(control_points, obstacle.radius, obstacle.center)
             radii = np.zeros(len(obstacles))
             centers = np.zeros((self._dimension,len(obstacles)))
+            heights = np.zeros(len(obstacles))
             for i in range(len(obstacles)):
                 radii[i] = obstacles[i].radius
                 centers[0,i] = obstacles[i].center[0,0]
                 centers[1,i] = obstacles[i].center[1,0]
+                heights[i] = obstacles[i].height
                 if self._dimension == 3:
                     centers[2,i] = obstacles[i].center[2,0]
-            return self._obstacle_cons_obj.getObstaclesConstraintsForSpline(control_points, radii, centers)
+            return self._obstacle_cons_obj.getObstaclesConstraintsForSpline(control_points, radii, centers, heights, obstacle_type)
         lower_bound = 0
         upper_bound = np.inf
         obstacle_constraint = NonlinearConstraint(obstacle_constraint_function , lb = lower_bound, ub = upper_bound)

@@ -13,7 +13,7 @@ import time
 #note incline constraints work much better when have a start and an end direction
 
 dimension = 3
-max_curvature = .01
+max_curvature = .009
 # max_incline = None
 order = 3
 scale_factor = 1

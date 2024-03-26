@@ -100,10 +100,12 @@ for i in range(len(waypoint_data_list)):
         bspline = BsplineEvaluation(control_points, order, spline_start_time, scale_factor, False)
         number_data_points = 10000
         spline_data, time_data = bspline.get_spline_data(number_data_points)
-        path_length = bspline.get_arc_length(number_data_points)
+        path_length = round(bspline.get_arc_length(number_data_points),2)
         waypoints = waypoint_data.get_waypoint_locations()
         ax[i,j].plot(spline_data[0,:], spline_data[1,:])
-        ax[i,j].set_xlabel("x (m) \n \n evaluation time: " + str(np.round(eval_time,2)) + "\n num ctrl pts: " + str(num_cont_pts))
+        ax[i,j].set_xlabel("x (m) \n \n evaluation time: " + str(np.round(eval_time,2)) + 
+                           "\n path length: " + str(path_length) +
+                           "\n num ctrl pts: " + str(num_cont_pts))
         ax[i,j].set_aspect('equal')
         plot2D_waypoints(waypoint_data, ax[i,j],arrow_scale = 2)
         if obstacles is not None:

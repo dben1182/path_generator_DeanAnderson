@@ -5,7 +5,7 @@ from bsplinegenerator.bsplines import BsplineEvaluation
 # from path_generation.path_generator import PathGenerator
 from path_generation.path_generator import PathGenerator
 from path_generation.safe_flight_corridor import SFC, SFC_Data, plot_sfcs, get2DRotationAndTranslationFromPoints
-from path_generation.obstacle import Obstacle, plot_2D_obstacles, plot_3D_obstacles
+from path_generation.obstacle import Obstacle, plot_2D_obstacles, plot_3D_obstacles, plot_cylinders
 from path_generation.waypoint_data import plot2D_waypoints, plot3D_waypoints
 from path_generation.waypoint_data import Waypoint, WaypointData
 from path_generation.path_plotter import set_axes_equal
@@ -35,33 +35,33 @@ waypoint_data_list = [waypoint_data_1, waypoint_data_2, waypoint_data_3]
 obstacles_1a = None
 
 #obstacle_list 1b
-obstacle_1 = Obstacle(center=np.array([[7],[-1],[0]]), radius=1.5)
+obstacle_1 = Obstacle(center=np.array([[7],[-1],[0]]), radius=1.5, height = 10)
 obstacles_1b = [obstacle_1]
 
 #obstacle_list 1c
-obstacle_2 = Obstacle(center=np.array([[15],[1.5],[0]]), radius=2)
+obstacle_2 = Obstacle(center=np.array([[15],[1.5],[0]]), radius=2, height = 10)
 obstacles_1c = [obstacle_1,obstacle_2]
 
 #obstacle_list 2a
 obstacles_2a = None
 
 #obstacle_list 2b
-obstacle_1 = Obstacle(center=np.array([[7],[-3],[3]]), radius=2)
+obstacle_1 = Obstacle(center=np.array([[7],[-3],[3]]), radius=2, height = 10)
 obstacles_2b = [obstacle_1]
 
 #obstacle_list 2c
-obstacle_2 = Obstacle(center=np.array([[15],[-10],[6]]), radius=1)
+obstacle_2 = Obstacle(center=np.array([[15],[-10],[6]]), radius=1, height = 10)
 obstacles_2c = [obstacle_1,obstacle_2]
 
 #obstacle_list 3a
 obstacles_3a = None
 
 #obstacle_list 3b
-obstacle_1 = Obstacle(center=np.array([[5],[10],[5]]), radius=1.5)
+obstacle_1 = Obstacle(center=np.array([[5],[10],[5]]), radius=1.5, height = 10)
 obstacles_3b = [obstacle_1]
 
 #obstacle_list 3c
-obstacle_2 = Obstacle(center=np.array([[3],[0],[2]]), radius=2)
+obstacle_2 = Obstacle(center=np.array([[3],[0],[2]]), radius=2, height = 10)
 obstacles_3c = [obstacle_1,obstacle_2]
 
 
@@ -98,7 +98,8 @@ for i in range(len(waypoint_data_list)):
         obstacles = obstacles_list[j]
         start_time = time.time()
         control_points = path_gen.generate_path(waypoint_data=waypoint_data, max_curvature=max_curvature,
-            max_incline=None, sfc_data=None, obstacles=obstacles,objective_function_type=objective_function_type)
+            max_incline=None, sfc_data=None, obstacles=obstacles,objective_function_type=objective_function_type,
+            obstacle_type="cylinder")
         end_time = time.time()
         eval_time = end_time - start_time
         num_cont_pts = np.shape(control_points)[1]
@@ -122,7 +123,8 @@ for i in range(len(waypoint_data_list)):
         # ax.set_aspect('equal')
         plot3D_waypoints(waypoint_data, ax, arrow_scale=3)
         if obstacles is not None:
-            plot_3D_obstacles(obstacles, ax)
+            # plot_3D_obstacles(obstacles, ax)
+            plot_cylinders(obstacles, ax)
         set_axes_equal(ax,dimension)
         ax.text(-10,-10,-50,"evaluation time: " + str(np.round(eval_times[i,j],2)) + 
                 "\n path length: " + str(path_length) + 
