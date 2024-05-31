@@ -43,7 +43,7 @@ class CurvatureConstraints(object):
             constraint = lib.get_spline_curvature_constraint_2(self.obj, cont_pts_array, num_cont_pts, max_curvature)
         else: # value = 3
             constraint = lib.get_spline_curvature_constraint_3(self.obj, cont_pts_array, num_cont_pts, max_curvature)
-        return constraint
+        return constraint / max_curvature*10
     
     def get_interval_curvature_constraints(self, cont_pts, max_curvature):
         num_cont_pts = np.shape(cont_pts)[1]

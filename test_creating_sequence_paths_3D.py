@@ -84,8 +84,10 @@ incline_data_1 = z_vel_mag_1/horiz_vel_mag_1
 # plt.show()
 
 ### second path
-waypoint_1_two.velocity = bspline.get_derivative_at_time_t(end_time_spline_1,1)
-waypoint_1_two.acceleration = bspline.get_derivative_at_time_t(end_time_spline_1,2)
+velocity_1_two = bspline.get_derivative_at_time_t(end_time_spline_1,1)
+norm_vel_1_two = np.linalg.norm(velocity_1_two)
+waypoint_1_two.velocity = velocity_1_two/norm_vel_1_two
+waypoint_1_two.acceleration = bspline.get_derivative_at_time_t(end_time_spline_1,2)/norm_vel_1_two**2
 waypoint_data_2 = WaypointData(start_waypoint=waypoint_1_two,end_waypoint=waypoint_2_two)
 spline_start_time_2 = end_time_spline_1
 start_time_2 = time.time()
@@ -196,16 +198,21 @@ plt.plot(time_data_2, curvature_data_2, color = "r")
 plt.plot(time_data_3, curvature_data_3, color = "g")
 plt.show()
 
+acceleration_data_1_norm = np.linalg.norm(acceleration_data_1,2,0)
+acceleration_data_2_norm = np.linalg.norm(acceleration_data_2,2,0)
+acceleration_data_3_norm = np.linalg.norm(acceleration_data_3,2,0)
+print("shape: accel norm: " , np.shape(acceleration_data_1_norm))
+
 plt.figure()
-plt.title("Curvature")
-plt.plot(time_data_1, acceleration_data_1[0,:], color = "b")
-plt.plot(time_data_1, acceleration_data_1[1,:], color = "b")
-plt.plot(time_data_1, acceleration_data_1[2,:], color = "b")
-plt.plot(time_data_2, acceleration_data_2[0,:], color = "r")
-plt.plot(time_data_2, acceleration_data_2[1,:], color = "r")
-plt.plot(time_data_2, acceleration_data_2[2,:], color = "r")
-plt.plot(time_data_3, acceleration_data_3[0,:], color = "g")
-plt.plot(time_data_3, acceleration_data_3[1,:], color = "g")
-plt.plot(time_data_3, acceleration_data_3[2,:], color = "g")
+plt.title("Acceleration")
+plt.plot(time_data_1, acceleration_data_1[0,:]/acceleration_data_1_norm, color = "b")
+plt.plot(time_data_1, acceleration_data_1[1,:]/acceleration_data_1_norm, color = "b")
+plt.plot(time_data_1, acceleration_data_1[2,:]/acceleration_data_1_norm, color = "b")
+plt.plot(time_data_2, acceleration_data_2[0,:]/acceleration_data_2_norm, color = "r")
+plt.plot(time_data_2, acceleration_data_2[1,:]/acceleration_data_2_norm, color = "r")
+plt.plot(time_data_2, acceleration_data_2[2,:]/acceleration_data_2_norm, color = "r")
+plt.plot(time_data_3, acceleration_data_3[0,:]/acceleration_data_3_norm, color = "g")
+plt.plot(time_data_3, acceleration_data_3[1,:]/acceleration_data_3_norm, color = "g")
+plt.plot(time_data_3, acceleration_data_3[2,:]/acceleration_data_3_norm, color = "g")
 plt.show()
 

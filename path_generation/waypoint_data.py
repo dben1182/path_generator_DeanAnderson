@@ -22,6 +22,13 @@ class Waypoint:
             return True
         else:
             return False
+        
+    def print_waypoint(self, waypoint_num):
+        print("Waypoint ", waypoint_num, ":")
+        print(" location: ", self.location.flatten())
+        print(" velocity: ", self.velocity.flatten())
+        if self.acceleration is not None:
+            print(" acceleration: ", self.acceleration.flatten())
 
 
 @dataclass
@@ -58,7 +65,7 @@ class WaypointData:
         else:
             return 0
         
-def plot2D_waypoints(waypoint_data: WaypointData, ax, dot_size = 0.1, arrow_scale = 2):
+def plot2D_waypoints(waypoint_data: WaypointData, ax, dot_size = 0.1, arrow_scale = 1):
     locations = waypoint_data.get_waypoint_locations()
     ax.scatter(locations[0,:],locations[1,:],color="b")
     if waypoint_data.start_waypoint.checkIfVelocityActive():
@@ -80,22 +87,24 @@ def plot2D_waypoints(waypoint_data: WaypointData, ax, dot_size = 0.1, arrow_scal
         ax.scatter(waypoint_data.intermediate_locations[0,:], 
                    waypoint_data.intermediate_locations[1,:],color="b", s=dot_size)
 
-def plot3D_waypoints(waypoint_data: WaypointData, ax,  arrow_scale=2):
+def plot3D_waypoints(waypoint_data: WaypointData, ax,  arrow_scale=2, arrow_length = None):
     locations = waypoint_data.get_waypoint_locations()
     ax.scatter(locations[0,:],locations[1,:],locations[2,:],color="b")
-    distance = waypoint_data.get_distance()
+    if arrow_length is None:
+        distance = waypoint_data.get_distance()
+        arrow_length = distance/10*arrow_scale
     if waypoint_data.start_waypoint.checkIfVelocityActive():
         start_pos = waypoint_data.start_waypoint.location
         start_vel = waypoint_data.start_waypoint.velocity
         ax.quiver(start_pos.item(0), start_pos.item(1), start_pos.item(2), 
                   start_vel.item(0), start_vel.item(1), start_vel.item(2), 
-                  length=distance/10*arrow_scale, normalize=True)
+                  length=arrow_length, normalize=True)
     if waypoint_data.end_waypoint.checkIfVelocityActive():
         end_pos = waypoint_data.end_waypoint.location
         end_vel = waypoint_data.end_waypoint.velocity
         ax.quiver(end_pos.item(0), end_pos.item(1), end_pos.item(2), 
                   end_vel.item(0), end_vel.item(1), end_vel.item(2), 
-                  length=distance/10*arrow_scale, normalize=True)
+                  length=arrow_length, normalize=True)
     if waypoint_data.intermediate_locations is not None:
         ax.scatter(waypoint_data.intermediate_locations[0,:], 
                    waypoint_data.intermediate_locations[1,:],

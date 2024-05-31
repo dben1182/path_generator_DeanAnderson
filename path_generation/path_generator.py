@@ -31,7 +31,8 @@ class PathGenerator:
 # 3. Change obstacle constraints to check only intervals that have an obstacle in the same SFC
 # 4. add constraints to reach intermediate waypoints between start and end waypoint.
 
-    def __init__(self, dimension: int, 
+    def __init__(self, 
+                 dimension: int, 
                  num_intervals_free_space: int = 5):
         self._dimension = dimension
         self._order = 3
@@ -68,7 +69,7 @@ class PathGenerator:
             constraints=constraints, 
             options = minimize_options)
         optimized_control_points = np.reshape(result.x[0:num_cont_pts*self._dimension] ,(self._dimension,num_cont_pts))
-        return optimized_control_points
+        return optimized_control_points, result.status
     
     def set_num_intervals_free_space(self, num):
         self._num_intervals_free_space = num

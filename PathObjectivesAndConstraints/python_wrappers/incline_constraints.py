@@ -38,7 +38,7 @@ class InclineConstraints(object):
         num_cont_pts = np.shape(cont_pts)[1]
         cont_pts_array = cont_pts.flatten().astype('float64')
         constraint = lib.get_spline_incline_constraint_3(self.obj, cont_pts_array, num_cont_pts, scale_factor, max_incline)
-        return constraint
+        return constraint/max_incline*10
     
 # control_points = np.array([[ 5,  8, 6, 7, 3],
 #                                [5, 11, 2, 7, 5],

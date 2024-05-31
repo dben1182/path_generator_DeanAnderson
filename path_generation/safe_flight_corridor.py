@@ -72,15 +72,21 @@ class SFC_Data:
         return self._num_intervals
     
     def __evaluate_intervals_per_corridor(self):
-        if self._num_corridors < 2:
-            intervals_per_corridor = 5
-        else:
-            distances = np.linalg.norm(self._point_sequence[:,1:] - self._point_sequence[:,0:-1],2,0)
-            min_distance = np.min(distances)
-            intervals_per_corridor = []
-            for i in range(self._num_corridors):
-                num_intervals = (int(np.round(distances[i]/min_distance)) + 1)*self._min_num_intervals_per_corridor
-                intervals_per_corridor.append(num_intervals)
+        # if self._num_corridors < 2:
+        #     intervals_per_corridor = 5
+        # else:
+        #     distances = np.linalg.norm(self._point_sequence[:,1:] - self._point_sequence[:,0:-1],2,0)
+        #     min_distance = np.min(distances)
+        #     intervals_per_corridor = []
+        #     for i in range(self._num_corridors):
+        #         num_intervals = (int(np.round(distances[i]/min_distance)))*self._min_num_intervals_per_corridor
+        #         intervals_per_corridor.append(num_intervals)
+        intervals_per_corridor = [1,2,3]
+        # intervals_per_corridor = [2,2,3]
+        # intervals_per_corridor = [2,3,4]
+        # intervals_per_corridor = [1,1,1,1,1,1]
+       
+        print("intervals per corridor: " , intervals_per_corridor)
         return intervals_per_corridor
 
 def plot_sfc(sfc: SFC, ax,alpha=1):
