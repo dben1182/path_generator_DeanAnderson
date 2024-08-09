@@ -14,19 +14,19 @@ import time
 
 # waypoints
 velocity_scale = 300
-waypoint_a = Waypoint(location=np.array([[0],[00]]), velocity = np.array([[0.85],[0.5267826876426369]])*velocity_scale)
-waypoint_b = Waypoint(location=np.array([[-100],[-50]]), velocity = np.array([[1],[0]])*velocity_scale)
+start_point = Waypoint(location = np.array([600,-100])[:,None],
+                         velocity = np.array([-26,  0])[:,None])
+end_point = Waypoint(location=np.array([600,  400])[:,None],
+                      velocity=np.array([-26, 0])[:,None])
+waypoint_a = Waypoint(location = np.array([600,-100])[:,None], velocity = np.array([-26,  0])[:,None]*velocity_scale)
+waypoint_b = Waypoint(location=np.array([600,  400])[:,None], velocity=np.array([-26, 0])[:,None]*velocity_scale)
 waypoint_data = WaypointData(start_waypoint=waypoint_a, end_waypoint=waypoint_b)
 
 
-
-#obstacle_list
-
-obstacles = None
-
 objective_function_type="minimal_distance_path"
-max_curvature= 0.0114362
-# max_incline = 0.2679491924311227
+objective_function_type="minimal_velocity_path"
+# objective_function_type="minimal_acceleration_path"
+max_curvature= 0.0056
 # max_curvature=None
 
 fig = plt.figure()
@@ -37,42 +37,39 @@ fig = plt.figure()
 # set up the axes for the first plot
 order = 3
 dimension = 2
-num_intervals_free_space = 5
-path_gen = PathGenerator(dimension, num_intervals_free_space = num_intervals_free_space)
+num_intervals_free_space = 32
+path_gen = PathGenerator(dimension,num_intervals_free_space=num_intervals_free_space)
 start_time = time.time()
 control_points, status = path_gen.generate_path(waypoint_data=waypoint_data, max_curvature=max_curvature,
-    sfc_data=None, obstacles=obstacles,objective_function_type=objective_function_type,
+    max_incline=None, sfc_data=None, obstacles=None,objective_function_type=objective_function_type,
     obstacle_type="cylinder")
+print("control points: " , control_points)
 end_time = time.time()
 eval_time = end_time - start_time
 num_cont_pts = np.shape(control_points)[1]
-print("control_points: " , control_points)
-print("computation time:" , end_time - start_time)
 
 spline_start_time = 0
 scale_factor = 1
 bspline = BsplineEvaluation(control_points, order, spline_start_time, scale_factor, False)
 curvature_data, time_data = bspline.get_spline_curvature_data(10000)
-velocity_data, time_data = bspline.get_spline_derivative_data(10000, 1)
-
+path_length = bspline.get_arc_length(100000)
+print("max curvature: " , np.max(curvature_data))
+print("path length: " , path_length)
+print("computation time:" , end_time - start_time)
 number_data_points = 10000
 spline_data, time_data = bspline.get_spline_data(number_data_points)
 
-path_length = bspline.get_arc_length(10000)
-
-# distances_to_obst = np.linalg.norm(spline_data[0:2,:] - obstacle_center[0:2,:], 2, 0)
-# closest_distance_to_obst = np.min(distances_to_obst) - obstacle_radius
-# print("dist to obst: " , closest_distance_to_obst)
-print("path length: " , path_length)
-print("max curvature: " , np.max(curvature_data))
 
 ax = fig.add_subplot()
 ax.plot(spline_data[0,:], spline_data[1,:])
 ax.set_ylabel("y (m)")
 ax.set_xlabel("x (m)")
 #  \n \n evaluation time: " + str(np.round(eval_time,2))
-ax.set_aspect('equal')
+# ax.set_aspect('equal')
 plot2D_waypoints(waypoint_data, ax, arrow_scale=0.2)
-# plot_2D_obstacles(obstacles, ax)
+
 plt.show()
+
+bspline_1 = BsplineEvaluation(control_points, order, 0, 2)
+bspline.plot_derivative_magnitude(1000,1)
 

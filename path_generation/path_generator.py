@@ -296,11 +296,18 @@ class PathGenerator:
             control_points = self.__get_objective_variables(variables, num_cont_pts)
             start_waypoint_scalar, end_waypoint_scalar = self.__get_objective_waypoint_scalars(variables, num_cont_pts)
             constraints = np.array([])
+            # if endVelocityIsActive:
+            #     end_velocity_direction = end_waypoint_scalar*(control_points[:,-1] - control_points[:,-3])/2
+            #     constraints = end_velocity_direction - end_velocity_desired
+            # if endAccelerationIsActive:
+            #     end_acceleration_direction = end_waypoint_scalar*end_waypoint_scalar*(control_points[:,-3] - 2*control_points[:,-2] + control_points[:,-1])
+            #     constraints_2 = end_acceleration_direction - end_acceleration_desired
+            #     constraints = np.concatenate((constraints, constraints_2))
             if endVelocityIsActive:
-                end_velocity_direction = end_waypoint_scalar*(control_points[:,-1] - control_points[:,-3])/2
+                end_velocity_direction = start_waypoint_scalar*(control_points[:,-1] - control_points[:,-3])/2
                 constraints = end_velocity_direction - end_velocity_desired
             if endAccelerationIsActive:
-                end_acceleration_direction = end_waypoint_scalar*end_waypoint_scalar*(control_points[:,-3] - 2*control_points[:,-2] + control_points[:,-1])
+                end_acceleration_direction = start_waypoint_scalar*start_waypoint_scalar*(control_points[:,-3] - 2*control_points[:,-2] + control_points[:,-1])
                 constraints_2 = end_acceleration_direction - end_acceleration_desired
                 constraints = np.concatenate((constraints, constraints_2))
             # print("end: constraints: ", constraints)
