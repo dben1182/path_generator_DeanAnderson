@@ -93,7 +93,7 @@ dimension = 3
 num_intervals_free_space = 7 
 path_gen = PathGenerator(dimension,num_intervals_free_space=num_intervals_free_space)
 start_time = time.time()
-control_points = path_gen.generate_path(waypoint_data=waypoint_data, max_curvature=max_curvature,
+control_points, status = path_gen.generate_path(waypoint_data=waypoint_data, max_curvature=max_curvature,
     max_incline=max_incline, sfc_data=sfc_data,objective_function_type=objective_function_type,
     obstacle_type="cylinder")
 print("control points: " , control_points)

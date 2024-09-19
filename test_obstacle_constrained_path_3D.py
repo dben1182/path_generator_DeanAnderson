@@ -28,7 +28,7 @@ order = 3
 
 path_gen = PathGenerator(dimension)
 start_time = time.time()
-control_points = path_gen.generate_path(waypoint_data=waypoint_data, max_curvature=max_curvature,
+control_points, status = path_gen.generate_path(waypoint_data=waypoint_data, max_curvature=max_curvature,
     max_incline=max_incline, sfc_data=None, obstacles=obstacles)
 end_time = time.time()
 print("control_points: " , control_points)

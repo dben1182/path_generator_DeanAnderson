@@ -49,7 +49,7 @@ point_3 = np.array([[7],[6]])
 point_4 = np.array([[7],[-1]])
 point_5 = np.array([[18],[-1]])
 point_6 = np.array([[14],[12]])
-point_sequence = np.concatenate((point_1,point_2,point_3,point_4,point_5,point_6),axis=1)
+point_sequence = np.concatenate((point_1, point_2, point_3, point_4, point_5, point_6),axis=1)
 R1, T1, min_len_1 = get2DRotationAndTranslationFromPoints(point_1, point_2)
 R2, T2, min_len_2 = get2DRotationAndTranslationFromPoints(point_2, point_3)
 R3, T3, min_len_3 = get2DRotationAndTranslationFromPoints(point_3, point_4)
@@ -99,7 +99,7 @@ for i in range(len(waypoint_data_list)):
         path_gen = PathGenerator(dimension,num_intervals_free_space=num_intervals_free_space)
         sfc_data = sfc_list[j]
         start_time = time.time()
-        control_points = path_gen.generate_path(waypoint_data=waypoint_data, max_curvature=max_curvature,
+        control_points, status = path_gen.generate_path(waypoint_data=waypoint_data, max_curvature=max_curvature,
             max_incline=None, sfc_data=sfc_data, obstacles=obstacles,objective_function_type=objective_function_type)
         end_time = time.time()
         eval_time = end_time - start_time

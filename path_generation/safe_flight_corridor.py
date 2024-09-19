@@ -50,7 +50,9 @@ class SFC:
 class SFC_Data:
     def __init__(self, sfc_list: list, point_sequence: np.ndarray, min_num_intervals_per_corridor: int = 1):
         self._sfc_list = sfc_list
+        # print("sfc list: ", self._sfc_list)
         self._num_corridors = len(self._sfc_list)
+        # print("num corridors: " , self._num_corridors)
         self._point_sequence = point_sequence
         self._min_num_intervals_per_corridor = min_num_intervals_per_corridor
         self._intervals_per_corridor = self.__evaluate_intervals_per_corridor()
@@ -72,21 +74,19 @@ class SFC_Data:
         return self._num_intervals
     
     def __evaluate_intervals_per_corridor(self):
-        # if self._num_corridors < 2:
-        #     intervals_per_corridor = 5
-        # else:
-        #     distances = np.linalg.norm(self._point_sequence[:,1:] - self._point_sequence[:,0:-1],2,0)
-        #     min_distance = np.min(distances)
-        #     intervals_per_corridor = []
-        #     for i in range(self._num_corridors):
-        #         num_intervals = (int(np.round(distances[i]/min_distance)))*self._min_num_intervals_per_corridor
-        #         intervals_per_corridor.append(num_intervals)
-        intervals_per_corridor = [1,2,3]
+        if self._num_corridors < 2:
+            intervals_per_corridor = 5
+        else:
+            distances = np.linalg.norm(self._point_sequence[:,1:] - self._point_sequence[:,0:-1],2,0)
+            min_distance = np.min(distances)
+            intervals_per_corridor = []
+            for i in range(self._num_corridors):
+                num_intervals = (int(np.round(distances[i]/min_distance)))*self._min_num_intervals_per_corridor
+                intervals_per_corridor.append(num_intervals)
+        # intervals_per_corridor = [1,2,3]
         # intervals_per_corridor = [2,2,3]
         # intervals_per_corridor = [2,3,4]
-        # intervals_per_corridor = [1,1,1,1,1,1]
-       
-        print("intervals per corridor: " , intervals_per_corridor)
+        # intervals_per_corridor = [2,2,2,2,6]
         return intervals_per_corridor
 
 def plot_sfc(sfc: SFC, ax,alpha=1):

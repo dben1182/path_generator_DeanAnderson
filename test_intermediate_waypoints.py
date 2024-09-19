@@ -38,7 +38,7 @@ obstacles = [Obstacle(np.array([[4.5],[5.5],[4]]), 2.0),
 
 path_gen = PathGenerator(dimension, num_intervals_free_space=8)
 start_time = time.time()
-control_points = path_gen.generate_path(waypoint_data=waypoint_data, max_curvature=max_curvature,
+control_points, status = path_gen.generate_path(waypoint_data=waypoint_data, max_curvature=max_curvature,
     max_incline=max_incline, sfc_data=None, obstacles=obstacles)
 end_time = time.time()
 print("computation time: " , end_time - start_time)

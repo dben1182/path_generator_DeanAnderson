@@ -97,7 +97,7 @@ for i in range(len(waypoint_data_list)):
         path_gen = PathGenerator(dimension,num_intervals_free_space=num_intervals_free_space)
         obstacles = obstacles_list[j]
         start_time = time.time()
-        control_points = path_gen.generate_path(waypoint_data=waypoint_data, max_curvature=max_curvature,
+        control_points,status = path_gen.generate_path(waypoint_data=waypoint_data, max_curvature=max_curvature,
             max_incline=None, sfc_data=None, obstacles=obstacles,objective_function_type=objective_function_type)
         end_time = time.time()
         eval_time = end_time - start_time

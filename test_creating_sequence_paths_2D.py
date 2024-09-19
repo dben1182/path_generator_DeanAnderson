@@ -25,7 +25,7 @@ waypoint_2.velocity = np.array([[1],[1]])
 waypoint_data = WaypointData(start_waypoint=waypoint_1,end_waypoint=waypoint_2)
 path_gen = PathGenerator(dimension)
 start_time_1 = time.time()
-control_points = path_gen.generate_path(waypoint_data=waypoint_data, max_curvature=max_curvature,
+control_points, status = path_gen.generate_path(waypoint_data=waypoint_data, max_curvature=max_curvature,
     max_incline=None, sfc_data=None, obstacles=None, objective_function_type=path_objective_type)
 end_time_1 = time.time()
 print("computation time path 1: " , end_time_1 - start_time_1)
@@ -45,7 +45,7 @@ waypoint_data_2 = WaypointData(start_waypoint=waypoint_1_two,end_waypoint=waypoi
 spline_start_time_2 = end_time_spline
 scale_factor_2 = 1
 start_time_2 = time.time()
-control_points_2 = path_gen.generate_path(waypoint_data=waypoint_data_2, max_curvature=max_curvature,
+control_points_2, status_2 = path_gen.generate_path(waypoint_data=waypoint_data_2, max_curvature=max_curvature,
     max_incline=None, sfc_data=None, obstacles=None)
 end_time_2 = time.time()
 

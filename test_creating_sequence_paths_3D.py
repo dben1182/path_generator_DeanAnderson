@@ -50,7 +50,7 @@ number_data_points = 10000
 ### 1st path
 path_gen = PathGenerator(dimension)
 start_time_1 = time.time()
-control_points = path_gen.generate_path(waypoint_data=waypoint_data_1, max_curvature=max_curvature,
+control_points, status = path_gen.generate_path(waypoint_data=waypoint_data_1, max_curvature=max_curvature,
     max_incline=max_incline, sfc_data=None, obstacles=obstacles_1, objective_function_type=path_objective_type)
 end_time_1 = time.time()
 print(" ")
@@ -91,7 +91,7 @@ waypoint_1_two.acceleration = bspline.get_derivative_at_time_t(end_time_spline_1
 waypoint_data_2 = WaypointData(start_waypoint=waypoint_1_two,end_waypoint=waypoint_2_two)
 spline_start_time_2 = end_time_spline_1
 start_time_2 = time.time()
-control_points_2 = path_gen.generate_path(waypoint_data=waypoint_data_2, max_curvature=max_curvature,
+control_points_2, status_2 = path_gen.generate_path(waypoint_data=waypoint_data_2, max_curvature=max_curvature,
     max_incline=max_incline, sfc_data=None, obstacles=None)
 end_time_2 = time.time()
 ## spline 2 data
@@ -156,7 +156,7 @@ waypoint_2_three.velocity = waypoint_2_two.velocity
 waypoint_data_3 = WaypointData(start_waypoint=waypoint_1_three,end_waypoint=waypoint_2_three)
 spline_start_time_3 = spline_2_mid_time
 start_time_3 = time.time()
-control_points_3 = path_gen.generate_path(waypoint_data=waypoint_data_3, max_curvature=max_curvature,
+control_points_3, status_3 = path_gen.generate_path(waypoint_data=waypoint_data_3, max_curvature=max_curvature,
     max_incline=max_incline, sfc_data=None, obstacles=obstacles_3)
 end_time_3 = time.time()
 ## spline 2 data
