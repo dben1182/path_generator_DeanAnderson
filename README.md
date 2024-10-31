@@ -1,21 +1,17 @@
-This Readme tells you the instructions on how to run the examples from scratch
+# B-Spline Generator
 
-LINUX:
+This README provides instructions on how to run the examples from scratch.
 
-  pip install numpy
-  pip install matplotlib
-  pip install scipy
-  pip install pyrsistent
+## Prerequisites
 
-Clone the following directory;
+Ensure you have Python and `pip` installed on your system. Then, install the required packages:
 
-  https://github.com/davidcGIThub/bspline_generator.git
+### Linux
 
-Navigate to the working folder
+```bash
+pip install numpy
+pip install matplotlib
+pip install scipy
+pip install pyrsistent
 
-  /bspline_generator
-
-then run the following command.
-
-  pip install .
   
