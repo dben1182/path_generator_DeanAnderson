@@ -13,5 +13,17 @@ pip install numpy
 pip install matplotlib
 pip install scipy
 pip install pyrsistent
+```
+Clone the following repository
 
-  
+```bash
+git clone https://github.com/davidcGIThub/bspline_generator.git
+```
+Navigate to the working directory and install
+
+```bash
+cd bspline_generator
+pip install .
+```
+
+You should now be able to run the examples
