@@ -10,6 +10,7 @@ Ensure you have Python, `pip`, git, and cmake installed on your system. Then, in
 sudo apt install python3
 sudo apt install python3-pip
 sudo apt install git
+sudo apt install libgtest-dev
 ```
 
 ## Linux Setup
