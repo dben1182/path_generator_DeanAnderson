@@ -26,6 +26,12 @@ cd bspline_generator
 pip install .
 ```
 
+Now clone this repository
+
+```bash
+git clone https://github.com/davidcGIThub/path_generator.git
+```
+
 You should now be able to run the examples. If you are having trouble, you might have to rebuild the c++ code. Navigate to
 
 ```bash
