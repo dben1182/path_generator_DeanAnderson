@@ -24,6 +24,7 @@ pip install numpy
 pip install matplotlib
 pip install scipy
 pip install pyrsistent
+pip install setuptools
 ```
 Clone the following repository
 
@@ -34,6 +35,7 @@ Navigate to the working directory and install
 
 ```bash
 cd bspline_generator
+python3 setup.py sdist bdist_wheel
 pip install .
 ```
 
