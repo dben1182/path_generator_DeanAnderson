@@ -1,4 +1,4 @@
-# B-Spline Generator
+# B-Spline Path Generator
 
 This README provides instructions on how to run the examples from scratch.
 
@@ -7,7 +7,13 @@ This README provides instructions on how to run the examples from scratch.
 Ensure you have Python, `pip`, git, and cmake installed on your system. Then, install the required packages:
 
 ### Linux
+```bash
+sudo apt install python3
+sudo apt install python3-pip
+sudo apt install git
+```
 
+Now install the pyton dependencies through pip
 ```bash
 pip install numpy
 pip install matplotlib
