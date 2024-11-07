@@ -2,16 +2,17 @@
 
 This README provides instructions on how to run the examples from scratch.
 
-## Prerequisites
+## Linux Prerequisites
 
 Ensure you have Python, `pip`, git, and cmake installed on your system. Then, install the required packages:
 
-### Linux
 ```bash
 sudo apt install python3
 sudo apt install python3-pip
 sudo apt install git
 ```
+
+## Linux Setup
 
 Now install the pyton dependencies through pip
 ```bash
