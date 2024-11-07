@@ -4,7 +4,7 @@ This README provides instructions on how to run the examples from scratch.
 
 ## Linux Prerequisites
 
-Ensure you have Python, `pip`, git, and cmake, Google Test, and Eigen3 installed on your system. Then, install the required packages:
+Ensure you have Python, `pip`, git, and cmake, Google Test, Eigen3, and tkinter is installed on your system. Then, install the required packages:
 
 ```bash
 sudo apt install python3
@@ -12,6 +12,8 @@ sudo apt install python3-pip
 sudo apt install git
 sudo apt install libgtest-dev
 sudo apt install libeigen3-dev
+sudo apt install python3-tk
+
 ```
 
 ## Linux Setup
