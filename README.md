@@ -4,7 +4,7 @@ This README provides instructions on how to run the examples from scratch.
 
 ## Prerequisites
 
-Ensure you have Python and `pip` installed on your system. Then, install the required packages:
+Ensure you have Python, `pip`, and git installed on your system. Then, install the required packages:
 
 ### Linux
 
