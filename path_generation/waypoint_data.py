@@ -1,5 +1,5 @@
 import numpy as np
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 import matplotlib.pyplot as plt
 
 @dataclass
@@ -33,8 +33,8 @@ class Waypoint:
 
 @dataclass
 class WaypointData:
-    start_waypoint: Waypoint = Waypoint(location=np.array([]))
-    end_waypoint: Waypoint = Waypoint(location=np.array([]))
+    start_waypoint: Waypoint = field(default_factory=lambda: Waypoint(location=np.array([])))
+    end_waypoint: Waypoint = field(default_factory=lambda: Waypoint(location=np.array([])))
     intermediate_locations: np.ndarray = None
 
     def get_waypoint_locations(self):
