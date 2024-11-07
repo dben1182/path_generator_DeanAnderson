@@ -45,7 +45,7 @@ Now clone this repository
 git clone https://github.com/davidcGIThub/path_generator.git
 ```
 
-You should now be able to run the examples. If you are having trouble, you might have to rebuild the c++ code. Navigate to
+ Build the c++ code. Navigate to
 
 ```bash
 /path_generator/PathObjectivesAndConstraints
@@ -53,7 +53,6 @@ You should now be able to run the examples. If you are having trouble, you might
 and then run the following commands
 
 ```bash
-rm -rf build
 mkdir build
 cd build
 cmake -DCMAKE_BUILD_TYPE=Release ..
