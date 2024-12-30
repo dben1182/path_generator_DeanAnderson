@@ -1,4 +1,5 @@
 import numpy as np
+import scipy
 
 def evaluate_point_on_interval(control_points, t, tj, scale_factor):
     order = np.shape(control_points)[1] - 1
@@ -29,7 +30,7 @@ def get_T_derivative_vector(order,t,tj,rth_derivative,scale_factor):
     T = np.zeros((order+1,1))
     t_tj = t-tj
     for i in range(order-rth_derivative+1):
-        T[i,0] = (t_tj**(order-rth_derivative-i))/(scale_factor**(order-i)) * np.math.factorial(order-i)/np.math.factorial(order-i-rth_derivative)
+        T[i,0] = (t_tj**(order-rth_derivative-i))/(scale_factor**(order-i)) * scipy.special.factorial(order-i)/scipy.special.factorial(order-i-rth_derivative)
     return T
 
 def get_T_vector(order,t,tj,scale_factor):
