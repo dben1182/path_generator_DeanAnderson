@@ -58,7 +58,11 @@ class PathGenerator:
         objective_variable_bounds = self.__create_objective_variable_bounds(num_cont_pts, num_intermediate_waypoints)
         waypoint_sequence = waypoint_data.get_waypoint_locations()
         optimization_variables = self.__create_initial_objective_variables(num_cont_pts, point_sequence, num_intermediate_waypoints, waypoint_sequence)
-        minimize_options = {'disp': False} #, 'maxiter': self.maxiter, 'ftol': tol}
+        # if you want speed over performance, set these options.
+        minimize_options = {'disp': False}
+        # if want performance over speed set these options
+        minimize_options = {'disp': False, 'maxiter' : 1000000000, 
+                            'ftol' : 0.0000000000000001, 'finite_diff_rel_step':0.000000000000000001}
         # perform optimization
         result = minimize(
             objectiveFunction,
