@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/david/Code/path_generator/PathObjectivesAndConstraints/build/tests -I/home/david/Code/path_generator/PathObjectivesAndConstraints/tests -I/home/david/Code/path_generator/PathObjectivesAndConstraints/src/src -I/home/david/Code/path_generator/PathObjectivesAndConstraints/src
+CXX_INCLUDES = -I/home/benjamin/path_generator_DeanAnderson/PathObjectivesAndConstraints/build/tests -I/home/benjamin/path_generator_DeanAnderson/PathObjectivesAndConstraints/tests -I/home/benjamin/path_generator_DeanAnderson/PathObjectivesAndConstraints/src/src -I/home/benjamin/path_generator_DeanAnderson/PathObjectivesAndConstraints/src
 
 CXX_FLAGS = -O3 -DNDEBUG -std=gnu++14 -DGTEST_HAS_PTHREAD=1
 

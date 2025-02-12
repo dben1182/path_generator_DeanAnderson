@@ -45,9 +45,14 @@ class PathGenerator:
         if dimension == 3:
             self._incline_const_obj = InclineConstraints()
         
-    def generate_path(self, waypoint_data: WaypointData, max_curvature: np.float64 = None,
-                max_incline: np.float64 = None, sfc_data: SFC_Data = None, obstacles: list = None,
-                objective_function_type: str = "minimal_velocity_path", obstacle_type = "circular"):
+    def generate_path(self, 
+                      waypoint_data: WaypointData, 
+                      max_curvature: np.float64 = None,
+                      max_incline: np.float64 = None, 
+                      sfc_data: SFC_Data = None, 
+                      obstacles: list = None,
+                      objective_function_type: str = "minimal_velocity_path", 
+                      obstacle_type = "circular"):
         num_intervals = self.__get_num_intervals(sfc_data)
         num_intermediate_waypoints = waypoint_data.get_num_intermediate_waypoints()
         point_sequence = self.__get_point_sequence(waypoint_data, sfc_data)

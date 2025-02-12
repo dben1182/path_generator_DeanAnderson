@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DPathObjectivesAndConstraints_EXPORTS
 
-CXX_INCLUDES = -I/home/david/Code/path_generator/PathObjectivesAndConstraints/build/src -I/home/david/Code/path_generator/PathObjectivesAndConstraints/src -I/home/david/Code/path_generator/PathObjectivesAndConstraints/src/src
+CXX_INCLUDES = -I/home/benjamin/path_generator_DeanAnderson/PathObjectivesAndConstraints/build/src -I/home/benjamin/path_generator_DeanAnderson/PathObjectivesAndConstraints/src -I/home/benjamin/path_generator_DeanAnderson/PathObjectivesAndConstraints/src/src
 
 CXX_FLAGS = -O3 -DNDEBUG -std=gnu++11 -fPIC
 

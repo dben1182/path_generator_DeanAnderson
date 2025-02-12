@@ -1,4 +1,4 @@
-# Install script for directory: /home/david/Code/path_generator/PathObjectivesAndConstraints/src
+# Install script for directory: /home/benjamin/path_generator_DeanAnderson/PathObjectivesAndConstraints/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
