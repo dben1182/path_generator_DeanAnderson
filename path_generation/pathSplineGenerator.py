@@ -67,6 +67,12 @@ class pathSplineGenerator:
         #saves the path length
         self.path_length : Optional[float] = None
 
+        #saves the obstacles
+        self.obstacles : Optional[list] = None
+
+        #saves the number of control points
+        self.num_ctrl_pnts : Optional[int] = None
+
 
 
 
@@ -82,6 +88,9 @@ class pathSplineGenerator:
                       obstacle_type = "circular"):
 
 
+        #saves the obstacles data
+        self.obstacles = obstacles
+
         #saves the waypoint data
         self.waypoint_data = waypoint_data
 
@@ -96,7 +105,10 @@ class pathSplineGenerator:
                                                                   objective_function_type=objective_function_type,
                                                                   obstacle_type=obstacle_type)
         end_time = time.time()
-        evaluation_time = end_time - start_time
+        self.evaluation_time = end_time - start_time
+
+        self.num_ctrl_pnts = np.shape(controlPoints)[1]
+
 
         #gets the BSpline from those control points
         self.bspline_evaluator = BsplineEvaluation(control_points=controlPoints,
@@ -110,29 +122,29 @@ class pathSplineGenerator:
         spline_data, time_data = self.bspline_evaluator.get_spline_data(num_data_points_per_interval=self.numSamplePoints)
 
         #gets the total path length
-        path_length = round(self.bspline_evaluator.get_arc_length(self.numSamplePoints),2)
+        self.path_length = round(self.bspline_evaluator.get_arc_length(self.numSamplePoints),2)
         #obtains the waypoints
         waypoints = self.waypoint_data.get_waypoint_locations()
 
         #returns the time_data, spline_data, etc
         return time_data, spline_data
 
-    '''
+    #'''
     #creates function to plot the data
     def plotSpline(self,
-                   spline_data: np.ndarray,
-                   time_data: np.ndarray):
+                   time_data: np.ndarray,
+                   spline_data: np.ndarray):
         
         #creates the subplot
         fig, ax = plt.subplots(1,1)
         ax.plot(spline_data[0,:], spline_data[1,:])
-        ax.set_xlabel("x (m) \n \n evaluation time: " + str(np.round(evaluation_time,2)) + 
-                           "\n path length: " + str(path_length) +
-                           "\n num ctrl pts: " + str(num_ctrl_pnts))
+        ax.set_xlabel("x (m) \n \n evaluation time: " + str(np.round(self.evaluation_time,2)) + 
+                           "\n path length: " + str(self.path_length) +
+                           "\n num ctrl pts: " + str(self.num_ctrl_pnts))
         ax.set_aspect('equal')
-        plot2D_waypoints(waypoint_data_1, ax,arrow_scale = 2)
-        if obstacles is not None:
-            plot_2D_obstacles(obstacles, ax)
+        plot2D_waypoints(self.waypoint_data, ax,arrow_scale = 2)
+        if self.obstacles is not None:
+            plot_2D_obstacles(self.obstacles, ax)
 
 
 

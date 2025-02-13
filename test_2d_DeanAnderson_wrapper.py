@@ -20,8 +20,9 @@ waypoint_data_1 = WaypointData(start_waypoint=waypoint_a, end_waypoint=waypoint_
 
 
 
-spline_data, time_data = pathGenerator.generate_path(waypoint_data=waypoint_data_1)
+time_data, spline_data = pathGenerator.generate_path(waypoint_data=waypoint_data_1)
 
-
+#calls the plotter function
+pathGenerator.plotSpline(spline_data=spline_data, time_data=time_data)
 
 potatoe = 0
